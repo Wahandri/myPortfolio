@@ -1,0 +1,19 @@
+body {
+    background-color: #ffffff;
+    color: #0c0636;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/*--------PALETA DE COLORES --------*/
+
+.color1 { color:  #0c0636 };
+.color2 { color:  #095169 };
+.color3 { color:  #059b9a };
+.color4 { color:  #53ba83 };
+.color5 { color:  #9fd86b };
+
+/* --------------------------------- */
