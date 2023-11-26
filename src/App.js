@@ -1,14 +1,26 @@
 import './App.css';
-import Header from "./components/Header/Header";
+import React, { useState, useEffect } from 'react';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 
 function App() {
+  const [name, setName] = useState('Wahandri');
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setName(prevName => prevName === 'Wahandri' ? 'Manuel' : 'Wahandri');
+    }, 3000);
+    return () => clearInterval(interval); 
+  }, []);
 
   return (
     <div className="App">
       <Header />
-      <h1>Manuel  <span className='color2'>García</span></h1>
-      <h1>I am a web <span className='color2'>developer</span></h1>
+      <div className='greeting'>
+        <h1>Hey, I am <span className='color2'>{ name }</span></h1>
+        <h1>I am a  <span className='color2'>developer</span></h1>
+      </div>
+      <Footer />
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import "./Footer.css";
-import logo from "./logotipo.png";
-import gitHub from "./github.png";
-import linkedin from "./linkedin.png";
+import logo from "../../images/logotipo.png";
+import gitHub from "../../images/github.png";
+import linkedin from "../../images/linkedin.png";
 
 export default function Footer() {
   return (

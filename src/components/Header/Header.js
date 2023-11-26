@@ -1,24 +1,29 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; 
+import gitHub from "../../images/github.png";
+import linkedin from "../../images/linkedin.png";
 
 import "./Header.css";
 import logotipo from "./logotipo.png";
-import payaso2 from "./payaso2.png";
 
-export default function Header(props) {
+
+export default function Header() {
+  
+
   return (
     <div className='baseHeader'>
-      <div className='header'>
-        <div className='imgContainer'>
+      <div className='logoName'>
+        <div className='imgLogo'>
           <img className='img' src={logotipo} alt='' />
-          <span className="developerText">Desarrollado por Wahandri</span>
-        </div>
-        
-        
-        <div><h1>{props.title}</h1></div>
-        <Link to="/user">
-          <img className='img2' src={payaso2} alt='Perfil' />
-        </Link>
+        </div> 
+      </div>
+      <div className="imgGithubIn">
+        <a href="https://github.com/Wahandri" target="_blank" rel="noopener noreferrer">
+                <img src={gitHub} title='GitHub'  width="40px" alt=''/>
+        </a>
+        <span> | </span>
+        <a href="https://linkedin.com/in/manuel-garcía-cobos-6b5413272" target="_blank" rel="noopener noreferrer">
+            <img src={linkedin} title='Linkedin' width="40px" alt=''/>
+        </a>
       </div>
     </div>
   )
