@@ -1,0 +1,33 @@
+import React from 'react'
+import "./SkillsImage.css";
+import html from '../../images/html-5.png';
+import css from '../../images/css-3.png';
+import js from '../../images/js.png';
+import react from '../../images/react.png';
+import node from '../../images/node.js.png';
+import mongo from '../../images/mongodb.png';
+import git from '../../images/git.png';
+import php from '../../images/PHP.png';
+import mysql from '../../images/mySQL.png';
+import sass from '../../images/sass.png';
+import bootstrap from '../../images/Bootstrap.png';
+
+const skillsImages = {
+  html, css, js, react, node, mongo, git, php, mysql, sass, bootstrap
+}
+
+const sizes = {
+  normal: '50px',
+  small: '30px',
+};
+
+
+
+
+export default function SkillsImage( {skill, size = "normal"} ) {
+    return (
+    <div>
+        <img className='skills imgSkill' src={skillsImages[skill]} alt={skill} style={{ width: sizes[size] }}/>
+    </div>
+  )
+}

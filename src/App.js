@@ -1,27 +1,23 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
+import Start from './components/Start/Start';
+import NumberGames from './components/NumberGames/NumberGames';
 
 function App() {
-  const [name, setName] = useState('Wahandri');
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setName(prevName => prevName === 'Wahandri' ? 'Manuel' : 'Wahandri');
-    }, 3000);
-    return () => clearInterval(interval); 
-  }, []);
-
   return (
-    <div className="App">
-      <Header />
-      <div className='greeting'>
-        <h1>Hey, I am <span className='color2'>{ name }</span></h1>
-        <h1>I am a  <span className='color2'>developer</span></h1>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Start />} />
+          <Route path="/findTheNumber" element={<NumberGames />} />
+        </Routes>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </Router>
   );
 }
 

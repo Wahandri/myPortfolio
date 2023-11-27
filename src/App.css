@@ -2,3 +2,18 @@
     color: #9fd86b;
 }
 
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.hello {
+    position: relative;
+}
+
+.imgHombre {
+    position: relative;
+    z-index: -1;
+}

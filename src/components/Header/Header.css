@@ -1,10 +1,11 @@
 .baseHeader {
-    /* background-color: rgba(128, 128, 128, 0.789); */
+    background-color: #095169;
     border-radius: 15px;
     display: flex;
     justify-content:space-between;
     color: #9fd86b;
     align-items: center;
+    box-shadow: 0 0 10px rgba(89, 89, 89, 0.5);
 }
 
 .logoName {
@@ -14,6 +15,11 @@
 .img {
     width: 70px;
     margin-right: 40px;
+}
+
+.imgHover1:hover {
+    transform: scale(1.2);
+    transition: all 0.5s ease-in-out;
 }
 
 @keyframes spin {
@@ -27,7 +33,7 @@
     animation-name: spin;
     animation-duration: 1.5s; 
     animation-iteration-count:infinite;
-  }
+}
 
 .imgLogo {
     margin-left: 10px;
