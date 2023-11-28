@@ -11,10 +11,12 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <Routes>
-          <Route path="/" element={<Start />} />
-          <Route path="/findTheNumber" element={<NumberGames />} />
-        </Routes>
+        <div className='paddingApp'>
+          <Routes>
+            <Route path="/" element={<Start />} />
+            <Route path="/findTheNumber" element={<NumberGames />} />
+          </Routes>
+        </div>
         <Footer />
       </div>
     </Router>

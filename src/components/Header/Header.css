@@ -122,3 +122,8 @@
         height: auto; 
     }
 }
+
+.linkNavbar {
+    text-decoration: none;
+    color: #fff;
+}

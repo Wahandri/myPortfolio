@@ -89,6 +89,10 @@
     background-size: cover;
 }
 
+.level {
+    color: black;
+}
+
 
 .board {
     background-image: url("../../images/fondoPizarra.jpg");

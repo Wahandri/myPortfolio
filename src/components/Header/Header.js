@@ -4,6 +4,7 @@ import linkedin from "../../images/linkedin.png";
 
 import "./Header.css";
 import logotipo from "./logotipo.png";
+import { Link } from 'react-router-dom';
 
 
 export default function Header() {
@@ -15,6 +16,10 @@ export default function Header() {
         <div className='imgLogo'>
           <img className='img' src={logotipo} alt='' />
         </div> 
+      </div>
+      <div>
+        <Link to='/'><p className='linkNavbar'>Home</p></Link>
+        <Link to='/findTheNumber'><p className='linkNavbar'>Game</p></Link>
       </div>
       <div className="imgGithubIn">
         <a href="https://github.com/Wahandri" target="_blank" rel="noopener noreferrer">

@@ -124,7 +124,7 @@ export default function Start() {
             // Intentos agotados
             if (intentos === 1 && !juegoTerminado) {
                 audioError.play();
-                setMensaje(`¡Oh no! Has agotado tus intentos. Has perdido. Vuelve a intentarlo.`);
+                setMensaje(`¡Oh no! Has agotado tus intentos. El numero era el ${numeroAleatorio}.  Vuelve a intentarlo.`);
                 
                 setTimeout(() => {
                     reiniciarJuego();

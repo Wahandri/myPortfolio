@@ -4,6 +4,7 @@ import FindTheNumber from "../../images/adivinaElNumero.png";
 import jokesWeb from "../../images/JokesWeb.png";
 import SkillsImage from '../SkillsImage/SkillsImage';
 import BtnLink from '../BtnLink/BtnLink';
+import imgGithub from "../../images/github.png";
 
 
 export default function Projects() {
@@ -13,14 +14,17 @@ export default function Projects() {
         <div className='listProject'>
             <div className='cardProject flexCenter'>
                 <img className='imgProject' src={FindTheNumber} alt=''/>
-                <div className='description flexCenter column'>
+                <div className='description flexBetween column'>
                     <h3>Simple game of guessing a random number. (great for practicing states)</h3>
                     <div className='skills flexCenter'>
                         <SkillsImage skill={'html'} />
                         <SkillsImage skill={'css'} />
                         <SkillsImage skill={'js'} />
                     </div>
-                    <BtnLink to='/findTheNumber'>Play</BtnLink>
+                    <div className='btnsLink'>
+                        <BtnLink to='/findTheNumber'>Play</BtnLink>
+                        <BtnLink to="https://github.com/Wahandri/GessTheNumber"><img width="30px" src={imgGithub} alt=''></img></BtnLink>
+                    </div>
                 </div>
             </div>
             <div className='cardProject flexCenter'>
