@@ -29,7 +29,7 @@
 
 .cardProject {
     margin: 15px;
-    background-color: #095169;
+    /* background-color: #0c0636; */
     position: relative;
     display: flex;
     justify-content: center;
@@ -43,11 +43,13 @@
     padding:10px;
     box-sizing: border-box;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(89, 89, 89, 0.5);
+    box-shadow: 0 0 10px #9fd86b;
     overflow: hidden;
 }
 .cardProject:hover .description {
     opacity: 1;
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
 }
 
 .space-between {

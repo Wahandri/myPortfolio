@@ -4,7 +4,7 @@ import FindTheNumber from "../../images/adivinaElNumero.png";
 import jokesWeb from "../../images/JokesWeb.png";
 import SkillsImage from '../SkillsImage/SkillsImage';
 import BtnLink from '../BtnLink/BtnLink';
-import imgGithub from "../../images/github.png";
+import imgGithubBlack from "../../images/githubBlack.png";
 
 
 export default function Projects() {
@@ -23,7 +23,7 @@ export default function Projects() {
                     </div>
                     <div className='btnsLink'>
                         <BtnLink to='/findTheNumber'>Play</BtnLink>
-                        <BtnLink to="https://github.com/Wahandri/GessTheNumber"><img width="30px" src={imgGithub} alt=''></img></BtnLink>
+                        <BtnLink to="https://github.com/Wahandri/GessTheNumber"><img width="30px" src={imgGithubBlack} alt=''></img></BtnLink>
                     </div>
                 </div>
             </div>
