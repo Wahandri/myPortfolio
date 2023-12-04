@@ -22,14 +22,18 @@
 .listProject {
     width: 70%;
     margin: 15px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
     gap: 30px;
 }
 
 .cardProject {
     margin: 15px;
-    /* background-color: #0c0636; */
+    background-color: #a0d86b0e;
     position: relative;
     display: flex;
     justify-content: center;
@@ -38,8 +42,7 @@
     margin-top: 20px; 
     width: 100%;
     max-width: 650px;
-    min-height: 400px;
-    height: 100%;
+    /* height: ; */
     padding:10px;
     box-sizing: border-box;
     border-radius: 10px;
@@ -71,4 +74,11 @@
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+}
+
+@media screen and (max-width: 1440px) {
+    .flexCenter {
+        flex-direction: column;
+    }
+    
 }

@@ -5,6 +5,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Start from './components/Start/Start';
 import NumberGames from './components/NumberGames/NumberGames';
+import ShaktiWeb from "./components/Shakti/Shakti"
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Start />} />
             <Route path="/findTheNumber" element={<NumberGames />} />
+            <Route path="/shaktiWeb" element={<ShaktiWeb />} />
           </Routes>
         </div>
         <Footer />
