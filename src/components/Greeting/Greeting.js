@@ -24,7 +24,7 @@ export default function Greeting() {
         <h1>I am  <span className='color2'>Web Developer</span></h1>
         <div className='myDescription'>
           <h3>
-          Hello! I'm Manuel García, 30 years old, and I am a full-stack web developer with a strong background from Codespace Academy. My insatiable curiosity for creation and problem-solving drives me to keep learning and applying my knowledge in personal projects.
+          Hello! I'm Manuel García, 30 years old, and I am a <span className='color2'>Full-Stack Web Developer</span> with a strong background from <a href='https://codespaceacademy.com/' target="_blank" rel='noreferrer'>Codespace Academy</a>. My insatiable curiosity for creation and problem-solving drives me to keep learning and applying my knowledge in personal projects.
           </h3>
           {showMore && ( // Si showMore es true, se muestra el segundo <h3>
             <h3>

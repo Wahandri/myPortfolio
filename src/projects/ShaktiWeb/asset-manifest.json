@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7db7ec13.css",
+    "main.js": "/static/js/main.f075d6c0.js",
+    "static/media/Masaje.png": "/static/media/Masaje.42819310b8d6a969134a.png",
+    "static/media/head-contact.jpg": "/static/media/head-contact.71e5fc850948a9ee1b82.jpg",
+    "static/media/osho-meditation-live-music-camp-in-romania-kundalini.jpg": "/static/media/osho-meditation-live-music-camp-in-romania-kundalini.1791a2490c9496a17aaa.jpg",
+    "static/media/Merienda-VariableFont_wght.ttf": "/static/media/Merienda-VariableFont_wght.373b823211bb1d6f1f8b.ttf",
+    "static/media/meditacion-playa.jpg": "/static/media/meditacion-playa.ab5741066d8251d3786f.jpg",
+    "static/media/emocionalcoaching.jpg": "/static/media/emocionalcoaching.8859d6a415e74968ad43.jpg",
+    "static/media/osho-dynamic-meditation-1.jpg": "/static/media/osho-dynamic-meditation-1.76071fff6f25ca8f79ab.jpg",
+    "static/media/shaktiSmall.png": "/static/media/shaktiSmall.a01431c404ce5642af20.png",
+    "static/media/shakti.png": "/static/media/shakti.7760daf3fbce01ee6d96.png",
+    "static/media/nutricion.jpg": "/static/media/nutricion.b25dca05af1faab33a65.jpg",
+    "static/media/positive.jpg": "/static/media/positive.38d3007dd7856277ae21.jpg",
+    "static/media/instagram.png": "/static/media/instagram.e719d8b29f452a16302d.png",
+    "static/media/Belleza-Regular.ttf": "/static/media/Belleza-Regular.cd095d8cf5ac9604d1d4.ttf",
+    "index.html": "/index.html",
+    "main.7db7ec13.css.map": "/static/css/main.7db7ec13.css.map",
+    "main.f075d6c0.js.map": "/static/js/main.f075d6c0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7db7ec13.css",
+    "static/js/main.f075d6c0.js"
+  ]
+}

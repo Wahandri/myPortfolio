@@ -9,6 +9,11 @@
     
 }
 
+.myDescription a {
+    /* text-decoration: none; */
+    color: #9fd86b;
+}
+
 .shadowMen {
     background: rgb(159,216,107);
     background: radial-gradient(circle, rgba(159,216,107,0.36720554272517325) 30%, rgba(186,78,157,0) 55%);

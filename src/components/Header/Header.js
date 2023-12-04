@@ -17,8 +17,8 @@ export default function Header() {
           <img className='img' src={logotipo} alt='' />
         </div> 
       </div>
-      <div>
-        <Link to='/'><p className='linkNavbar'>Home</p></Link>
+      <div className='boxLinkNavBar'>
+        <Link className='linkNavbar' to="/">Home</Link>
         {/* <Link to='/findTheNumber'><p className='linkNavbar'>Game</p></Link> */}
       </div>
       <div className="imgGithubIn">
