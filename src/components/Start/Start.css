@@ -1,0 +1,32 @@
+.color2 {
+    color: #9fd86b;
+}
+
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.hello {
+    position: relative;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.imgHombre {
+    width: 500px;
+    position: relative;
+    z-index: -1;
+}
+

@@ -19,7 +19,7 @@ export default function Header() {
       </div>
       <div className='boxLinkNavBar'>
         <Link className='linkNavbar' to="/">Home</Link>
-        {/* <Link to='/findTheNumber'><p className='linkNavbar'>Game</p></Link> */}
+        
       </div>
       <div className="imgGithubIn">
         <a href="https://github.com/Wahandri" target="_blank" rel="noopener noreferrer">

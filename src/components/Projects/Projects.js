@@ -61,7 +61,7 @@ export default function Projects() {
                             <SkillsImage skill={'react'} />
                         </div>
                         <div className='btnsLink'>
-                            <BtnLink to='/shaktiWeb'>Go</BtnLink>
+                            <BtnLink to='https://shakti-coaching.pages.dev/'>Go</BtnLink>
                             <BtnLink to="https://github.com/Wahandri/ShaktiYoga.git"><img width="30px" src={imgGithubBlack} alt=''></img></BtnLink>
                         </div>
                     </div>
