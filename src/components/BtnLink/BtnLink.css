@@ -23,3 +23,10 @@
 .BtnLink:active {
     background-color: #616161;
 }
+
+@media screen and (max-width: 621px) {
+    .BtnLink {
+        padding: 7px 15px;
+        
+    }
+}

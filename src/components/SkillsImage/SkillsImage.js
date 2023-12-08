@@ -16,18 +16,12 @@ const skillsImages = {
   html, css, js, react, node, mongo, git, php, mysql, sass, bootstrap
 }
 
-const sizes = {
-  normal: '50px',
-  small: '30px',
-};
 
 
-
-
-export default function SkillsImage( {skill, size = "normal"} ) {
+export default function SkillsImage( {skill} ) {
     return (
     <div>
-        <img className='skills imgSkill' src={skillsImages[skill]} alt={skill} style={{ width: sizes[size] }}/>
+        <img className='skills imgSkill' src={skillsImages[skill]} alt={skill}/>
     </div>
   )
 }

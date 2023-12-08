@@ -10,7 +10,7 @@ export default function Greeting() {
     const interval = setInterval(() => {
       setGreeting(prevGreeting =>
         prevGreeting === 'Hey, my name is <span class="color2">Manuel</span>'
-          ? 'Hey, you can call me <span class="color2">Wahandri</span>'
+          ? 'You can call me <span class="color2">Wahandri</span>'
           : 'Hey, my name is <span class="color2">Manuel</span>'
       );
     }, 2000);
@@ -20,8 +20,15 @@ export default function Greeting() {
   return (
     <div className='boxGreeting flexCenter'>
       <div className='boxDescription hello'>
-        <h1 dangerouslySetInnerHTML={{ __html: greeting }} />
-        <h1>I am  <span className='color2'>Web Developer</span></h1>
+        <div className='helloImg'>
+          <div className='textStart'>
+            <h1 dangerouslySetInnerHTML={{ __html: greeting }} />
+            <h1>I am  <span className='color2'>Web Developer</span></h1>
+          </div>
+          <div className='divMen'>
+            <img className='imgMen shadowMen' src={hombre} alt=''/>
+          </div>
+        </div>
         <div className='myDescription'>
           <h3>
           Hello! I'm Manuel García, 30 years old, and I am a <span className='color2'>Full-Stack Web Developer</span> with a strong background from <a href='https://codespaceacademy.com/' target="_blank" rel='noreferrer'>Codespace Academy</a>. My insatiable curiosity for creation and problem-solving drives me to keep learning and applying my knowledge in personal projects.
@@ -35,9 +42,6 @@ export default function Greeting() {
         <button className='btnRead' onClick={() => setShowMore(!showMore)}> {/* Botón para mostrar/ocultar el segundo <h3> */}
           {showMore ? 'Read less' : 'Read more'}
         </button>
-      </div>
-      <div className='divMen'>
-        <img className='imgMen shadowMen' src={hombre} alt=''/>
       </div>
     </div>
   )

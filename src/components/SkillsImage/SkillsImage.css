@@ -2,3 +2,13 @@
     transform: scale(1.2);
     transition: all 0.3s ease-in-out;
 }
+
+.imgSkill {
+    width: 50px;
+}
+
+@media screen and (max-width: 621px) {
+    .imgSkill {
+        width: 30px;
+    }
+}
