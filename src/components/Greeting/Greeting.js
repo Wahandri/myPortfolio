@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import hombre from "../../images/hombre.png";
+import fondoTek from "../../images/fondoTek.png";
 import "./Greeting.css";
 
 export default function Greeting() {
@@ -25,9 +26,10 @@ export default function Greeting() {
             <h1 dangerouslySetInnerHTML={{ __html: greeting }} />
             <h1>I am  <span className='color2'>Web Developer</span></h1>
           </div>
-          <div className='divMen'>
-            <img className='imgMen shadowMen' src={hombre} alt=''/>
-          </div>
+            <div className='divMen'>
+              <img className='imgMen shadowMen' src={hombre} alt=''/>
+              <img className=' imgMen backgroundTek' src={fondoTek} alt=''/>
+            </div>
         </div>
         <div className='myDescription'>
           <h3>

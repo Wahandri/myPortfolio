@@ -30,6 +30,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+}
+
+.backgroundTek {
+    position: absolute;
+    z-index: -5;
+    opacity: 0.1;
+    top: 40px;
 }
 
 .myDescription a {
@@ -125,47 +133,9 @@
     }
 }
 
-/* @media screen and (max-width: 1126px) {
-    .imgMen {
-        width: 350px;        
-    }
-}
-
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 445px) {
     .boxDescription h1 {
-        font-size: 30px;
-        width: 100%;
-    }
-    .boxGreeting {
-       font-size: 20px;
+        font-size: 25px;
     }
 }
 
-@media screen and (max-width: 764px) { 
-    .boxGreeting {
-        flex-direction:column-reverse;
-    }
-
-    .boxDescription {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .myDescription {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .myDescription h3 {
-        width: 400px;
-    }
-}
-
-@media screen and (max-width: 455px) { 
-    .boxDescription {
-        
-    }
-} */
