@@ -50,7 +50,7 @@
     background: radial-gradient(circle, rgba(159,216,107,0.36720554272517325) 30%, rgba(186,78,157,0) 55%);
 }
 
-.boxDescription {
+.boxMyDescription {
     width: 70%;
     height: 100%;
     display: flex;
@@ -97,7 +97,7 @@
 @media screen and (max-width: 1026px) {
     
 
-    .boxDescription {
+    .boxMyDescription {
         width: 100%;
     }
 
@@ -111,7 +111,7 @@
 
 @media screen and (max-width: 853px) {
     
-    .boxDescription h1 {
+    .boxMyDescription h1 {
         font-size: 30px;
         width: 100%;
     }
@@ -121,7 +121,7 @@
     
     }
 
-    .boxDescription {
+    .boxMyDescription {
         width: 100%;
         font-size: 16px;
     }
@@ -134,7 +134,7 @@
 }
 
 @media screen and (max-width: 445px) {
-    .boxDescription h1 {
+    .boxMyDescription h1 {
         font-size: 25px;
     }
 }
