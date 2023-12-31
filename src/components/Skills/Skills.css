@@ -9,8 +9,8 @@
     height: 100%;
     padding:10px;
     box-sizing: border-box;
-    background-color: #a0d86b0e;
     border-radius: 10px;
-    box-shadow: 0 0 10px #9fd86b;
+    background-color: #c1c1c10e;
+    box-shadow: 5px 5px 10px 0px rgba(255, 255, 255, 0.124);
 }
 

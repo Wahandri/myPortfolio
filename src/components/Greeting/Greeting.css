@@ -59,10 +59,25 @@
     align-items: center;
 }
 
+.textStart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fixed {
+    height: 60px;
+    width: 100%;
+    margin-bottom: 90px;
+}
+
 .myDescription {
-    background-color: #a0d86b0e;
+    background-color: #c1c1c10e;
+    box-shadow: 5px 5px 10px 0px rgba(255, 255, 255, 0.124);
     padding: 15px;
     border-radius: 10px;
+    
 }
 
 .btnRead {
@@ -85,6 +100,15 @@
         font-size: 25px;
     }
 
+    .fixed {
+        height: 30px;
+        margin-bottom: 30px;
+    }
+
+    .boxMyDescription h1 {
+        font-size: 35px;
+    }
+
     .imgMen {
         width: 350px;        
     }
@@ -95,7 +119,10 @@
 }
 
 @media screen and (max-width: 1026px) {
+    .textStart {
+        text-align: center;
     
+    }
 
     .boxMyDescription {
         width: 100%;
@@ -112,7 +139,6 @@
 @media screen and (max-width: 853px) {
     
     .boxMyDescription h1 {
-        font-size: 30px;
         width: 100%;
     }
 
