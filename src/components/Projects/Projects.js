@@ -117,7 +117,7 @@ export default function Projects() {
                 <SkillsImage skill={"react"} />
               </div>
               <div className="btnsLink">
-                <BtnLink to="https://shakti-coaching.pages.dev/">Go</BtnLink>
+                <BtnLink to="https://simona-zappoli.pages.dev/">Go</BtnLink>
                 <BtnLink to="https://github.com/Wahandri/ShaktiYoga.git">
                   <img className="widthIcon" src={imgGithubBlack} alt=""></img>
                 </BtnLink>
