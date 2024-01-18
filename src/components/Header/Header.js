@@ -11,7 +11,7 @@ export default function Header() {
   
 
   return (
-    <div className='baseHeader'>
+    <div className='baseHeader borderCard'>
       <div className='logoName'>
         <div className='imgLogo'>
           <img className='img' src={logotipo} alt='' />

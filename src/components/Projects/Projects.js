@@ -13,7 +13,7 @@ export default function Projects() {
     <div className=" boxProjects">
       <h1 className="sombra">Mi Experiencia</h1>
       <div className="listProject">
-        <div className="shadowProject flexCenter ">
+        <div className="shadowProject borderCard flexCenter ">
           <div className="cardProject flexCenter">
             <img className="imgProject" src={jokesWeb} alt="" />
             <div className="descriptionProject flexCenter column">
@@ -56,7 +56,7 @@ export default function Projects() {
             </p>
           </div>
         </div>
-        <div className="shadowProject flexCenter reverse">
+        <div className="shadowProject borderCard flexCenter reverse">
           <div className="cardProject flexCenter">
             <img className="imgProject" src={imgRAM} alt="" />
             <div className="descriptionProject flexCenter column">
@@ -81,7 +81,7 @@ export default function Projects() {
           </div>
         </div>
 
-        <div className="shadowProject  flexCenter">
+        <div className="shadowProject borderCard  flexCenter">
           <div className="cardProject flexCenter">
             <img className="imgProject" src={FindTheNumber} alt="" />
             <div className="descriptionProject flexCenter column">
@@ -106,7 +106,7 @@ export default function Projects() {
             </h3>
           </div>
         </div>
-        <div className="shadowProject flexCenter reverse">
+        <div className="shadowProject borderCard flexCenter reverse">
           <div className="cardProject flexCenter">
             <img className="imgProject" src={shaktiWeb} alt="" />
             <div className="descriptionProject flexCenter column">

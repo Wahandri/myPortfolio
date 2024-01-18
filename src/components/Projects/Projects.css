@@ -7,8 +7,7 @@
 }
 
 .shadowProject {
-    background: rgb(255,255,255);
-    background: radial-gradient(circle, #a0d86b1f 1%, rgba(0,212,255,0) 80%);
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,7 +55,7 @@
 
 .cardProject {
     margin: 15px;
-    background-color: #000000;
+    
     position: relative;
     display: flex;
     justify-content: center;
@@ -66,8 +65,8 @@
     height: 100%;
     padding:10px;
     box-sizing: border-box;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #9fd86b;
+    
+    
     overflow: hidden;
 }
 .cardProject:hover .descriptionProject {

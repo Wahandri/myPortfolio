@@ -21,7 +21,7 @@ export default function Greeting() {
   }, []);
 
   return (
-    <div className="boxGreeting flexCenter">
+    <div className="boxGreeting borderCard flexCenter">
       <div className="boxMyDescription hello">
         <div className="helloImg">
           <div className="textStart">
@@ -31,11 +31,11 @@ export default function Greeting() {
             </h1>
           </div>
           <div className="divMen">
-            <img className="imgMen shadowMen" src={hombre} alt="" />
+            <img className="imgMen" src={hombre} alt="" />
             <img className=" imgMen backgroundTek" src={fondoTek} alt="" />
           </div>
         </div>
-        <div className="myDescription">
+        <div className="myDescription borderCard">
           <h3>
             Hello! I'm Manuel García, 30 years old, and I am a{" "}
             <span className="color2">Full-Stack Web Developer</span> with a

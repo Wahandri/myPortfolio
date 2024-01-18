@@ -20,7 +20,7 @@
 
 .imgMen {
     width: 500px;
-    z-index: -2;
+    z-index: 2;
     position:static;
     
 }
@@ -35,19 +35,15 @@
 
 .backgroundTek {
     position: absolute;
-    z-index: -5;
-    opacity: 0.1;
-    top: 40px;
+    z-index: 1;
+    opacity: 0.3;
+    top: 0px;
+    height: 900px;
+    width: 600px;
 }
 
 .myDescription a {
-    /* text-decoration: none; */
     color: #9fd86b;
-}
-
-.shadowMen {
-    background: rgb(159,216,107);
-    background: radial-gradient(circle, rgba(159,216,107,0.36720554272517325) 30%, rgba(186,78,157,0) 55%);
 }
 
 .boxMyDescription {
@@ -60,7 +56,6 @@
 }
 
 .myDescription {
-    background-color: #a0d86b0e;
     padding: 15px;
     border-radius: 10px;
 }

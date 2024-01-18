@@ -7,7 +7,7 @@ export default function skills() {
   
 
   return (
-    <div className='boxskills'>
+    <div className='boxskills borderCard'>
         <SkillsImage skill='html'/>
         <SkillsImage skill='css'/>
         <SkillsImage skill='js'/>

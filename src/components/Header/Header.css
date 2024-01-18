@@ -1,11 +1,9 @@
 .baseHeader {
-    /* background-color: #0c0636; */
-    border-radius: 15px;
     display: flex;
     justify-content:space-between;
     color: #9fd86b;
     align-items: center;
-    box-shadow: 0 0 10px #9fd86b;
+    /* box-shadow: 0 0 10px #9fd86b; */
 }
 
 .logoName {
