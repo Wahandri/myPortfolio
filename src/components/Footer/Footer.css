@@ -19,7 +19,7 @@
   color: aliceblue;
   border-radius: 10px;
   width: 100%;
-  box-shadow: 0 0 10px #9fd86b;
+  /* box-shadow: 0 0 10px #9fd86b; */
   padding-bottom: 15px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

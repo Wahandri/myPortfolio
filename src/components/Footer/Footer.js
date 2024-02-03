@@ -6,7 +6,7 @@ import linkedin from "../../images/linkedin.png";
 
 export default function Footer() {
   return (
-    <footer className='footer flexFooter'>
+    <footer className='footer borderCard flexFooter'>
         <div className='flex2'>
             <div className="contenedor-rotacion">
                 <img className="rotacion" src={logo} width="70px" alt=''/>

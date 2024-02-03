@@ -1,10 +1,9 @@
 import React from 'react';
 import gitHub from "../../images/github.png";
 import linkedin from "../../images/linkedin.png";
-
 import "./Header.css";
 import logotipo from "./logotipo.png";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 
 export default function Header() {
@@ -18,7 +17,9 @@ export default function Header() {
         </div> 
       </div>
       <div className='boxLinkNavBar'>
-        <Link className='linkNavbar' to="/">Home</Link>
+      <a className='textNone' href="/cvManuelGarcia.pdf" download="cvManuelGarcia.pdf">
+        <button className='linkNavbar'>Descargar Currículum</button>
+      </a>
         
       </div>
       <div className="imgGithubIn">
