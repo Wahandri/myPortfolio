@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Start from "./components/Start/Start";
 import NumberGames from "./components/NumberGames/NumberGames";
+import CV from "./components/CV/CV";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <div className="paddingApp">
           <Routes>
             <Route path="/" element={<Start />} />
+            <Route path="/cv" element={<CV />} />
             <Route path="/findTheNumber" element={<NumberGames />} />
           </Routes>
         </div>

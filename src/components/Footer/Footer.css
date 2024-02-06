@@ -19,7 +19,6 @@
   color: aliceblue;
   border-radius: 10px;
   width: 100%;
-  /* box-shadow: 0 0 10px #9fd86b; */
   padding-bottom: 15px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -38,7 +37,7 @@
 }
   
 .texto p {
-  margin: 0; /* Asegurarse de que no haya margen dentro del párrafo */
+  margin: 0; 
   opacity: 1;
   transition: opacity 0.5s ease;
 }

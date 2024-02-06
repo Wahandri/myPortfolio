@@ -1,6 +1,5 @@
 import React, { useState} from "react";
 import hombre from "../../images/hombre.png";
-// import fondoTek from "../../images/fondoTek.png";
 import "./Greeting.css";
 
 export default function Greeting() {

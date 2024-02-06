@@ -3,11 +3,10 @@ import gitHub from "../../images/github.png";
 import linkedin from "../../images/linkedin.png";
 import "./Header.css";
 import logotipo from "./logotipo.png";
-// import { Link } from 'react-router-dom';
-
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Header() {
-  
+  const location = useLocation();
 
   return (
     <div className='baseHeader borderCard'>
@@ -17,10 +16,15 @@ export default function Header() {
         </div> 
       </div>
       <div className='boxLinkNavBar'>
-      <a className='textNone' href="/cvManuelGarcia.pdf" download="cvManuelGarcia.pdf">
-        <button className='linkNavbar'>Descargar Currículum</button>
-      </a>
+        <div className='flexBetween'>
+          <Link className="textNone" to="/" >
+            <button className={`linkNavbar ${location.pathname === '/' ? 'activeLink' : ''}`}>Porfolio</button>
+          </Link>
         
+          <Link className="textNone"  to="/cv" >
+            <button className={`linkNavbar ${location.pathname === '/cv' ? 'activeLink' : ''}`}>Ver Currículum</button>
+          </Link>
+        </div>
       </div>
       <div className="imgGithubIn">
         <a href="https://github.com/Wahandri" target="_blank" rel="noopener noreferrer">
@@ -32,5 +36,5 @@ export default function Header() {
         </a>
       </div>
     </div>
-  )
+  );
 }
