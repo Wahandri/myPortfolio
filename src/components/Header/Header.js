@@ -18,11 +18,11 @@ export default function Header() {
       <div className='boxLinkNavBar'>
         <div className='flexBetween'>
           <Link className="textNone" to="/" >
-            <button className={`linkNavbar ${location.pathname === '/' ? 'activeLink' : ''}`}>Porfolio</button>
+            <button className={`linkNavbar  ${location.pathname === '/' ? 'activeLink' : ''}`}>Porfolio</button>
           </Link>
         
           <Link className="textNone"  to="/cv" >
-            <button className={`linkNavbar ${location.pathname === '/cv' ? 'activeLink' : ''}`}>Ver Currículum</button>
+            <button className={`linkNavbar  ${location.pathname === '/cv' ? 'activeLink' : ''}`}>Currículum</button>
           </Link>
         </div>
       </div>

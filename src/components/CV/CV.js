@@ -4,8 +4,8 @@ import './CV.css'
 
 export default function CV() {
     return (
-        <div>
-            <iframe src="/cvManuelGarcia.pdf" className='iframeCV' title="CV"></iframe>
+        <div className='flex-column center'>
+            <iframe src="/cvManuelGarcia.pdf" className='borderCard iframeCV' title="CV"></iframe>
         </div>
     )
 }
