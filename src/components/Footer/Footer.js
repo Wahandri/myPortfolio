@@ -11,14 +11,14 @@ export default function Footer() {
             <div className="contenedor-rotacion">
                 <img className="rotacion" src={logo} width="70px" alt=''/>
                 <div className="texto">
-                    <span className="texto-original">Developed by <span className='color2'>Wahandri</span></span>
-                    <span className="texto-hover">Developed by <span className='color2'>Manuel García Cobos</span></span>
+                    <span className="texto-original">Desarrollado por <span className='color2'>Wahandri</span></span>
+                    <span className="texto-hover">Desarrollado por <span className='color2'>Manuel García Cobos</span></span>
                 </div>
             </div>
         </div>
         <div className='flex2'>
             
-            <p>More about me:</p> 
+            <p>Mas sobre mi:</p> 
 
             <a href="https://github.com/Wahandri" target="_blank" rel="noopener noreferrer">
                 <img className='imgSkill' src={gitHub} title='GitHub'  width="40px" alt=''/>

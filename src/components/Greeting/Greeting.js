@@ -17,16 +17,19 @@ export default function Greeting() {
           </div>
           <div className="divMen">
             <img className="imgMen" src={hombre} alt="" />
-            {/* <img className=" imgMen backgroundTek" src={fondoTek} alt="" /> */}
           </div>
         </div>
         <div className="myDescription borderCard">
           <h3>
-            Soy Manuel García, tengo 30 años y soy un <span className="color2">Desarrollador Web Full-Stack</span> con sólida formación de <span className="color2">Codespace Academy</span>. Mi insaciable curiosidad por la creación me impulsa a seguir aprendiendo y aplicando mis conocimientos en proyectos personales.
+            Soy Manuel García, tengo 30 años y soy un <span className="color2">Desarrollador Web Full-Stack</span> con sólida formación de <span className="color2">Codespace Academy</span>. Mi insaciable curiosidad me impulsa a seguir aprendiendo y aplicando mis conocimientos en proyectos personales.
           </h3>
           {showMore && ( 
             <h3>
-              Me defino por mi personalidad positiva, enfoque orientado a objetivos y habilidad para trabajar en equipo. Aunque mi experiencia laboral es limitada, creo que mi año de inmersión en la academia y la aplicación diaria en proyectos personales, incluyendo la creación de un sitio web gratuito para un pequeño negocio, han sido esenciales para mi desarrollo. Me siento bien preparado para llevar mis habilidades al siguiente nivel y enfrentar con éxito desafíos en el entorno laboral del desarrollo web. Estoy emocionado por seguir creciendo y contribuir significativamente en proyectos futuros.
+              Me defino por mi personalidad positiva, enfoque orientado a objetivos y habilidad para trabajar en equipo.
+              <br/>
+              Ahun que mi experiencia laboral hasta ahora venga del gremio de la hosteleria, creo que mi año de inmersión en la academia y la aplicación diaria en proyectos personales, incluyendo el desarrollo de un sitio web para un pequeño negocio, han sido esenciales para mi aprendizaje.
+              <br/><br/> 
+              Me siento bien preparado para llevar mis habilidades al siguiente nivel y enfrentar con éxito desafíos en el entorno laboral del desarrollo web. Estoy emocionado por seguir creciendo y contribuir significativamente en proyectos futuros.
             </h3>
           )}
         </div>

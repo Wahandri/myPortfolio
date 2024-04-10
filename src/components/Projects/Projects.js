@@ -3,7 +3,7 @@ import "./Projects.css";
 import FindTheNumber from "../../images/NumberGammer.png";
 import jokesWeb from "../../images/JokesWeb.png";
 import SkillsImage from "../SkillsImage/SkillsImage";
-import shaktiWeb from "../../images/shaktiWeb.png";
+import shaktiWeb from "../../images/simonaZappoliWeb.png";
 import imgRAM from "../../images/imgRAM.png";
 import BtnLink from "../BtnLink/BtnLink";
 import imgGithubBlack from "../../images/githubBlack.png";
@@ -28,6 +28,9 @@ export default function Projects() {
               <div className="btnsLink">
                 <BtnLink to="https://github.com/Wahandri/JokesWeb.git">
                   <img className="widthIcon" src={imgGithubBlack} alt=""></img>
+                </BtnLink>
+                <BtnLink to="https://www.linkedin.com/posts/manuel-garc%C3%ADa-cobos-6b5413272_hola-familia-me-gustar%C3%ADa-ense%C3%B1aros-una-demo-activity-7175175179633909760-SrFs?utm_source=share&utm_medium=member_desktop">
+                  Ver Demo
                 </BtnLink>
               </div>
             </div>
@@ -89,7 +92,6 @@ export default function Projects() {
                 <SkillsImage skill={"html"} />
                 <SkillsImage skill={"css"} />
                 <SkillsImage skill={"js"} />
-                <SkillsImage skill={"react"} />
               </div>
               <div className="btnsLink">
                 <BtnLink to="/findTheNumber">Play</BtnLink>
