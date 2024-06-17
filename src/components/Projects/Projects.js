@@ -11,7 +11,7 @@ import imgGithubBlack from "../../images/githubBlack.png";
 export default function Projects() {
   return (
     <div className=" boxProjects">
-      <h1 className="sombra">Mi Experiencia</h1>
+      <h1 className="experience">Mi Experiencia</h1>
       <div className="listProject">
         <div className="shadowProject borderCard flexCenter ">
           <div className="cardProject flexCenter">

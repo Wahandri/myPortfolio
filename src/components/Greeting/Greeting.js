@@ -1,6 +1,8 @@
 import React, { useState} from "react";
 import hombre from "../../images/hombre.png";
 import "./Greeting.css";
+import Skills from "../Skills/Skills";
+
 
 export default function Greeting() {
   const [showMore, setShowMore] = useState(false);
@@ -17,7 +19,9 @@ export default function Greeting() {
           </div>
           <div className="divMen">
             <img className="imgMen" src={hombre} alt="" />
+            
           </div>
+          
         </div>
         <div className="myDescription borderCard">
           <h3>
@@ -39,6 +43,7 @@ export default function Greeting() {
           {showMore ? "Plegar" : "Leer más"}
         </button>
       </div>
+      <Skills/>
     </div>
   );
 }

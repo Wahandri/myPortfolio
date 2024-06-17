@@ -4,11 +4,28 @@
     justify-content: space-around;
     align-items: center;
     margin: 0 auto;
-    margin-top: 100px; 
+    margin-top: 20px; 
     width: 70%;
     height: 100%;
     padding:10px;
     box-sizing: border-box;
-    
+    list-style: none;
+}
+
+.boxskills > li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.boxskills > li > img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.boxskills > li > p {
+    font-size: 15px;
 }
 

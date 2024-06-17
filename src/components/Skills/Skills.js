@@ -7,19 +7,45 @@ export default function skills() {
   
 
   return (
-    <div className='boxskills borderCard'>
-        <SkillsImage skill='html'/>
-        <SkillsImage skill='css'/>
-        <SkillsImage skill='js'/>
-        <SkillsImage skill='react'/>
-        <SkillsImage skill='node'/>
-        <SkillsImage skill='mongo'/>
-        <SkillsImage skill='git'/>
-        <SkillsImage skill='php'/>
-        <SkillsImage skill='mysql'/>
-        <SkillsImage skill='sass'/>
-        <SkillsImage skill='bootstrap'/>
+    <ul className='boxskills borderCard'>
+        <li>
+          <SkillsImage skill='html'/>
+          <p>HTML5</p>
+        </li>
+
+        <li>
+          <SkillsImage skill='css'/>
+          <p>CSS3</p>
+        </li>
+        <li>
+          <SkillsImage skill='js'/>
+          <p>JavaScript</p>
+        </li>
+        <li>
+          <SkillsImage skill='react'/>
+          <p>React</p>
+        </li>
+        <li>
+          <SkillsImage skill='node'/>
+          <p>Node.js</p>
+        </li>
+        <li>
+          <SkillsImage skill='git'/>
+          <p>Git</p>
+        </li>
+        <li>
+          <SkillsImage skill='mysql'/>
+          <p>MySQL</p>
+        </li>
+        <li>
+          <SkillsImage skill='mongo'/>
+          <p>MongoDB</p>
+        </li>
+        {/* <li>
+          <SkillsImage skill='bootstrap'/>
+          <p>Bootstrap</p>
+        </li> */}
         
-    </div>
+    </ul>
   )
 }

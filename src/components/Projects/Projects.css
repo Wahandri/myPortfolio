@@ -41,6 +41,14 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
+.experience {
+    color: #9FD86B;
+    background-color: rgb(114, 114, 114);
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
 .listProject {
     width: 70%;
     margin: 15px;
@@ -72,7 +80,7 @@
 .cardProject:hover .descriptionProject {
     opacity: 1;
     transform: scale(1.2);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .space-between {
