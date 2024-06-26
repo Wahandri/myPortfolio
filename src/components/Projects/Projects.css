@@ -7,7 +7,7 @@
 }
 
 .shadowProject {
-    
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,6 +34,13 @@
     width: 100%; 
     height: 100%; 
     object-fit: contain;
+}
+
+.boxTitleProject {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .rows3 {
@@ -101,7 +108,7 @@
 .btnsLink {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    align-items: center;
 }
 
 .boxH3 {

@@ -1,6 +1,6 @@
 .BtnLink {
     display: flex;
-    padding: 10px 20px;
+    padding: 5px 10px;
     color: #000000;
     background-color: #9fd86b;
     border: none;
@@ -15,8 +15,8 @@
 }
 
 .BtnLink:hover {
-    background-color: #5c7c3d;
-    transform: scale(1.2);
+    background-color: #d1fca9;
+    transform:translateY(-5px);
     transition: all 0.3s ease-in-out;
 }
 

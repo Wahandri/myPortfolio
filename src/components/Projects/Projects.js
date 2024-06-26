@@ -11,7 +11,7 @@ import imgGithubBlack from "../../images/githubBlack.png";
 export default function Projects() {
   return (
     <div className=" boxProjects">
-      <h1 className="experience">Mi Experiencia</h1>
+        <h1 className="experience">Mi Experiencia</h1>
       <div className="listProject">
         <div className="shadowProject borderCard flexCenter ">
           <div className="cardProject flexCenter">
@@ -25,6 +25,14 @@ export default function Projects() {
                 <SkillsImage skill={"node"} />
                 <SkillsImage skill={"mongo"} />
               </div>
+              
+            </div>
+          </div>
+          <div className="boxH3">
+            <div className="boxTitleProject">
+              <h1 className="color2">
+                Wahaha
+              </h1>
               <div className="btnsLink">
                 <BtnLink to="https://github.com/Wahandri/JokesWeb.git">
                   <img className="widthIcon" src={imgGithubBlack} alt=""></img>
@@ -34,29 +42,82 @@ export default function Projects() {
                 </BtnLink>
               </div>
             </div>
+            <h3>
+              <p>
+              Wahaha es una plataforma interactiva y divertida donde los usuarios pueden ver, escuchar, puntuar y añadir a favoritos chistes subidos por otros miembros de la comunidad.
+              </p>
+              <p>
+              Diseñada como una pequeña red social para compartir y evaluar chistes, Wahaha permite a los usuarios disfrutar de una experiencia única al combinar elementos de humor y socialización.
+              </p>
+              <p>
+              Este es un proyecto full stack que desarrollé desde cero como parte de mi proyecto final de curso, el cual completé con éxito. Con el tiempo, he realizado mejoras específicas en la experiencia de usuario y diseño.
+              </p>
+            </h3>
+          </div>
+        </div>
+
+        <div className="shadowProject borderCard flexCenter reverse">
+          <div className="cardProject flexCenter">
+            <img className="imgProject" src={shaktiWeb} alt="" />
+            <div className="descriptionProject flexCenter column">
+              <div className="skills-box flexCenter rows3">
+                <SkillsImage skill={"html"} />
+                <SkillsImage skill={"css"} />
+                <SkillsImage skill={"js"} />
+                <SkillsImage skill={"react"} />
+              </div>
+              
+            </div>
           </div>
           <div className="boxH3">
+            <div className="boxTitleProject">
+              <h1 className="color2">
+                SimonaZappoli
+              </h1>
+              <div className="btnsLink">
+                <BtnLink to="https://simona-zappoli.pages.dev/">Ver</BtnLink>
+                <BtnLink to="https://github.com/Wahandri/ShaktiYoga.git">
+                  <img className="widthIcon" src={imgGithubBlack} alt=""></img>
+                </BtnLink>
+              </div>
+            </div>
             <h3>
-              Proyecto Full Stack: Plataforma de Compartir y Calificar Chistes
-              en Audio
+              <p>
+              Simonazappoli es una web estática que diseñé y creé para el negocio freelance de una amiga dedicada al coaching emocional, nutrición, masajes, meditación y yoga.
+              </p>
+              <p>
+              Este proyecto fue una oportunidad para acercarme a un entorno laboral real, donde tuve que escuchar peticiones, solucionar problemas y trabajar en el diseño, a pesar de no ser diseñador. A través de reuniones online y telefónicas con Simona, logramos definir un diseño que cumpliera con sus expectativas y ofreciera una experiencia de usuario cómoda.
+              </p>
+              
             </h3>
-            <p>
-              Me complace presentar mi proyecto de final de curso realizado en
-              "CodeSpace Academy". Esta iniciativa se centra en el desarrollo de
-              una red social dedicada a compartir, calificar y disfrutar de
-              chistes en formato de audio.
-            </p>
-            <p>
-              Durante el proceso de creación, me sumergí de lleno en las
-              prácticas y conceptos relacionados tanto con el desarrollo como
-              con el despliegue y la publicación del proyecto.
-            </p>
-            <p>
-              Esta inmersión no solo me proporcionó una comprensión más profunda
-              de los aspectos técnicos, sino que también me permitió asimilar
-              prácticas y conceptos que solo se comprenden plenamente a través
-              de la experiencia práctica.
-            </p>
+          </div>
+        </div>
+        <div className="shadowProject borderCard  flexCenter">
+          <div className="cardProject flexCenter">
+            <img className="imgProject" src={FindTheNumber} alt="" />
+            <div className="descriptionProject flexCenter column">
+              <div className="skills-box flexCenter rows3">
+                <SkillsImage skill={"html"} />
+                <SkillsImage skill={"css"} />
+                <SkillsImage skill={"js"} />
+              </div>
+              
+            </div>
+          </div>
+          <div className="boxH3">
+            <div className="boxTitleProject">
+              <h1 className="color2">Adivina el Numero</h1>
+              <div className="btnsLink">
+                <BtnLink to="/findTheNumber">Play</BtnLink>
+                <BtnLink to="https://github.com/Wahandri/GessTheNumber">
+                  <img className="widthIcon" src={imgGithubBlack} alt=""></img>
+                </BtnLink>
+              </div>
+            </div>
+            <h3>
+              <p>Este juego simple hecho con HTML, CSS y JavaScript desafía al jugador a adivinar un número secreto que varía en dificultad a medida que avanzas de nivel. </p>
+              <p>Creado principalmente como ejercicio para practicar lógica y fortalecer mis habilidades en JavaScript.</p>
+            </h3>
           </div>
         </div>
         <div className="shadowProject borderCard flexCenter reverse">
@@ -69,6 +130,12 @@ export default function Projects() {
                 <SkillsImage skill={"js"} />
                 <SkillsImage skill={"react"} />
               </div>
+              
+            </div>
+          </div>
+          <div className="boxH3">
+            <div className="boxTitleProject">
+              <h1 className="color2">Rick and Morty API</h1>
               <div className="btnsLink">
                 <BtnLink to="https://rick-and-morty-characters.pages.dev/">
                   Play
@@ -77,62 +144,22 @@ export default function Projects() {
                   <img className="widthIcon" src={imgGithubBlack} alt=""></img>
                 </BtnLink>
               </div>
+              
             </div>
-          </div>
-          <div className="boxH3">
-            <h3>Application to consume Rick and Morty API</h3>
+            <h3>
+                <p>
+                Esta es una web sencilla que consume una API pública de Rick y Morty. Permite explorar todos los personajes de la serie con un scroll infinito y cuenta con un input de búsqueda que filtra los personajes a medida que se escribe.
+                </p>
+                <p>
+                Inspirado por mi pasión por la serie, me dediqué especialmente al diseño CSS para crear una experiencia visual atractiva.
+                </p>
+              </h3>
           </div>
         </div>
 
-        <div className="shadowProject borderCard  flexCenter">
-          <div className="cardProject flexCenter">
-            <img className="imgProject" src={FindTheNumber} alt="" />
-            <div className="descriptionProject flexCenter column">
-              <div className="skills-box flexCenter rows3">
-                <SkillsImage skill={"html"} />
-                <SkillsImage skill={"css"} />
-                <SkillsImage skill={"js"} />
-              </div>
-              <div className="btnsLink">
-                <BtnLink to="/findTheNumber">Play</BtnLink>
-                <BtnLink to="https://github.com/Wahandri/GessTheNumber">
-                  <img className="widthIcon" src={imgGithubBlack} alt=""></img>
-                </BtnLink>
-              </div>
-            </div>
-          </div>
-          <div className="boxH3">
-            <h3>
-              Game of guessing a random number in 10 tries. Each level more
-              difficult. Can you reach level 10?
-            </h3>
-          </div>
-        </div>
-        <div className="shadowProject borderCard flexCenter reverse">
-          <div className="cardProject flexCenter">
-            <img className="imgProject" src={shaktiWeb} alt="" />
-            <div className="descriptionProject flexCenter column">
-              <div className="skills-box flexCenter rows3">
-                <SkillsImage skill={"html"} />
-                <SkillsImage skill={"css"} />
-                <SkillsImage skill={"js"} />
-                <SkillsImage skill={"react"} />
-              </div>
-              <div className="btnsLink">
-                <BtnLink to="https://simona-zappoli.pages.dev/">Go</BtnLink>
-                <BtnLink to="https://github.com/Wahandri/ShaktiYoga.git">
-                  <img className="widthIcon" src={imgGithubBlack} alt=""></img>
-                </BtnLink>
-              </div>
-            </div>
-          </div>
-          <div className="boxH3">
-            <h3>
-              website of a small real business of personal coaching, meditation,
-              yoga, etc.
-            </h3>
-          </div>
-        </div>
+        
+
+        
       </div>
     </div>
   );

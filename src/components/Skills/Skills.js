@@ -7,7 +7,7 @@ export default function skills() {
   
 
   return (
-    <ul className='boxskills borderCard'>
+    <ul className='boxskills '>
         <li>
           <SkillsImage skill='html'/>
           <p>HTML5</p>
