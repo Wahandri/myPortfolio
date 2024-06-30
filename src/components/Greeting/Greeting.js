@@ -2,17 +2,18 @@ import React, { useState} from "react";
 import hombre from "../../images/hombre.png";
 import "./Greeting.css";
 import Skills from "../Skills/Skills";
+import VSC from "../VSC/VSC";
 
 
 export default function Greeting() {
-  const [showMore, setShowMore] = useState(false);
+  // const [showMore, setShowMore] = useState(false);
 
   return (
     <div className="boxGreeting borderCard flexCenter">
       <div className="boxMyDescription hello">
         <div className="helloImg">
           <div className="textStart">
-            <h1>Hola, me llamo <span class="color2">Manuel</span></h1>
+            <h1>Me llamo <span class="color2">Manuel</span></h1>
             <h1>
               Y soy <span className="color2">Desarrollador Web</span>
             </h1>
@@ -23,7 +24,11 @@ export default function Greeting() {
           </div>
           
         </div>
-        <div className="myDescription borderCard">
+
+        <VSC/>
+
+
+        {/* <div className="myDescription borderCard">
           <h3>
             Soy Manuel García, tengo 30 años y soy un <span className="color2">Desarrollador Web Full-Stack</span> con sólida formación de <span className="color2">Codespace Academy</span>. Mi insaciable curiosidad me impulsa a seguir aprendiendo y aplicando mis conocimientos en proyectos personales.
           </h3>
@@ -41,7 +46,7 @@ export default function Greeting() {
         <button className="linkNavbar" onClick={() => setShowMore(!showMore)}>
           {" "}
           {showMore ? "Plegar" : "Leer más"}
-        </button>
+        </button> */}
       </div>
       <Skills/>
     </div>

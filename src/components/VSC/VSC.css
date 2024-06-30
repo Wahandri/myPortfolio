@@ -1,0 +1,46 @@
+.boxVSC {
+    width: 1700px;
+    height: 900px;
+    background-color: rgb(38, 38, 38);
+    /* border: 1px solid gray; */
+}
+
+.boxHeaderVSC {
+    display: flex;
+    background-color: rgb(21, 21, 21);
+}
+
+.boxHeaderVSC p {
+    font-size: 25px;
+    color: white;
+}
+
+.tab {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    padding: 15px;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    cursor: pointer;
+}
+
+.tab:hover {
+    background-color: rgb(50, 50, 50);
+}
+
+.activeTab {
+    background-color: rgb(38, 38, 38);
+    
+    /* border-bottom: 2px solid white; */
+}
+
+.boxBodyVSC {
+    padding: 20px;
+    /* background-color: rgb(30, 30, 30); */
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+}

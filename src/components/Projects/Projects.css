@@ -127,6 +127,11 @@
         width: 100%;
     
     }
+
+    .listProject {
+        width: 95%;
+        
+    }
     
 }
 
@@ -135,6 +140,9 @@
         width: 550px;
     }
     
+    .shadowProject h3 {
+        font-size: 1.2rem;
+    }
 }
 
 @media screen and (max-width: 619px) {
@@ -152,9 +160,7 @@
 }
 
 @media screen and (max-width: 400px) {
-    .shadowProject h3 {
-        font-size: 1.2rem;
-    }
+    
 
     .boxH3 {
         width: 90%;
