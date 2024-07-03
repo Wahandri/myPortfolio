@@ -1,21 +1,22 @@
 .boxVSC {
-    width: 1700px;
-    height: 900px;
+    width: 90vw;
+    height:auto;
     background-color: rgb(38, 38, 38);
-    /* border: 1px solid gray; */
-}
-
-.boxHeaderVSC {
+    border: 1px solid gray;
+  }
+  
+  .boxHeaderVSC {
     display: flex;
     background-color: rgb(21, 21, 21);
-}
-
-.boxHeaderVSC p {
+  }
+  
+  .boxHeaderVSC p {
     font-size: 25px;
     color: white;
-}
-
-.tab {
+  }
+  
+  .tab {
+    color: rgb(138, 138, 138);
     display: flex;
     gap: 10px;
     justify-content: center;
@@ -25,22 +26,23 @@
     border-left: 1px solid gray;
     border-right: 1px solid gray;
     cursor: pointer;
-}
-
-.tab:hover {
+  }
+  
+  .tab:hover {
     background-color: rgb(50, 50, 50);
-}
-
-.activeTab {
-    background-color: rgb(38, 38, 38);
+  }
+  
+  .activeTab {
+    background-color: rgb(30, 30, 30);
     
-    /* border-bottom: 2px solid white; */
-}
-
-.boxBodyVSC {
+    color: #fff;
+  }
+  
+  .boxBodyVSC {
     padding: 20px;
-    /* background-color: rgb(30, 30, 30); */
+    background-color: rgb(30, 30, 30);
     color: white;
     font-family: 'Courier New', Courier, monospace;
     white-space: pre-wrap;
-}
+  }
+  

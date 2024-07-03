@@ -1,0 +1,23 @@
+.codeBlock {
+    font-size: 25px;
+    position: relative;
+    padding-left: 10px; /* Space for line numbers */
+    counter-reset: line; /* Reset counter for line numbers */
+  }
+  
+  .codeBlock span {
+    display: block;
+    padding-left: 10px; /* Padding to align text */
+  }
+  
+  /* .codeBlock span::before {
+    content: counter(line); 
+    counter-increment: line; 
+    display: inline-block;
+    width: 30px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    color: #888;
+    text-align: right; 
+  } */
+  

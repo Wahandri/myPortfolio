@@ -1,0 +1,4 @@
+.boxBodyJson {
+    display: flex;
+    flex-direction: column;
+}
