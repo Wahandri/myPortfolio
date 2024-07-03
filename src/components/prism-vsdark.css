@@ -1,0 +1,7 @@
+/* prism-vsdark.css */
+
+.token.property { color: #80b1ff; }
+.token.punctuation { color: #999; }
+.token.string { color: #c39999; }
+.token.number { color: #d95b43; }
+.token.keyword { color: #a79173; }

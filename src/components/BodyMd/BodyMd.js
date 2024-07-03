@@ -1,8 +1,8 @@
 import React from 'react';
-import '../CodeBlock.css';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'; // Ejemplo de estilo compatible
 
-export default function BodyMd() {
-  const code = `# Experiencia
+const code = `# Experiencia
 
 **Educación:**
 - Institución: Nombre de tu institución educativa
@@ -18,11 +18,13 @@ export default function BodyMd() {
    - Descripción: Breve descripción del proyecto y tu rol en él
    - Tecnologías: Lista de tecnologías utilizadas`;
 
+export default function BodyMd() {
   return (
-    <pre className="codeBlock">
-      {code.split('\n').map((line, index) => (
-        <span key={index}>{line}</span>
-      ))}
-    </pre>
+    <>
+    <p className='headerVSC'>Home > Document > Portfolio > Experiencia.md</p>
+    <SyntaxHighlighter language="markdown" style={vscDarkPlus}>
+      {code}
+    </SyntaxHighlighter>
+    </>
   );
 }

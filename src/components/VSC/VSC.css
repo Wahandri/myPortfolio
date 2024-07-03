@@ -1,48 +1,68 @@
 .boxVSC {
-    width: 90vw;
-    height:auto;
-    background-color: rgb(38, 38, 38);
-    border: 1px solid gray;
-  }
-  
-  .boxHeaderVSC {
-    display: flex;
-    background-color: rgb(21, 21, 21);
-  }
-  
-  .boxHeaderVSC p {
-    font-size: 25px;
-    color: white;
-  }
-  
-  .tab {
-    color: rgb(138, 138, 138);
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    padding: 15px;
-    border-left: 1px solid gray;
-    border-right: 1px solid gray;
-    cursor: pointer;
-  }
-  
-  .tab:hover {
-    background-color: rgb(50, 50, 50);
-  }
-  
-  .activeTab {
-    background-color: rgb(30, 30, 30);
-    
-    color: #fff;
-  }
-  
-  .boxBodyVSC {
-    padding: 20px;
-    background-color: rgb(30, 30, 30);
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-    white-space: pre-wrap;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 50px;
+}
+
+.boxHeaderVSC {
+  display: flex;
+  background-color: #333;
+  /* padding: 10px; */
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-right: 1px solid gray;
+  background-color: #2d2d2d;
+  cursor: pointer;
+}
+
+.tab.activeTab {
+  background-color: #1e1e1e;
+  border-top: 2px solid #007acc;
+}
+
+.headerVSC {
+  font-size: small;
+  position: relative;
+  margin-top: 0;
+  width: max-content;
+  background-color: #333;
+}
+
+.tab img {
+  margin-right: 5px;
+}
+
+.boxBodyVSC {
+  flex-grow: 1;
+  background-color: #1e1e1e;
+  overflow: hidden; /* Evita que el contenido desborde */
+}
+
+.scrollableContent {
+  height: 400px; /* Altura fija del contenido */
+  overflow-y: auto; /* Hace que haya scroll si el contenido es más largo */
+  padding: 20px; /* Espaciado interior para el contenido */
+}
+
+/* Estilos de la barra de desplazamiento */
+.scrollableContent::-webkit-scrollbar {
+  width: 10px; /* Ancho de la barra de desplazamiento */
+}
+
+.scrollableContent::-webkit-scrollbar-track {
+  background-color: #1e1e1e; /* Color del fondo de la barra de desplazamiento */
+}
+
+.scrollableContent::-webkit-scrollbar-thumb {
+  background-color: #333; /* Color del "thumb" (la parte deslizante de la barra) */
+  border-radius: 5px; /* Borde redondeado del "thumb" */
+}

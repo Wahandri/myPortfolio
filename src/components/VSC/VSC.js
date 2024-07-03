@@ -28,12 +28,8 @@ export default function VSC() {
   };
 
   return (
-    <div className='boxVSC'>
+    <div className='boxVSC borderCard'>
       <header className='boxHeaderVSC'>
-        <div className={getTabClassName('QuienSoy.json')} onClick={() => setActiveTab('QuienSoy.json')}>
-          <img width="30px" alt='' src={iconJson} /> 
-          <p>QuienSoy.json</p>
-        </div>
         <div className={getTabClassName('Experiencia.md')} onClick={() => setActiveTab('Experiencia.md')}>
           <img width="30px" alt='' src={iconMd} /> 
           <p>Experiencia.md</p>
@@ -42,9 +38,15 @@ export default function VSC() {
           <img width="20px" alt='' src={iconJs} /> 
           <p>Objetivo.js</p>
         </div>
+        <div className={getTabClassName('QuienSoy.json')} onClick={() => setActiveTab('QuienSoy.json')}>
+          <img width="30px" alt='' src={iconJson} /> 
+          <p>QuienSoy.json</p>
+        </div>
       </header>
       <div className='boxBodyVSC'>
-        {renderContent()}
+        <div className="scrollableContent">
+          {renderContent()}
+        </div>
       </div>
     </div>
   );

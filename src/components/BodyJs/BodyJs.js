@@ -1,8 +1,8 @@
 import React from 'react';
-import '../CodeBlock.css';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'; // Ejemplo de estilo compatible
 
-export default function BodyJs() {
-  const code = `const objetivos = {
+const code = `const objetivos = {
   "objetivos": [
     "Consolidar mis habilidades en el desarrollo front-end y back-end.",
     "Explorar nuevas tecnologías como React y Node.js.",
@@ -12,11 +12,13 @@ export default function BodyJs() {
 };
 console.log(objetivos);`;
 
+export default function BodyJs() {
   return (
-    <pre className="codeBlock">
-      {code.split('\n').map((line, index) => (
-        <span key={index}>{line}</span>
-      ))}
-    </pre>
+    <>
+    <p className='headerVSC'>Home > Document > Portfolio > Objetivo.js</p>
+    <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
+      {code}
+    </SyntaxHighlighter>
+    </>
   );
 }
