@@ -8,11 +8,11 @@ import BodyMd from '../BodyMd/BodyMd';
 import BodyJs from '../BodyJs/BodyJs';
 
 export default function VSC() {
-  const [activeTab, setActiveTab] = useState('QuienSoy.json');
+  const [activeTab, setActiveTab] = useState('SobreMi.json');
 
   const renderContent = () => {
     switch (activeTab) {
-      case 'QuienSoy.json':
+      case 'SobreMi.json':
         return <BodyJson />;
       case 'Experiencia.md':
         return <BodyMd />;
@@ -30,18 +30,18 @@ export default function VSC() {
   return (
     <div className='boxVSC borderCard'>
       <header className='boxHeaderVSC'>
-        <div className={getTabClassName('Experiencia.md')} onClick={() => setActiveTab('Experiencia.md')}>
-          <img width="30px" alt='' src={iconMd} /> 
-          <p>Experiencia.md</p>
+        <div className={getTabClassName('SobreMi.json')} onClick={() => setActiveTab('SobreMi.json')}>
+          <img width="30px" alt='' src={iconJson} /> 
+          <p>SobreMi.json</p>
         </div>
         <div className={getTabClassName('Objetivo.js')} onClick={() => setActiveTab('Objetivo.js')}>
           <img width="20px" alt='' src={iconJs} /> 
           <p>Objetivo.js</p>
         </div>
-        <div className={getTabClassName('QuienSoy.json')} onClick={() => setActiveTab('QuienSoy.json')}>
-          <img width="30px" alt='' src={iconJson} /> 
-          <p>QuienSoy.json</p>
-        </div>
+        {/* <div className={getTabClassName('Experiencia.md')} onClick={() => setActiveTab('Experiencia.md')}>
+          <img width="30px" alt='' src={iconMd} /> 
+          <p>Experiencia.md</p>
+        </div> */}
       </header>
       <div className='boxBodyVSC'>
         <div className="scrollableContent">

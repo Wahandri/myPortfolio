@@ -93,6 +93,9 @@
 }
 
 @media screen and (max-width: 1026px) {
+    .imgMen {
+        width: 240px;        
+    }
     
 
     .boxMyDescription {
@@ -126,9 +129,7 @@
 }
 
 @media screen and (max-width: 445px) {
-    .imgMen {
-        width: 240px;        
-    }
+    
 }
 
 @media screen and (max-width: 445px) {

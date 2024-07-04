@@ -4,6 +4,10 @@
   color: #9fd86b;
 }
 
+.boxSizeText {
+  font-size: 15px;
+}
+
 .flexCenter {
   display: flex;
   justify-content: center;
