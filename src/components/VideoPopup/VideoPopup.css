@@ -15,12 +15,27 @@
   .popup-content {
     border-radius: 8px;
     position: relative;
+
+  }
+
+  .videoJokesweb {
+    width: 700px;
   }
   
   .close {
+    z-index: 111;
+    position: relative;
+    top: 50px;
+    right: 10px;
     display: flex;
     flex-direction: row-reverse;
-    width: 100%;
+    width:inherit;
     cursor: pointer;
   }
   
+
+  @media (max-width: 720px) {
+    .videoJokesweb {
+      width: 100%;
+    }
+  }
