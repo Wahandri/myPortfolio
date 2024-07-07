@@ -17,9 +17,9 @@ const code = `{
   "intereses": [
     "Desarrollo de software",
     "Inteligencia Artificial",
-    "Tecnologías emergentes",
-    "Viajes",
-    "Fotografía"
+    "Documentales",
+    "Baloncesto",
+    "Senderismo"
   ]
 }`;
 

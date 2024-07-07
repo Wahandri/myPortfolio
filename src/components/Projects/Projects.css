@@ -50,10 +50,11 @@
 
 .experience {
     color: #9FD86B;
-    background-color: rgb(114, 114, 114);
-    width: 80%;
+    background-color: rgb(216, 216, 216);
+    width: 700px;
     display: flex;
     justify-content: center;
+    border-radius: 10px;
 }
 
 .listProject {
@@ -139,6 +140,10 @@
     .cardProject {
         width: 550px;
     }
+
+    .experience {
+        width: 90%;
+    }
     
     .shadowProject h3 {
         font-size: 1.2rem;
@@ -148,6 +153,10 @@
 @media screen and (max-width: 619px) {
     .cardProject {
         width: 350px;
+    }
+    
+    .boxTitleProject {
+        flex-direction: column;
     }
 
     .descriptionProject {
