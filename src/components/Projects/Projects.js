@@ -127,7 +127,7 @@ export default function Projects() {
             <div className="boxTitleProject">
               <h1 className="color2">Adivina el Numero</h1>
               <div className="btnsLink">
-                <BtnLink to="/findTheNumber">Play</BtnLink>
+                <BtnLink to="https://gessthenumber.pages.dev/">Play</BtnLink>
                 <BtnLink to="https://github.com/Wahandri/GessTheNumber">
                   <img className="widthIcon" src={imgGithubBlack} alt="" />
                 </BtnLink>
