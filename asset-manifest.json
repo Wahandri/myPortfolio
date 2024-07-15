@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7ce61336.css",
+    "main.js": "/static/js/main.d6b42342.js",
+    "static/media/demo.mp4": "/static/media/demo.bbc39f126a0845346551.mp4",
+    "static/media/simonaZappoliWeb.png": "/static/media/simonaZappoliWeb.4f65e02f89394ba4219f.png",
+    "static/media/NumberGammer.png": "/static/media/NumberGammer.87ac74afe0411ad1d9e8.png",
+    "static/media/hombre.png": "/static/media/hombre.5fa9ef85e125676a8067.png",
+    "static/media/JokesWeb.png": "/static/media/JokesWeb.2c15445b376bed464c45.png",
+    "static/media/tablon.jpg": "/static/media/tablon.bf775b1109110ff3f028.jpg",
+    "static/media/logotipo.png": "/static/media/logotipo.657f8a6a4c97b3e76f3c.png",
+    "static/media/imgRAM.png": "/static/media/imgRAM.9b9d0e1860d95e494507.png",
+    "static/media/posit.png": "/static/media/posit.677d18d8a6eb29590be4.png",
+    "static/media/pokemonVictoria.mp3": "/static/media/pokemonVictoria.64d7507041a5ba77908b.mp3",
+    "static/media/pokemonNext.mp3": "/static/media/pokemonNext.3dc0430f1122811617e6.mp3",
+    "static/media/FingerPaint-Regular.ttf": "/static/media/FingerPaint-Regular.3c3a9cdbff527a1cdb37.ttf",
+    "static/media/posit.jpg": "/static/media/posit.e5e5a07e75a1e55ff3f2.jpg",
+    "static/media/fondoPizarra.jpg": "/static/media/fondoPizarra.34b648e52358a1cfefe1.jpg",
+    "static/media/Bootstrap.png": "/static/media/Bootstrap.70f4dd8ef1861d7a9dfe.png",
+    "static/media/PHP.png": "/static/media/PHP.a7759c068d5c9f03bebf.png",
+    "static/media/mySQL.png": "/static/media/mySQL.224c9ccc60ac335dbaac.png",
+    "static/media/sass.png": "/static/media/sass.13045b9023e3420bd176.png",
+    "static/media/git.png": "/static/media/git.5418f0cfbb0231fe2d13.png",
+    "static/media/trompetaComedia.mp3": "/static/media/trompetaComedia.a49813042eb6905ed005.mp3",
+    "static/media/linkedin.png": "/static/media/linkedin.75cc2ec03719f1fd8fa1.png",
+    "static/media/flecha-arriba.png": "/static/media/flecha-arriba.5c68a4df2a5fcc8b6a15.png",
+    "static/media/flecha-hacia-abajo.png": "/static/media/flecha-hacia-abajo.b4b3dc50d7340b76f29f.png",
+    "static/media/react.png": "/static/media/react.ab970a613322f3f9c401.png",
+    "static/media/delete.png": "/static/media/delete.3c662b752278fc52f408.png",
+    "static/media/css-3.png": "/static/media/css-3.463e319bad8e0edf1ef7.png",
+    "static/media/html-5.png": "/static/media/html-5.ff3cf75e3b7cbb4ea77c.png",
+    "static/media/mongodb.png": "/static/media/mongodb.2178943141ba7e7fae4e.png",
+    "static/media/js.png": "/static/media/js.3dfb665e058d08c99f28.png",
+    "index.html": "/index.html",
+    "main.7ce61336.css.map": "/static/css/main.7ce61336.css.map",
+    "main.d6b42342.js.map": "/static/js/main.d6b42342.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7ce61336.css",
+    "static/js/main.d6b42342.js"
+  ]
+}
