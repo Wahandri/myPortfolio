@@ -8,7 +8,7 @@ const code = `{
   "ubicacion": "Málaga, España",
   "contacto": {
     "email": "wahandricode@gmail.com",
-    "telefono": "+34 744-641-741"
+    "linkedin": "https://www.linkedin.com/in/manuel-garc%C3%ADa-cobos-6b5413272/"
   },
   "habilidades": [
     "HTML", "CSS", "JavaScript", "Git", "React", 

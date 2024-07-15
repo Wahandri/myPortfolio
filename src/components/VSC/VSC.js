@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "./VSC.css";
 import iconJs from "../../images/jsIcon.png";
 import iconJson from "../../images/jsonIcon.png";
-import iconMd from "../../images/mdIcon.png";
+// import iconMd from "../../images/mdIcon.png";
 import BodyJson from '../BodyJson/BodyJson';
 import BodyMd from '../BodyMd/BodyMd';
 import BodyJs from '../BodyJs/BodyJs';
@@ -38,10 +38,6 @@ export default function VSC() {
           <img width="20px" alt='' src={iconJs} /> 
           <p>Objetivo.js</p>
         </div>
-        {/* <div className={getTabClassName('Experiencia.md')} onClick={() => setActiveTab('Experiencia.md')}>
-          <img width="30px" alt='' src={iconMd} /> 
-          <p>Experiencia.md</p>
-        </div> */}
       </header>
       <div className='boxBodyVSC'>
         <div className="scrollableContent">
