@@ -1,4 +1,6 @@
 .boxGreeting {
+    display: -webkit-box; /* prefijo para Safari */
+    display: -ms-flexbox;/* prefijo para IE */
     display: flex;
     flex-direction: column;
     
@@ -7,6 +9,7 @@
 }
 
 .helloImg {
+    display: -ms-grid; /* prefijo para IE */
     width: 100%;
     height: 100%;
     display: grid;

@@ -1,4 +1,3 @@
-// Projects.js
 import React, { useState } from "react";
 import "./Projects.css";
 import FindTheNumber from "../../images/NumberGammer.png";
