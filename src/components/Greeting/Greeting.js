@@ -9,7 +9,7 @@ export default function Greeting() {
 
   return (
     <div className="boxGreeting borderCard flexCenter">
-      <div className="boxMyDescription hello">
+      {/* <div className="boxMyDescription hello"> */}
         <div className="helloImg">
           <div className="textStart">
             <h1>Me llamo <span class="color2">Manuel</span></h1>
@@ -19,14 +19,13 @@ export default function Greeting() {
           </div>
           <div className="divMen">
             <img className="imgMen" src={hombre} alt="" />
-            
           </div>
           
         </div>
 
         <VSC/>
 
-      </div>
+      {/* </div> */}
       <Skills/>
     </div>
   );

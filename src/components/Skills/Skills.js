@@ -41,6 +41,10 @@ export default function skills() {
           <SkillsImage skill='mongo'/>
           <p>MongoDB</p>
         </li>
+        <li>
+          <SkillsImage skill='nextjs'/>
+          <p>Next.js</p>
+        </li>
         {/* <li>
           <SkillsImage skill='bootstrap'/>
           <p>Bootstrap</p>

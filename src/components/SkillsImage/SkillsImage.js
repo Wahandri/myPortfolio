@@ -2,6 +2,7 @@ import React from 'react'
 import "./SkillsImage.css";
 import html from '../../images/html-5.png';
 import css from '../../images/css-3.png';
+import nextjs from '../../images/nextjs.png';
 import js from '../../images/js.png';
 import react from '../../images/react.png';
 import node from '../../images/node.js.png';
@@ -13,7 +14,7 @@ import sass from '../../images/sass.png';
 import bootstrap from '../../images/Bootstrap.png';
 
 const skillsImages = {
-  html, css, js, react, node, mongo, git, php, mysql, sass, bootstrap
+  html, css, js, react, node, mongo, git, php, mysql, sass, bootstrap, nextjs
 }
 
 

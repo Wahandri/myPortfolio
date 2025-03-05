@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import "./Projects.css";
 import FindTheNumber from "../../images/NumberGammer.png";
 import jokesWeb from "../../images/JokesWeb.png";
+import comerIA from "../../images/comeriaImage.png";
 import SkillsImage from "../SkillsImage/SkillsImage";
 import shaktiWeb from "../../images/simonaZappoliWeb.png";
 import imgRAM from "../../images/imgRAM.png";
 import BtnLink from "../BtnLink/BtnLink";
 import imgGithubBlack from "../../images/githubBlack.png";
-import VideoPopup from "../VideoPopup/VideoPopup"; // Asegúrate de ajustar la ruta según sea necesario
+import VideoPopup from "../VideoPopup/VideoPopup";
 
 export default function Projects() {
   const [isVideoOpen, setVideoOpen] = useState(false);
@@ -24,7 +25,41 @@ export default function Projects() {
     <div className="boxProjects">
       <h1 className="experience borderCard">Proyectos</h1>
       <div className="listProject">
+
         <div className="shadowProject borderCard flexCenter ">
+            <div className="cardProject flexCenter">
+              <img className="imgProject" src={comerIA} alt="" />
+              <div className="descriptionProject flexCenter column">
+                <div className="skills-box flexCenter rows3">
+                  <SkillsImage skill={"html"} />
+                  <SkillsImage skill={"css"} />
+                  <SkillsImage skill={"js"} />
+                  <SkillsImage skill={"nextjs"} />
+                </div>
+              </div>
+            </div>
+            <div className="boxH3">
+              <div className="boxTitleProject">
+                <h1 className="color2">Comer-IA</h1>
+                <div className="btnsLink">
+                  <BtnLink to="https://www.comer-ia.com/">Ver</BtnLink>
+                  {/* <BtnLink to="https://github.com/Wahandri/ShaktiYoga.git">
+                    <img className="widthIcon" src={imgGithubBlack} alt="" />
+                  </BtnLink> */}
+                </div>
+              </div>
+              <h3>
+                <p>
+                Desarrollé una aplicación web con Next.js que genera recetas personalizadas usando la API de OpenAI. 
+                Los usuarios ingresan ingredientes y aplican filtros (tipo de comida, dificultad, dieta) para obtener recetas coherentes y detalladas. 
+                Desde el diseño de la interfaz hasta la implementación, aprendí a integrar IA en aplicaciones web, gestionar dominios DNS, desplegar en Vercel y crear interfaces responsive. 
+                </p>
+                Este proyecto me permitió mejorar en Next.js, React, CSS y el manejo de APIs externas, además de resolver desafíos como la coherencia de la IA y la optimización del rendimiento.
+              </h3>
+            </div>
+          </div>
+
+        <div className="shadowProject borderCard flexCenter reverse">
           <div className="cardProject flexCenter">
             <img className="imgProject" src={jokesWeb} alt="" />
             <div className="descriptionProject flexCenter column">
@@ -72,7 +107,7 @@ export default function Projects() {
           </div>
         </div>
 
-        <div className="shadowProject borderCard flexCenter reverse">
+        <div className="shadowProject borderCard flexCenter ">
           <div className="cardProject flexCenter">
             <img className="imgProject" src={shaktiWeb} alt="" />
             <div className="descriptionProject flexCenter column">
@@ -111,7 +146,8 @@ export default function Projects() {
             </h3>
           </div>
         </div>
-        <div className="shadowProject borderCard flexCenter">
+
+        <div className="shadowProject borderCard flexCenter reverse">
           <div className="cardProject flexCenter">
             <img className="imgProject" src={FindTheNumber} alt="" />
             <div className="descriptionProject flexCenter column">
@@ -145,7 +181,8 @@ export default function Projects() {
             </h3>
           </div>
         </div>
-        <div className="shadowProject borderCard flexCenter reverse">
+
+        <div className="shadowProject borderCard flexCenter ">
           <div className="cardProject flexCenter">
             <img className="imgProject" src={imgRAM} alt="" />
             <div className="descriptionProject flexCenter column">
@@ -183,6 +220,7 @@ export default function Projects() {
             </h3>
           </div>
         </div>
+
       </div>
       <VideoPopup isOpen={isVideoOpen} onClose={handleCloseVideo} />
     </div>
