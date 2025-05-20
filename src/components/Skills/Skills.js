@@ -26,6 +26,10 @@ export default function skills() {
           <p>React</p>
         </li>
         <li>
+          <SkillsImage skill='nextjs'/>
+          <p>Next.js</p>
+        </li>
+        <li>
           <SkillsImage skill='node'/>
           <p>Node.js</p>
         </li>
@@ -40,10 +44,6 @@ export default function skills() {
         <li>
           <SkillsImage skill='mongo'/>
           <p>MongoDB</p>
-        </li>
-        <li>
-          <SkillsImage skill='nextjs'/>
-          <p>Next.js</p>
         </li>
         {/* <li>
           <SkillsImage skill='bootstrap'/>
