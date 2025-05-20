@@ -110,17 +110,6 @@
     border: 3px solid #8dde7b;
 }
 
-@media (max-width: 768px) {
-    .baseHeader {
-        padding: 5px;
-    }
-
-    .btnNav {
-        padding: 5px 10px;
-        height: auto; 
-    }
-}
-
 .linkNavbar {
     background-color: #ffffff00;
     display: flex;
@@ -161,4 +150,31 @@
 
 .textNone {
     text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .baseHeader {
+        padding: 5px;
+    }
+
+    .imgLogo {
+        margin-left: 0px;
+    }
+
+    .btnNav {
+        padding: 5px 10px;
+        height: auto; 
+    }
+}
+
+@media (max-width: 500px) {
+
+    .imgLogo {
+        margin-left: 0px;
+    }
+
+    .img {
+        width: 50px;
+        margin-right: 0px;
+    }
 }

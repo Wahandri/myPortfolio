@@ -98,6 +98,7 @@
 
     .boxGreeting {
         margin: 15px;
+        padding: 25px;
     }
 }
 
@@ -109,6 +110,10 @@
 
     .textStart {
         text-align: center;
+    }
+
+    .imgMen {
+        width: 200px;        
     }
 
     .helloImg {
@@ -126,6 +131,10 @@
         width: 100%;
     }
 
+    .textStart {
+        font-size: 20px;
+        text-align: center;
+    }
     
 
     .boxMyDescription {
@@ -135,12 +144,19 @@
 }
 
 @media screen and (max-width: 445px) {
-    
+    .textStart {
+        font-size: 15px;
+    }
+
+    .boxGreeting {
+        margin: 0px;
+        padding: 0px;
+    }
 }
 
 @media screen and (max-width: 445px) {
     .boxMyDescription h1 {
-        font-size: 25px;
+        font-size: 20px;
     }
 }
 
