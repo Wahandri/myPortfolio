@@ -1,26 +1,31 @@
 import "./App.css";
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Footer from "./components/Footer/Footer";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import Start from "./components/Start/Start";
-import NumberGames from "./components/NumberGames/NumberGames";
+import About from "./components/About/About";
+import Projects from "./components/Projects/Projects";
 
-function App() {
+export default function App() {
   return (
     <Router>
-      <div className="App">
-        <Header />
-        <div className="paddingApp">
-          <Routes>
-            <Route path="/" element={<Start />} />
-            <Route path="/findTheNumber" element={<NumberGames />} />
-          </Routes>
-        </div>
-        <Footer />
-      </div>
+      <Header />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Start />
+              <About />
+              <Projects />
+            </>
+          }
+        />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+      </Routes>
+      <Footer />
     </Router>
   );
 }
-
-export default App;
