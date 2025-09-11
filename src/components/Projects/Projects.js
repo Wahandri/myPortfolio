@@ -94,9 +94,8 @@ export default function Projects() {
               <p>
                 Aplicación web para ver la serie Digimon Adventure completa en
                 castellano. Muestra todos los episodios en una galería con
-                miniaturas y permite reproducir cada capítulo directamente desde
-                la web, además de marcar los vistos para llevar un control del
-                progreso.
+                miniaturas, además de marcar los vistos para llevar un control
+                del progreso.
               </p>
               <p>
                 La app organiza los episodios a partir de un archivo JSON,
