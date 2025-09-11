@@ -2,22 +2,22 @@ import React, { useState } from 'react';
 import "./VSC.css";
 import iconJs from "../../images/jsIcon.png";
 import iconJson from "../../images/jsonIcon.png";
-// import iconMd from "../../images/mdIcon.png";
-import BodyJson from '../BodyJson/BodyJson';
+import iconMd from "../../images/mdIcon.png";
 import BodyMd from '../BodyMd/BodyMd';
-import BodyJs from '../BodyJs/BodyJs';
+import BodyEnv from '../BodyEnv/BodyEnv';
+import BodyJson from '../BodyJson/BodyJson';
 
 export default function VSC() {
-  const [activeTab, setActiveTab] = useState('SobreMi.json');
+  const [activeTab, setActiveTab] = useState('SobreMi.md');
 
   const renderContent = () => {
     switch (activeTab) {
-      case 'SobreMi.json':
-        return <BodyJson />;
-      case 'Experiencia.md':
+      case 'SobreMi.md':
         return <BodyMd />;
-      case 'Objetivo.js':
-        return <BodyJs />;
+      case 'contacto.env':
+        return <BodyEnv />;
+      case 'datos.json':
+        return <BodyJson />;
       default:
         return null;
     }
@@ -30,13 +30,17 @@ export default function VSC() {
   return (
     <div className='boxVSC borderCard'>
       <header className='boxHeaderVSC'>
-        <div className={getTabClassName('SobreMi.json')} onClick={() => setActiveTab('SobreMi.json')}>
-          <img width="30px" alt='' src={iconJson} /> 
-          <p>SobreMi.json</p>
+        <div className={getTabClassName('SobreMi.md')} onClick={() => setActiveTab('SobreMi.md')}>
+          <img width="30px" alt='' src={iconMd} />
+          <p>SobreMi.md</p>
         </div>
-        <div className={getTabClassName('Objetivo.js')} onClick={() => setActiveTab('Objetivo.js')}>
-          <img width="20px" alt='' src={iconJs} /> 
-          <p>Objetivo.js</p>
+        <div className={getTabClassName('contacto.env')} onClick={() => setActiveTab('contacto.env')}>
+          <img width="20px" alt='' src={iconJs} />
+          <p>contacto.env</p>
+        </div>
+        <div className={getTabClassName('datos.json')} onClick={() => setActiveTab('datos.json')}>
+          <img width="30px" alt='' src={iconJson} />
+          <p>datos.json</p>
         </div>
       </header>
       <div className='boxBodyVSC'>
