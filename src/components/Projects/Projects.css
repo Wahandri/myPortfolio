@@ -1,204 +1,198 @@
 .boxProjects {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
 }
 
 .shadowProject {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 
-    view-timeline-name: --reveal;
+  view-timeline-name: --reveal;
 
-    animation-name: project;
-    animation-fill-mode: both;
+  animation-name: project;
+  animation-fill-mode: both;
 
-    animation-timeline: --reveal;
-    animation-range: entry 0% cover 45%;
-} @keyframes project {
-    from {
-        opacity: 0; scale: 5%
-    }
-    to {
-        opacity: 1; scale: 100%;
-    }
+  animation-timeline: --reveal;
+  animation-range: entry 0% cover 45%;
+}
+@keyframes project {
+  from {
+    opacity: 0;
+    scale: 5%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
 }
 
-
 .widthIcon {
-    width: 30px;
-
+  width: 30px;
 }
 
 .column {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .imgProject {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%; 
-    height: 100%; 
-    object-fit: contain;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .boxTitleProject {
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .rows3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .experience {
-    color: #9FD86B;
-    background-color: rgb(216, 216, 216);
-    width: 700px;
-    display: flex;
-    justify-content: center;
-    border-radius: 10px;
+  color: #9fd86b;
+  background-color: rgb(216, 216, 216);
+  width: 700px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
 }
 
 .listProject {
-    width: 70%;
-    margin: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    
-    gap: 30px;
+  width: 70%;
+  margin: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  gap: 30px;
 }
 
 .cardProject {
+  margin: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 1100px;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.cardProject:hover .descriptionProject {
+  opacity: 1;
+  transform: scale(1.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.cardProject:hover .imgProject {
+  opacity: 0.1;
+}
+
+.descriptionProject {
+  opacity: 0;
+  z-index: 10;
+  position: relative;
+  margin: 100px;
+}
+
+.btnsLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.boxH3 {
+  width: 100%;
+  padding: 20px;
+}
+
+@media screen and (max-width: 1440px) {
+  .boxH3 {
+    width: 90%;
+  }
+
+  .flexCenter {
+    flex-direction: column;
+  }
+
+  .cardProject {
+    width: 100%;
+  }
+
+  .listProject {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cardProject {
+    width: 550px;
+  }
+
+  .experience {
+    width: 90%;
+  }
+
+  .shadowProject h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 619px) {
+  .cardProject {
+    width: 350px;
+  }
+
+  .boxTitleProject {
+    flex-direction: column;
+  }
+
+  .descriptionProject {
+    margin: 40px;
+  }
+
+  .widthIcon {
+    width: 25px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .cardProject {
     margin: 15px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px; 
-    width: 1100px;
+    margin-top: 20px;
+    width: 95%;
     height: 100%;
-    padding:10px;
+    padding: 10px;
     box-sizing: border-box;
-    overflow: hidden;
-}
-.cardProject:hover .descriptionProject {
-    opacity: 1;
-    transform: scale(1.2);
-    transition: all 0.5s ease-in-out;
-}
 
-.space-between {
-    justify-content: space-between;
-}
-
-.cardProject:hover .imgProject {
-    opacity: 0.1; 
-}
-
-.descriptionProject {
-    opacity: 0;
-    z-index: 10;
-    position: relative;
-    margin: 100px;
-}
-
-.btnsLink {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.boxH3 {
-    width: 100%;
-    padding: 20px;
-}
-
-
-
-@media screen and (max-width: 1440px) {
-    .boxH3 {
-        width: 90%;
-    }
-
-    .flexCenter {
-        flex-direction: column;
-    }
-
-    .cardProject {
-        width: 100%;
-    
-    }
-
-    .listProject {
-        width: 95%;
-        
-    }
-    
-}
-
-@media screen and (max-width: 1024px) {
-    .cardProject {
-        width: 550px;
-    }
-
-    .experience {
-        width: 90%;
-    }
-    
-    .shadowProject h3 {
-        font-size: 1.2rem;
-    }
-}
-
-@media screen and (max-width: 619px) {
-    .cardProject {
-        width: 350px;
-    }
-    
-    .boxTitleProject {
-        flex-direction: column;
-    }
-
-    .descriptionProject {
-        margin: 40px;
-    }
-
-    .widthIcon {
-        width: 25px;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .cardProject {
-        margin: 15px;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px; 
-        width: 95%;
-        height: 100%;
-        padding:10px;
-        box-sizing: border-box;
-        
-        
-        /* overflow: hidden; */
-    }
-    
+    /* overflow: hidden; */
+  }
 }

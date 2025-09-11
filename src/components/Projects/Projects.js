@@ -3,6 +3,7 @@ import "./Projects.css";
 import FindTheNumber from "../../images/NumberGammer.png";
 import jokesWeb from "../../images/JokesWeb.png";
 import comerIA from "../../images/comeriaImage.png";
+import digimonOnline from "../../images/digimonOnline.png";
 import SkillsImage from "../SkillsImage/SkillsImage";
 import shaktiWeb from "../../images/simonaZappoliWeb.png";
 import imgRAM from "../../images/imgRAM.png";
@@ -25,40 +26,88 @@ export default function Projects() {
     <div className="boxProjects">
       <h1 className="experience borderCard">Proyectos</h1>
       <div className="listProject">
-
+        {/* Comer-IA */}
         <div className="shadowProject borderCard flexCenter ">
-            <div className="cardProject flexCenter">
-              <img className="imgProject" src={comerIA} alt="" />
-              <div className="descriptionProject flexCenter column">
-                <div className="skills-box flexCenter rows3">
-                  <SkillsImage skill={"html"} />
-                  <SkillsImage skill={"css"} />
-                  <SkillsImage skill={"js"} />
-                  <SkillsImage skill={"nextjs"} />
-                </div>
+          <div className="cardProject flexCenter">
+            <img className="imgProject" src={comerIA} alt="" />
+            <div className="descriptionProject flexCenter column">
+              <div className="skills-box flexCenter rows3">
+                <SkillsImage skill={"html"} />
+                <SkillsImage skill={"css"} />
+                <SkillsImage skill={"js"} />
+                <SkillsImage skill={"nextjs"} />
               </div>
-            </div>
-            <div className="boxH3">
-              <div className="boxTitleProject">
-                <h1 className="color2">Comer-IA</h1>
-                <div className="btnsLink">
-                  <BtnLink to="https://www.comer-ia.com/">Ver</BtnLink>
-                  {/* <BtnLink to="https://github.com/Wahandri/ShaktiYoga.git">
-                    <img className="widthIcon" src={imgGithubBlack} alt="" />
-                  </BtnLink> */}
-                </div>
-              </div>
-              <h3>
-                <p>
-                Desarrollé una aplicación web con Next.js que genera recetas personalizadas usando la API de OpenAI. 
-                Los usuarios ingresan ingredientes y aplican filtros (tipo de comida, dificultad, dieta) para obtener recetas coherentes y detalladas. 
-                Desde el diseño de la interfaz hasta la implementación, aprendí a integrar IA en aplicaciones web, gestionar dominios DNS, desplegar en Vercel y crear interfaces responsive. 
-                </p>
-                Este proyecto me permitió mejorar en Next.js, React, CSS y el manejo de APIs externas, además de resolver desafíos como la coherencia de la IA y la optimización del rendimiento.
-              </h3>
             </div>
           </div>
-
+          <div className="boxH3">
+            <div className="boxTitleProject">
+              <h1 className="color2">Comer-IA</h1>
+              <div className="btnsLink">
+                <BtnLink to="https://www.comer-ia.com/">Ver</BtnLink>
+                {/* <BtnLink to="https://github.com/Wahandri/ShaktiYoga.git">
+                    <img className="widthIcon" src={imgGithubBlack} alt="" />
+                  </BtnLink> */}
+              </div>
+            </div>
+            <h3>
+              <p>
+                Desarrollé una aplicación web con Next.js que genera recetas
+                personalizadas usando la API de OpenAI. Los usuarios ingresan
+                ingredientes y aplican filtros (tipo de comida, dificultad,
+                dieta) para obtener recetas coherentes y detalladas. Desde el
+                diseño de la interfaz hasta la implementación, aprendí a
+                integrar IA en aplicaciones web, gestionar dominios DNS,
+                desplegar en Vercel y crear interfaces responsive.
+              </p>
+              <p>
+                Este proyecto me permitió mejorar en Next.js, React, CSS y el
+                manejo de APIs externas, además de resolver desafíos como la
+                coherencia de la IA y la optimización del rendimiento.
+              </p>
+            </h3>
+          </div>
+        </div>
+        {/* DigimonOnline */}
+        <div className="shadowProject borderCard flexCenter ">
+          <div className="cardProject flexCenter">
+            <img className="imgProject" src={digimonOnline} alt="" />
+            <div className="descriptionProject flexCenter column">
+              <div className="skills-box flexCenter rows3">
+                <SkillsImage skill={"html"} />
+                <SkillsImage skill={"css"} />
+                <SkillsImage skill={"js"} />
+                <SkillsImage skill={"nextjs"} />
+              </div>
+            </div>
+          </div>
+          <div className="boxH3">
+            <div className="boxTitleProject">
+              <h1 className="color2">Digimon-Online</h1>
+              <div className="btnsLink">
+                <BtnLink to="https://wahandri-digimon.vercel.app/">Ver</BtnLink>
+                <BtnLink to="https://github.com/Wahandri/digimon-castellano">
+                  <img className="widthIcon" src={imgGithubBlack} alt="" />
+                </BtnLink>
+              </div>
+            </div>
+            <h3>
+              <p>
+                Aplicación web para ver la serie Digimon Adventure completa en
+                castellano. Muestra todos los episodios en una galería con
+                miniaturas y permite reproducir cada capítulo directamente desde
+                la web, además de marcar los vistos para llevar un control del
+                progreso.
+              </p>
+              <p>
+                La app organiza los episodios a partir de un archivo JSON,
+                utiliza localStorage para guardar el progreso de visionado y
+                gestiona la reproducción de cada capítulo directamente desde la
+                web.
+              </p>
+            </h3>
+          </div>
+        </div>
+        {/* JokesWeb */}
         <div className="shadowProject borderCard flexCenter reverse">
           <div className="cardProject flexCenter">
             <img className="imgProject" src={jokesWeb} alt="" />
@@ -106,7 +155,7 @@ export default function Projects() {
             </h3>
           </div>
         </div>
-
+        {/* SimonaZappoli */}
         <div className="shadowProject borderCard flexCenter ">
           <div className="cardProject flexCenter">
             <img className="imgProject" src={shaktiWeb} alt="" />
@@ -146,7 +195,7 @@ export default function Projects() {
             </h3>
           </div>
         </div>
-
+        {/* FindTheNumber */}
         <div className="shadowProject borderCard flexCenter reverse">
           <div className="cardProject flexCenter">
             <img className="imgProject" src={FindTheNumber} alt="" />
@@ -181,7 +230,7 @@ export default function Projects() {
             </h3>
           </div>
         </div>
-
+        {/* Rick and Morty API */}
         <div className="shadowProject borderCard flexCenter ">
           <div className="cardProject flexCenter">
             <img className="imgProject" src={imgRAM} alt="" />
@@ -220,7 +269,6 @@ export default function Projects() {
             </h3>
           </div>
         </div>
-
       </div>
       <VideoPopup isOpen={isVideoOpen} onClose={handleCloseVideo} />
     </div>
