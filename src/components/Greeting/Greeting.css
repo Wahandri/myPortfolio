@@ -1,162 +1,151 @@
 .boxGreeting {
-    display: -webkit-box; 
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: column;
-    
-    margin: 30px;
-    padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  padding: 50px;
 }
 
 .helloImg {
-    display: -ms-grid;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-
+  display: -ms-grid;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
 }
 
 .textStart {
-    justify-content: start;
-    font-size: 25px;
-    width: 100%;
+  justify-content: start;
+  font-size: 25px;
+  width: 100%;
 }
 
 .imgMen {
-    width: 300px;
-    z-index: 2;
-    position:static;
-    border: none; /* Elimina cualquier borde predeterminado */
-    box-shadow: 0 0 20px 10px rgba(160, 216, 107, 0.29); /* Ajusta el color y la intensidad del difuminado */
-    border-radius: 10px; /* Opcional: para bordes redondeados */
-    margin-bottom: 20px;
+  width: 300px;
+  z-index: 2;
+  position: static;
+  /* margin-bottom: 20px; */
 }
 
 .divMen {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .backgroundTek {
-    position: absolute;
-    z-index: 1;
-    opacity: 0.3;
-    top: 0px;
-    height: 900px;
-    width: 600px;
+  position: absolute;
+  z-index: 1;
+  opacity: 0.3;
+  top: 0px;
+  height: 900px;
+  width: 600px;
 }
 
 .myDescription a {
-    color: #9fd86b;
+  color: #9fd86b;
 }
 
 .boxMyDescription {
-    width: 70%;
-    height: 100%;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.myDescription {
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.btnRead {
+  background-color: #9fd86b;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #9fd86b;
+}
+.btnRead:hover {
+  background-color: #60823f;
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 1450px) {
+  .textStart {
+    font-size: 25px;
+  }
+
+  .imgMen {
+    width: 240px;
+  }
+
+  .boxGreeting {
+    margin: 15px;
+    padding: 25px;
+  }
+}
+
+@media screen and (max-width: 1026px) {
+  .boxMyDescription {
+    width: 100%;
+  }
+
+  .textStart {
+    text-align: center;
+  }
+
+  .imgMen {
+    width: 200px;
+  }
+
+  .helloImg {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.myDescription {
-    padding: 15px;
-    border-radius: 10px;
-}
-
-.btnRead {
-    background-color: #9fd86b;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    color: #000000;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    border: 1px solid #9fd86b;
-} .btnRead:hover {
-    background-color: #60823f;
-    transition: all 0.3s ease-in-out;
-}
-
-@media screen and (max-width: 1450px) {
-    .textStart {
-        font-size: 25px;
-    }
-
-    .imgMen {
-        width: 240px;        
-    }
-
-
-
-    .boxGreeting {
-        margin: 15px;
-        padding: 25px;
-    }
-}
-
-@media screen and (max-width: 1026px) {
-
-    .boxMyDescription {
-        width: 100%;
-    }
-
-    .textStart {
-        text-align: center;
-    }
-
-    .imgMen {
-        width: 200px;        
-    }
-
-    .helloImg {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+  }
 }
 
 @media screen and (max-width: 853px) {
-    
-    .boxMyDescription h1 {
-        font-size: 30px;
-        width: 100%;
-    }
+  .boxMyDescription h1 {
+    font-size: 30px;
+    width: 100%;
+  }
 
-    .textStart {
-        font-size: 20px;
-        text-align: center;
-    }
-    
+  .textStart {
+    font-size: 20px;
+    text-align: center;
+  }
 
-    .boxMyDescription {
-        width: 100%;
-        font-size: 16px;
-    }
+  .boxMyDescription {
+    width: 100%;
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 445px) {
-    .textStart {
-        font-size: 15px;
-    }
+  .textStart {
+    font-size: 15px;
+  }
 
-    .boxGreeting {
-        margin: 0px;
-        padding: 0px;
-    }
+  .boxGreeting {
+    margin: 0px;
+    padding: 0px;
+  }
 }
 
 @media screen and (max-width: 445px) {
-    .boxMyDescription h1 {
-        font-size: 20px;
-    }
+  .boxMyDescription h1 {
+    font-size: 20px;
+  }
 }
-

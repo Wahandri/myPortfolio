@@ -24,10 +24,10 @@ export default function Projects() {
 
   return (
     <div className="boxProjects">
-      <h1 className="experience borderCard">Proyectos</h1>
+      <h1 className="experience borderCard">Mi Experiencia</h1>
       <div className="listProject">
         {/* Comer-IA */}
-        <div className="shadowProject borderCard flexCenter ">
+        <div className="shadowProject borderCard flexCenter reverse">
           <div className="cardProject flexCenter">
             <img className="imgProject" src={comerIA} alt="" />
             <div className="descriptionProject flexCenter column">
