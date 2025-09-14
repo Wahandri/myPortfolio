@@ -3,16 +3,21 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
-  background-color: #1e1e1e;
+  /* background-color: #e61414; */
   color: #d4d4d4;
   font-family: "Courier New", Courier, monospace;
   margin-bottom: 50px;
 }
 
+.titleBarVSC {
+  height: 30px;
+  background-color: #2f2f2f;
+}
+
 .boxHeaderVSC {
   display: flex;
-  background-color: #333;
-  border-radius: 15px 15px 0 0;
+  background-color: #181818;
+  /* border-radius: 15px 15px 0 0; */
 
   /* padding: 10px; */
 }
@@ -26,12 +31,12 @@
   align-items: center;
   padding: 10px;
   border-right: 1px solid gray;
-  background-color: #2d2d2d;
+  background-color: #181818;
   cursor: pointer;
 }
 
 .tab.activeTab {
-  background-color: #1e1e1e;
+  background-color: #1f1f1f;
   border-top: 2px solid #007acc;
 }
 
@@ -49,7 +54,7 @@
 
 .boxBodyVSC {
   flex-grow: 1;
-  background-color: #1e1e1e;
+  background-color: #1f1f1f;
   overflow: hidden; /* Evita que el contenido desborde */
 }
 

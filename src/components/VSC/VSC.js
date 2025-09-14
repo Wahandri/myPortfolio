@@ -29,9 +29,10 @@ export default function VSC() {
 
   return (
     <div className="boxVSC borderCard">
+      {/* <div className="titleBarVSC"></div> */}
       <header className="boxHeaderVSC">
         <div
-          className={`${getTabClassName("datos.json")} border-one`}
+          className={`${getTabClassName("datos.json")}`}
           onClick={() => setActiveTab("datos.json")}
         >
           <img width="30px" alt="" src={iconJson} />
