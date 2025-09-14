@@ -1,6 +1,6 @@
 .boxVSC {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   height: 100%;
   width: 100%;
   /* background-color: #e61414; */
@@ -9,6 +9,11 @@
   margin-bottom: 50px;
 }
 
+.explorerVSC {
+  width: 250px;
+  border-right: 1px solid gray;
+  background-color: #1e1e1e;
+}
 .titleBarVSC {
   height: 30px;
   background-color: #2f2f2f;
