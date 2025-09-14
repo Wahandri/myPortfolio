@@ -6,44 +6,66 @@ import iconMd from "../../images/mdIcon.png";
 import BodyMd from "../BodyMd/BodyMd";
 import BodyEnv from "../BodyEnv/BodyEnv";
 import BodyJson from "../BodyJson/BodyJson";
+import archiveIcon from "../../images/archivo.png";
+import logo from "../../images/empyVSC.png";
 
+/**
+ * Layout (izq ➜ dcha):
+ * 1) miniSidebar fija con botón para desplegar el explorador
+ * 2) explorerVSC (si está abierto), con carpeta “MiPortfolio” contraible
+ * 3) mainVSC con pestañas + contenido; la X solo aparece en la pestaña activa
+ *
+ * Controles de ventana (titleVSC):
+ * - “–” y “×/⧉” alternan plegado/desplegado de toda la ventana.
+ * - Doble clic en la barra de título también alterna el plegado.
+ */
 export default function VSC() {
-  // Lista de archivos disponibles junto con sus iconos.
   const fileList = [
     { name: "datos.json", icon: iconJson },
     { name: "SobreMi.md", icon: iconMd },
     { name: "contacto.env", icon: iconJs },
   ];
 
-  // Estado con las pestañas actualmente abiertas; por defecto están todas abiertas.
+  // Pestañas y activa
   const [openTabs, setOpenTabs] = useState(fileList.map((f) => f.name));
-
-  // Pestaña activa para determinar qué contenido mostrar.
   const [activeTab, setActiveTab] = useState("SobreMi.md");
 
-  // Abre un archivo desde el explorador (añade la pestaña si no está) y lo activa.
+  // Explorador
+  const [isFolderOpen, setIsFolderOpen] = useState(true);
+  const [isExplorerOpen, setIsExplorerOpen] = useState(true);
+
+  // Ventana plegada/desplegada (oculta todo menos la barra de título)
+  const [isWindowCollapsed, setIsWindowCollapsed] = useState(false);
+  const toggleWindowCollapsed = () => setIsWindowCollapsed((v) => !v);
+
   const handleOpenFile = (fileName) => {
-    if (!openTabs.includes(fileName)) {
-      setOpenTabs([...openTabs, fileName]);
-    }
+    if (!openTabs.includes(fileName)) setOpenTabs([...openTabs, fileName]);
     setActiveTab(fileName);
+    // En móvil, cerrar explorador al elegir archivo
+    if (typeof window !== "undefined" && window.innerWidth <= 700) {
+      setIsExplorerOpen(false);
+    }
   };
 
-  // Cierra una pestaña.  Si era la activa, selecciona otra o vacía la selección.
   const closeTab = (fileName) => {
     const newOpenTabs = openTabs.filter((tab) => tab !== fileName);
     setOpenTabs(newOpenTabs);
     if (activeTab === fileName) {
-      if (newOpenTabs.length > 0) {
-        setActiveTab(newOpenTabs[newOpenTabs.length - 1]);
-      } else {
-        setActiveTab(null);
-      }
+      setActiveTab(
+        newOpenTabs.length ? newOpenTabs[newOpenTabs.length - 1] : null
+      );
     }
   };
 
-  // Devuelve el componente de contenido según la pestaña activa.
   const renderContent = () => {
+    // Si no hay pestaña activa (se cerraron todas), muestra el logo centrado
+    if (!activeTab) {
+      return (
+        <div className="emptyState">
+          <img src={logo} alt="Logo MiPortfolio" />
+        </div>
+      );
+    }
     switch (activeTab) {
       case "SobreMi.md":
         return <BodyMd />;
@@ -56,83 +78,136 @@ export default function VSC() {
     }
   };
 
-  // Devuelve las clases CSS para una pestaña (activa o no).
-  const getTabClassName = (tabName) => {
-    return `tab ${activeTab === tabName ? "activeTab" : ""}`;
-  };
+  const getTabClassName = (tabName) =>
+    `tab ${activeTab === tabName ? "activeTab" : ""}`;
 
   return (
-    <div className="boxVSC borderCard" style={{ display: "flex" }}>
-      {/* Barra lateral del explorador */}
-      <aside className="explorerVSC" style={{ minWidth: "140px" }}>
-        <div>Explorador</div>
-        {fileList.map(({ name, icon }) => (
-          <div
-            key={name}
-            className="explorerItem"
-            onClick={() => handleOpenFile(name)}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              cursor: "pointer",
-              padding: "4px 8px",
-            }}
-          >
-            {icon && (
-              <img
-                width="18px"
-                height="18px"
-                alt=""
-                src={icon}
-                style={{ marginRight: "6px" }}
-              />
-            )}
-            <span>{name}</span>
-          </div>
-        ))}
-      </aside>
+    <div className="vscWrapper">
+      {/* Barra de título (siempre visible) */}
+      <div
+        className={`titleVSC ${isWindowCollapsed ? "collapsed" : ""}`}
+        onDoubleClick={toggleWindowCollapsed}
+        role="button"
+        aria-expanded={!isWindowCollapsed}
+        title={
+          isWindowCollapsed
+            ? "Doble clic para desplegar"
+            : "Doble clic para plegar"
+        }
+      >
+        <p className="titleLeft"></p>
+        <p className="titleCenter">MiPortfolio - Visual Wahandri Code</p>
 
-      {/* Área principal con las pestañas y el contenido */}
-      <div style={{ flexGrow: 1 }}>
-        <header className="boxHeaderVSC">
-          {openTabs.map((tabName) => {
-            const details = fileList.find((f) => f.name === tabName);
-            return (
-              <div
-                key={tabName}
-                className={getTabClassName(tabName)}
-                onClick={() => handleOpenFile(tabName)}
-                style={{ display: "flex", alignItems: "center" }}
-              >
-                {details?.icon && (
-                  <img
-                    width="18px"
-                    height="18px"
-                    alt=""
-                    src={details.icon}
-                    style={{ marginRight: "4px" }}
-                  />
-                )}
-                <p style={{ marginRight: "4px", marginBottom: 0 }}>{tabName}</p>
-                {/* Botón de cierre (la X).  Detiene la propagación para no activar la pestaña al cerrar */}
-                <span
-                  className="closeTab"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    closeTab(tabName);
-                  }}
-                  style={{ cursor: "pointer" }}
-                >
-                  &#10005;
-                </span>
-              </div>
-            );
-          })}
-        </header>
-        <div className="boxBodyVSC">
-          <div className="scrollableContent">{renderContent()}</div>
+        <div className="titleControls">
+          <button
+            className="titleBtn titleMin"
+            aria-label={isWindowCollapsed ? "Desplegar" : "Plegar"}
+            title={isWindowCollapsed ? "Desplegar" : "Plegar"}
+            onClick={toggleWindowCollapsed}
+          >
+            –
+          </button>
+          <button
+            className="titleBtn titleClose borderR"
+            aria-label={isWindowCollapsed ? "Desplegar" : "Plegar"}
+            title={isWindowCollapsed ? "Desplegar" : "Plegar"}
+            onClick={toggleWindowCollapsed}
+          >
+            {isWindowCollapsed ? "⧉" : "×"}
+          </button>
         </div>
       </div>
+
+      {/* Cuerpo (oculto si está plegado) */}
+      {!isWindowCollapsed && (
+        <div className="boxVSC">
+          {/* 1) Barra lateral fina fija */}
+          <div className="miniSidebar">
+            <button
+              className="miniSidebarBtn"
+              onClick={() => setIsExplorerOpen(!isExplorerOpen)}
+              aria-label={
+                isExplorerOpen ? "Cerrar explorador" : "Abrir explorador"
+              }
+              title={isExplorerOpen ? "Cerrar explorador" : "Abrir explorador"}
+            >
+              <img width="24" height="24" alt="" src={archiveIcon} />
+            </button>
+          </div>
+
+          {/* 2) Explorador (plegable/oculto) */}
+          <aside
+            className={`explorerVSC ${isExplorerOpen ? "open" : "closed"}`}
+            aria-hidden={!isExplorerOpen}
+          >
+            <div
+              className="folderItem"
+              onClick={() => setIsFolderOpen(!isFolderOpen)}
+              role="button"
+              aria-expanded={isFolderOpen}
+            >
+              <span className="folderChevron">{isFolderOpen ? "▼" : "▶"}</span>
+              <span>MiPortfolio</span>
+            </div>
+
+            {isFolderOpen &&
+              fileList.map(({ name, icon }) => (
+                <div
+                  key={name}
+                  className={`explorerItem ${
+                    activeTab === name ? "activeExplorerItem" : ""
+                  }`}
+                  onClick={() => handleOpenFile(name)}
+                  role="button"
+                >
+                  {icon && <img width="18" height="18" alt="" src={icon} />}
+                  <span>{name}</span>
+                </div>
+              ))}
+          </aside>
+
+          {/* 3) Área principal: pestañas + contenido */}
+          <div className="mainVSC">
+            <header className="boxHeaderVSC">
+              {openTabs.map((tabName) => {
+                const details = fileList.find((f) => f.name === tabName);
+                return (
+                  <div
+                    key={tabName}
+                    className={getTabClassName(tabName)}
+                    onClick={() => handleOpenFile(tabName)}
+                  >
+                    {details?.icon && (
+                      <img width="18" height="18" alt="" src={details.icon} />
+                    )}
+                    <p>{tabName}</p>
+                    {/* X solo en pestaña activa y a la derecha */}
+                    {tabName === activeTab && (
+                      <span
+                        className="closeTab"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          closeTab(tabName);
+                        }}
+                        aria-label="Cerrar pestaña"
+                        title="Cerrar pestaña"
+                      >
+                        <div className="XIcon" role="img" aria-hidden="true">
+                          x
+                        </div>
+                      </span>
+                    )}
+                  </div>
+                );
+              })}
+            </header>
+
+            <div className="boxBodyVSC">
+              <div className="scrollableContent">{renderContent()}</div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

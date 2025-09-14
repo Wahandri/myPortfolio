@@ -57,6 +57,10 @@
   align-items: center;
 }
 
+.borderR {
+  margin-right: 13px;
+}
+
 .btw {
   justify-content: space-between;
   align-items: center;

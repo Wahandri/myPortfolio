@@ -1,108 +1,292 @@
+/* ==== WRAPPER COMÚN: garantiza mismo ancho para titleVSC y boxVSC ==== */
+.vscWrapper {
+  width: 100%;
+  /* Si quieres limitarlo, descomenta:
+  max-width: 1200px;
+  margin: 0 auto;
+  */
+  border: 1px solid #3a3a3a;
+  border-radius: 4px;
+  overflow: hidden; /* que los bordes del wrapper manden */
+  background: #1a1a1a; /* base */
+}
+
+/* ==== BARRA DE TÍTULO (siempre visible) ==== */
+.titleVSC {
+  width: 100%;
+  padding: 6px 10px;
+  font-size: 16px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2f2f2f;
+  color: #e0e0e0;
+  user-select: none;
+  border-bottom: 1px solid #3a3a3a;
+}
+.titleVSC.collapsed {
+  /* cuando no hay cuerpo debajo, mantenemos la separación del wrapper */
+}
+.titleLeft {
+  margin: 0;
+  width: 24px;
+}
+.titleCenter {
+  margin: 0;
+  text-align: center;
+  flex: 1;
+}
+
+.titleControls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.titleBtn {
+  width: 28px;
+  height: 24px;
+  line-height: 22px;
+  text-align: center;
+  border: 1px solid #3a3a3a;
+  background: #2f2f2f;
+  color: #d4d4d4;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0;
+  font-size: 16px;
+}
+.titleBtn:hover {
+  background: #3a3a3a;
+}
+.titleClose:hover {
+  background: #383838;
+} /* toque de peligro */
+.titleMin:hover {
+  background: #3a3a3a;
+}
+
+/* ==== LAYOUT PRINCIPAL (fila: miniSidebar | explorer | main) ==== */
 .boxVSC {
   display: flex;
-  /* flex-direction: column; */
   height: 100%;
   width: 100%;
-  /* background-color: #e61414; */
   color: #d4d4d4;
   font-family: "Courier New", Courier, monospace;
-  margin-bottom: 50px;
+  position: relative;
+  /* OJO: quitamos bordes aquí para que mande el wrapper */
+  /* margin-bottom: 50px;  <- si lo necesitas, añádelo fuera del wrapper */
 }
 
-.explorerVSC {
-  width: 250px;
-  border-right: 1px solid gray;
+/* ==== 1) MINI SIDEBAR FIJA ==== */
+.miniSidebar {
+  width: 54px;
   background-color: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8px;
+  border-right: 1px solid #333;
+  flex-shrink: 0;
 }
-.titleBarVSC {
-  height: 30px;
-  background-color: #2f2f2f;
+.miniSidebarBtn {
+  background: none;
+  border: none;
+  color: #d4d4d4;
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+.miniSidebarBtn:hover {
+  background: #2a2a2a;
 }
 
+/* ==== 2) EXPLORADOR PLEGABLE ==== */
+.explorerVSC {
+  width: 220px;
+  background-color: #1f1f1f;
+  border-right: 1px solid #333;
+  transition: width 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.explorerVSC.closed {
+  width: 0;
+  border-right: none;
+  opacity: 0;
+  pointer-events: none;
+}
+.explorerVSC.open {
+  opacity: 1;
+}
+
+/* Carpeta proyecto */
+.folderItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+.folderItem:hover {
+  background-color: #2a2a2a;
+}
+.folderChevron {
+  width: 14px;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Archivos */
+.explorerItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+  margin-left: 16px; /* jerarquía dentro de la carpeta */
+  border-left: 2px solid transparent;
+}
+.explorerItem:hover {
+  background-color: #2a2a2a; /* hover más claro */
+}
+.activeExplorerItem {
+  background-color: #2a2a2a;
+  border-left-color: #007acc; /* acento azul tipo VS Code */
+  font-weight: 600;
+}
+
+/* ==== 3) ÁREA PRINCIPAL ==== */
+.mainVSC {
+  flex-grow: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Pestañas */
 .boxHeaderVSC {
   display: flex;
   background-color: #181818;
-  /* border-radius: 15px 15px 0 0; */
-
-  /* padding: 10px; */
 }
-
-.border-one {
-  border-radius: 15px 0 0 0;
-}
-
 .tab {
   display: flex;
   align-items: center;
+  gap: 6px;
   padding: 10px;
   border-right: 1px solid gray;
   background-color: #181818;
   cursor: pointer;
+  min-width: 0;
 }
-
+.tab p {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .tab.activeTab {
   background-color: #1f1f1f;
   border-top: 2px solid #007acc;
 }
+.closeTab {
+  margin-left: auto; /* empuja la X a la derecha */
+  padding-left: 6px;
+}
 
-.headerVSC {
-  font-size: small;
-  position: relative;
-  margin-top: 0;
-  width: max-content;
+.XIcon {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 7px;
+  border-radius: 4px;
+}
+.XIcon:hover {
   background-color: #333;
 }
 
-.tab img {
-  margin-right: 5px;
-}
-
+/* Panel de contenido */
 .boxBodyVSC {
   flex-grow: 1;
   background-color: #1f1f1f;
-  overflow: hidden; /* Evita que el contenido desborde */
+  overflow: hidden;
 }
-
 .scrollableContent {
-  height: 400px; /* Altura fija del contenido */
-  overflow-y: auto; /* Hace que haya scroll si el contenido es más largo */
-  padding: 20px; /* Espaciado interior para el contenido */
+  height: 400px;
+  overflow-y: auto;
+  padding: 20px;
 }
 
-/* Estilos de la barra de desplazamiento */
+/* Estado vacío (sin pestañas): logo centrado */
+.emptyState {
+  height: 100%;
+  min-height: 360px; /* asegura altura visible dentro del scrollableContent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.emptyState img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain; /* asegura que la imagen siempre sea visible */
+  opacity: 0.2; /* efecto marca de agua */
+}
+
+/* Scrollbar */
 .scrollableContent::-webkit-scrollbar {
-  width: 10px; /* Ancho de la barra de desplazamiento */
+  width: 10px;
 }
-
 .scrollableContent::-webkit-scrollbar-track {
-  background-color: #1e1e1e; /* Color del fondo de la barra de desplazamiento */
+  background-color: #1e1e1e;
 }
-
 .scrollableContent::-webkit-scrollbar-thumb {
-  background-color: #333; /* Color del "thumb" (la parte deslizante de la barra) */
-  border-radius: 5px; /* Borde redondeado del "thumb" */
+  background-color: #333;
+  border-radius: 5px;
 }
 
+/* ==== RESPONSIVE ==== */
 @media (max-width: 1025px) {
   .boxVSC {
-    width: 90%;
+    width: 100%;
   }
-
   .boxHeaderVSC img {
     width: 20px;
   }
-
   .tab {
     font-size: 15px;
   }
 }
 
+/* En móvil el explorador se comporta como drawer encima del contenido */
 @media (max-width: 700px) {
-  .tab {
-    font-size: 13px;
-    padding: 5px;
+  .explorerVSC {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 54px; /* a la derecha de la miniSidebar */
+    transform: translateX(-100%);
+    width: 70vw;
+    max-width: 280px;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.45);
+    z-index: 10;
+    opacity: 1; /* controlado por clases open/closed */
+  }
+  .explorerVSC.open {
+    transform: translateX(0);
+  }
+  .explorerVSC.closed {
+    transform: translateX(-100%);
+    width: 70vw; /* mantiene tamaño para animación */
   }
 
+  .tab {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
   .boxHeaderVSC img {
     width: 15px;
   }
