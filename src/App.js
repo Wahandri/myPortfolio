@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import Start from "./components/Start/Start";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
+import SkillsOverview from "./components/SkillsOverview/SkillsOverview";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
             <>
               <Start />
               <About />
+              <SkillsOverview />
               <Projects />
             </>
           }

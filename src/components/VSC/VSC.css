@@ -1,0 +1,224 @@
+.vsc {
+  background: #0f0f0f;
+  border: 1px solid #1f1f1f;
+  border-radius: 18px;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.vsc__header {
+  display: none;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.vsc__toggle {
+  appearance: none;
+  background: #1c1c1c;
+  border: 1px solid #2f2f2f;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+}
+
+.vsc__layout {
+  display: flex;
+  min-height: 460px;
+}
+
+.vsc__sidebar {
+  width: 240px;
+  background: #111111;
+  border-right: 1px solid #1f1f1f;
+  padding: 1rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.vsc__sidebarTitle {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: #8a8a8a;
+  margin: 0;
+}
+
+.vsc__fileList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.vsc__fileButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: transparent;
+  color: #cfcfcf;
+  border: none;
+  border-radius: 8px;
+  padding: 0.45rem 0.55rem;
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.9rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.vsc__fileButton:hover,
+.vsc__fileButton:focus-visible {
+  background: #1d1d1d;
+  color: #ffffff;
+}
+
+.vsc__fileButton.is-active {
+  background: #242424;
+  color: #ffffff;
+}
+
+.vsc__fileIcon {
+  width: 1.5rem;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.vsc__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #181818;
+}
+
+.vsc__tabs {
+  display: flex;
+  align-items: stretch;
+  background: #141414;
+  border-bottom: 1px solid #1f1f1f;
+  overflow-x: auto;
+}
+
+.vsc__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 0.9rem;
+  border-right: 1px solid #1f1f1f;
+  cursor: pointer;
+  color: #b5b5b5;
+  font-size: 0.9rem;
+  user-select: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.vsc__tab.is-active {
+  background: #1f1f1f;
+  color: #ffffff;
+}
+
+.vsc__tabClose {
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+
+.vsc__content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+.vscBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: #f5f5f5;
+}
+
+.vscBody h2 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.vscBody p,
+.vscBody pre,
+.vscBody dl {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.vscBody pre {
+  background: #101010;
+  border-radius: 12px;
+  padding: 1rem;
+  color: #9cdcfe;
+  font-family: "Fira Code", "SFMono-Regular", Consolas, "Liberation Mono", Menlo,
+    monospace;
+  white-space: pre-wrap;
+}
+
+.vscBody dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5rem 1rem;
+}
+
+.vscBody dt {
+  color: #9fd86b;
+}
+
+.vscBody dd {
+  margin: 0;
+}
+
+.vscBody a {
+  color: #9fd86b;
+}
+
+@media (max-width: 960px) {
+  .vsc__layout {
+    flex-direction: column;
+  }
+
+  .vsc__header {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .vsc__sidebar {
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .vsc__sidebar.is-open {
+    transform: translateX(0);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .vsc__main {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .vsc__content {
+    padding: 1.1rem;
+  }
+
+  .vscBody h2 {
+    font-size: 1.2rem;
+  }
+}
