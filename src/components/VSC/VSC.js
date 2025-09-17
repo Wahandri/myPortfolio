@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./VSC.css";
 import iconJs from "../../images/jsIcon.png";
 import iconJson from "../../images/jsonIcon.png";
@@ -37,6 +37,25 @@ export default function VSC() {
   // Ventana plegada/desplegada (oculta todo menos la barra de título)
   const [isWindowCollapsed, setIsWindowCollapsed] = useState(false);
   const toggleWindowCollapsed = () => setIsWindowCollapsed((v) => !v);
+
+  // Cerrar explorador por defecto en móviles en el primer render
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.innerWidth <= 700) {
+      setIsExplorerOpen(false);
+    }
+  }, []);
+
+  // Si el viewport vuelve a ser >700px, reabrimos el explorador automáticamente
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const onResize = () => {
+      if (window.innerWidth > 700) {
+        setIsExplorerOpen(true);
+      }
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
   const handleOpenFile = (fileName) => {
     if (!openTabs.includes(fileName)) setOpenTabs([...openTabs, fileName]);
@@ -82,7 +101,7 @@ export default function VSC() {
     `tab ${activeTab === tabName ? "activeTab" : ""}`;
 
   return (
-    <div className="vscWrapper">
+    <div className={`vscWrapper ${isWindowCollapsed ? "collapsed" : ""}`}>
       {/* Barra de título (siempre visible) */}
       <div
         className={`titleVSC ${isWindowCollapsed ? "collapsed" : ""}`}

@@ -1,17 +1,16 @@
-/* ==== WRAPPER COMÚN: garantiza mismo ancho para titleVSC y boxVSC ==== */
+/* ==== WRAPPER COMÚN ==== */
 .vscWrapper {
   width: 100%;
-  /* Si quieres limitarlo, descomenta:
-  max-width: 1200px;
-  margin: 0 auto;
-  */
+  height: 600px; /* Altura fija para todo el componente */
+  display: flex;
+  flex-direction: column;
   border: 1px solid #3a3a3a;
   border-radius: 4px;
-  overflow: hidden; /* que los bordes del wrapper manden */
-  background: #1a1a1a; /* base */
+  overflow: hidden;
+  background: #1a1a1a;
 }
 
-/* ==== BARRA DE TÍTULO (siempre visible) ==== */
+/* ==== BARRA DE TÍTULO ==== */
 .titleVSC {
   width: 100%;
   padding: 6px 10px;
@@ -26,8 +25,8 @@
   border-bottom: 1px solid #3a3a3a;
 }
 .titleVSC.collapsed {
-  /* cuando no hay cuerpo debajo, mantenemos la separación del wrapper */
 }
+
 .titleLeft {
   margin: 0;
   width: 24px;
@@ -37,7 +36,6 @@
   text-align: center;
   flex: 1;
 }
-
 .titleControls {
   display: flex;
   gap: 8px;
@@ -61,24 +59,24 @@
 }
 .titleClose:hover {
   background: #383838;
-} /* toque de peligro */
+}
 .titleMin:hover {
   background: #3a3a3a;
 }
 
-/* ==== LAYOUT PRINCIPAL (fila: miniSidebar | explorer | main) ==== */
+/* ==== LAYOUT PRINCIPAL (miniSidebar | explorer | main) ==== */
 .boxVSC {
+  flex: 1;
   display: flex;
   height: 100%;
   width: 100%;
   color: #d4d4d4;
   font-family: "Courier New", Courier, monospace;
   position: relative;
-  /* OJO: quitamos bordes aquí para que mande el wrapper */
-  /* margin-bottom: 50px;  <- si lo necesitas, añádelo fuera del wrapper */
+  overflow: hidden;
 }
 
-/* ==== 1) MINI SIDEBAR FIJA ==== */
+/* ==== MINI SIDEBAR ==== */
 .miniSidebar {
   width: 54px;
   background-color: #1e1e1e;
@@ -103,12 +101,12 @@
   background: #2a2a2a;
 }
 
-/* ==== 2) EXPLORADOR PLEGABLE ==== */
+/* ==== EXPLORADOR ==== */
 .explorerVSC {
   width: 220px;
   background-color: #1f1f1f;
   border-right: 1px solid #333;
-  transition: width 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+  transition: width 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -122,7 +120,7 @@
   opacity: 1;
 }
 
-/* Carpeta proyecto */
+/* Carpeta */
 .folderItem {
   display: flex;
   align-items: center;
@@ -147,19 +145,19 @@
   gap: 6px;
   padding: 4px 8px;
   cursor: pointer;
-  margin-left: 16px; /* jerarquía dentro de la carpeta */
+  margin-left: 16px;
   border-left: 2px solid transparent;
 }
 .explorerItem:hover {
-  background-color: #2a2a2a; /* hover más claro */
+  background-color: #2a2a2a;
 }
 .activeExplorerItem {
   background-color: #2a2a2a;
-  border-left-color: #007acc; /* acento azul tipo VS Code */
+  border-left-color: #007acc;
   font-weight: 600;
 }
 
-/* ==== 3) ÁREA PRINCIPAL ==== */
+/* ==== ÁREA PRINCIPAL ==== */
 .mainVSC {
   flex-grow: 1;
   min-width: 0;
@@ -167,7 +165,7 @@
   flex-direction: column;
 }
 
-/* Pestañas */
+/* ==== PESTAÑAS ==== */
 .boxHeaderVSC {
   display: flex;
   background-color: #181818;
@@ -193,10 +191,9 @@
   border-top: 2px solid #007acc;
 }
 .closeTab {
-  margin-left: auto; /* empuja la X a la derecha */
+  margin-left: auto;
   padding-left: 6px;
 }
-
 .XIcon {
   font-size: 20px;
   cursor: pointer;
@@ -207,22 +204,24 @@
   background-color: #333;
 }
 
-/* Panel de contenido */
+/* ==== PANEL DE CONTENIDO ==== */
 .boxBodyVSC {
-  flex-grow: 1;
+  flex: 1;
   background-color: #1f1f1f;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .scrollableContent {
-  height: 400px;
+  flex: 1;
   overflow-y: auto;
   padding: 20px;
 }
 
-/* Estado vacío (sin pestañas): logo centrado */
+/* ==== LOGO ESTADO VACÍO ==== */
 .emptyState {
   height: 100%;
-  min-height: 360px; /* asegura altura visible dentro del scrollableContent */
+  min-height: 360px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -232,11 +231,11 @@
   max-height: 100%;
   width: auto;
   height: auto;
-  object-fit: contain; /* asegura que la imagen siempre sea visible */
-  opacity: 0.2; /* efecto marca de agua */
+  object-fit: contain;
+  opacity: 0.2;
 }
 
-/* Scrollbar */
+/* ==== SCROLLBAR ==== */
 .scrollableContent::-webkit-scrollbar {
   width: 10px;
 }
@@ -261,26 +260,26 @@
   }
 }
 
-/* En móvil el explorador se comporta como drawer encima del contenido */
 @media (max-width: 700px) {
   .explorerVSC {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 54px; /* a la derecha de la miniSidebar */
+    left: 54px;
     transform: translateX(-100%);
     width: 70vw;
     max-width: 280px;
     box-shadow: 2px 0 12px rgba(0, 0, 0, 0.45);
     z-index: 10;
-    opacity: 1; /* controlado por clases open/closed */
+    opacity: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
   .explorerVSC.open {
     transform: translateX(0);
   }
   .explorerVSC.closed {
     transform: translateX(-100%);
-    width: 70vw; /* mantiene tamaño para animación */
+    width: 70vw;
   }
 
   .tab {
@@ -290,4 +289,15 @@
   .boxHeaderVSC img {
     width: 15px;
   }
+}
+
+.vscWrapper {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  transition: height 0.3s ease;
+}
+
+.vscWrapper.collapsed {
+  height: 35px;
 }
