@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./VSC.css";
 import iconJs from "../../images/jsIcon.png";
+import iconEnv from "../../images/env.png";
 import iconJson from "../../images/jsonIcon.png";
 import iconMd from "../../images/mdIcon.png";
 import BodyMd from "../BodyMd/BodyMd";
 import BodyEnv from "../BodyEnv/BodyEnv";
 import BodyJson from "../BodyJson/BodyJson";
+import BodyJS from "../BodyJs/BodyJs";
 import archiveIcon from "../../images/archivo.png";
 import logo from "../../images/empyVSC.png";
 
@@ -23,7 +25,8 @@ export default function VSC() {
   const fileList = [
     { name: "datos.json", icon: iconJson },
     { name: "SobreMi.md", icon: iconMd },
-    { name: "contacto.env", icon: iconJs },
+    { name: "contacto.env", icon: iconEnv },
+    { name: "Skills.js", icon: iconJs },
   ];
 
   // Pestañas y activa
@@ -92,6 +95,8 @@ export default function VSC() {
         return <BodyEnv />;
       case "datos.json":
         return <BodyJson />;
+      case "Skills.js":
+        return <BodyJS />;
       default:
         return null;
     }
