@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Start from "./components/Start/Start";
 import CV from "./components/CV/CV";
+import proyectosData from "./data/proyectosData";
 
 function App() {
   return (
@@ -12,8 +13,13 @@ function App() {
       <div className="App borderCardBg">
         <Header />
         <div className="paddingApp">
+          {/**
+           * Ejemplo de uso directo del carrusel:
+           * import ProyectosCarousel from "./components/ProyectosCarousel/ProyectosCarousel";
+           * <ProyectosCarousel proyectos={proyectosData} />
+           */}
           <Routes>
-            <Route path="/" element={<Start />} />
+            <Route path="/" element={<Start proyectos={proyectosData} />} />
             <Route path="/cv" element={<CV />} />
           </Routes>
         </div>

@@ -2,15 +2,15 @@ import React from 'react';
 import "./Start.css"
 import Greeting from "../Greeting/Greeting"
 // import Skills from '../Skills/Skills';
-import Projects from '../Projects/Projects';
+import ProyectosCarousel from "../ProyectosCarousel/ProyectosCarousel";
 
 
-export default function Start() {
+export default function Start({ proyectos = [] }) {
   return (
     <div>
         <Greeting />
         {/* <Skills /> */}
-        <Projects />
+        <ProyectosCarousel proyectos={proyectos} />
     </div>
   )
 }
