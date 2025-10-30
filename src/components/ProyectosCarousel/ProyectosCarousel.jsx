@@ -1,98 +1,136 @@
-import React, { useMemo, useRef } from "react";
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "./ProyectosCarousel.css";
+import VideoPopup from "../VideoPopup/VideoPopup";
 
-const FALLBACK_PROYECTOS = [];
+const MAX_LENGTH = 380;
 
-const ProyectosCarousel = ({ proyectos = FALLBACK_PROYECTOS, titulo = "Proyectos" }) => {
-  const viewportRef = useRef(null);
+const ProyectosCarousel = ({ proyectos = [] }) => {
+  const [videoOpen, setVideoOpen] = useState(false);
+  const [videoUrl, setVideoUrl] = useState("");
+  const [modalContent, setModalContent] = useState(null);
 
-  const elementos = useMemo(() => proyectos ?? FALLBACK_PROYECTOS, [proyectos]);
-
-  const handleScroll = (direccion) => {
-    const viewport = viewportRef.current;
-    if (!viewport) return;
-
-    const card = viewport.querySelector(".proyectos-carousel__card");
-    const cardWidth = card ? card.offsetWidth : viewport.offsetWidth;
-    const gap = parseFloat(getComputedStyle(viewport).getPropertyValue("--card-gap")) || 24;
-
-    viewport.scrollBy({
-      left: direccion * (cardWidth + gap),
-      behavior: "smooth"
-    });
+  const openVideo = (url) => {
+    setVideoUrl(url);
+    setVideoOpen(true);
   };
 
-  if (!elementos.length) {
-    return (
-      <section className="proyectos-carousel">
-        <div className="proyectos-carousel__header">
-          <h2>{titulo}</h2>
-        </div>
-        <p className="proyectos-carousel__empty">No hay proyectos para mostrar todavía.</p>
-      </section>
-    );
-  }
+  const closeVideo = () => setVideoOpen(false);
+
+  const openModal = (titulo, descripcion) => {
+    setModalContent({ titulo, descripcion });
+  };
+
+  const closeModal = () => setModalContent(null);
 
   return (
-    <section className="proyectos-carousel">
-      <div className="proyectos-carousel__header">
-        <h2>{titulo}</h2>
-        <div className="proyectos-carousel__controls" aria-hidden={elementos.length <= 1}>
-          <button
-            type="button"
-            className="proyectos-carousel__nav"
-            onClick={() => handleScroll(-1)}
-            aria-label="Desplazar a la izquierda"
-          >
-            &lt;
-          </button>
-          <button
-            type="button"
-            className="proyectos-carousel__nav"
-            onClick={() => handleScroll(1)}
-            aria-label="Desplazar a la derecha"
-          >
-            &gt;
-          </button>
-        </div>
-      </div>
-      <div className="proyectos-carousel__viewport" ref={viewportRef}>
-        <div className="proyectos-carousel__track">
-          {elementos.map((proyecto) => (
-            <article className="proyectos-carousel__card" key={proyecto.id ?? proyecto.titulo}>
-              <div className="proyectos-carousel__image-wrapper">
-                {proyecto.imagen ? (
-                  <img src={proyecto.imagen} alt={proyecto.titulo} loading="lazy" />
-                ) : (
-                  <div className="proyectos-carousel__image-placeholder">{proyecto.titulo?.[0] ?? ""}</div>
+    <div className="proyectos-carousel-container">
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        loop
+        speed={700}
+        spaceBetween={30}
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        pagination={{ clickable: true, dynamicBullets: true }}
+        navigation
+        breakpoints={{
+          0: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+        className="proyectos-swiper"
+      >
+        {proyectos.map((proyecto) => {
+          const textoLargo =
+            proyecto.descripcion && proyecto.descripcion.length > MAX_LENGTH;
+          const textoVisible = textoLargo
+            ? proyecto.descripcion.slice(0, MAX_LENGTH) + "..."
+            : proyecto.descripcion;
+
+          return (
+            <SwiperSlide key={proyecto.id || proyecto.titulo}>
+              <div className="card">
+                {proyecto.imagen && (
+                  <img
+                    src={proyecto.imagen}
+                    alt={proyecto.titulo}
+                    className="card-image"
+                  />
                 )}
+
+                <p className="badge">{proyecto.titulo}</p>
+
+                {/* Descripción clicable */}
+                {proyecto.descripcion && (
+                  <div
+                    className="card-description clickable"
+                    onClick={() =>
+                      openModal(proyecto.titulo, proyecto.descripcion)
+                    }
+                  >
+                    <p>{textoVisible}</p>
+                  </div>
+                )}
+
+                {/* Botones */}
+                {Array.isArray(proyecto.enlaces) &&
+                  proyecto.enlaces.length > 0 && (
+                    <div className="card-actions">
+                      {proyecto.enlaces.map((enlace, index) => {
+                        const esVideo =
+                          enlace.etiqueta.toLowerCase().includes("demo") &&
+                          enlace.url.includes("youtu");
+
+                        return esVideo ? (
+                          <button
+                            key={index}
+                            className="action-button primary"
+                            onClick={() => openVideo(enlace.url)}
+                          >
+                            {enlace.etiqueta}
+                          </button>
+                        ) : (
+                          <a
+                            key={index}
+                            href={enlace.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className={`action-button ${
+                              enlace.tipo === "primario" ? "primary" : ""
+                            }`}
+                          >
+                            {enlace.etiqueta}
+                          </a>
+                        );
+                      })}
+                    </div>
+                  )}
               </div>
-              <div className="proyectos-carousel__body">
-                <h3>{proyecto.titulo}</h3>
-                {proyecto.descripcion && <p>{proyecto.descripcion}</p>}
-              </div>
-              {Array.isArray(proyecto.enlaces) && proyecto.enlaces.length > 0 && (
-                <div className="proyectos-carousel__actions">
-                  {proyecto.enlaces.map((enlace) => (
-                    <a
-                      key={`${proyecto.id ?? proyecto.titulo}-${enlace.etiqueta}`}
-                      className={`proyectos-carousel__action ${
-                        enlace.tipo === "primario" ? "proyectos-carousel__action--primary" : ""
-                      }`}
-                      href={enlace.url}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {enlace.etiqueta}
-                    </a>
-                  ))}
-                </div>
-              )}
-            </article>
-          ))}
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
+
+      {/* Popup del video */}
+      <VideoPopup isOpen={videoOpen} onClose={closeVideo} videoUrl={videoUrl} />
+
+      {/* Modal del texto completo */}
+      {modalContent && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={closeModal}>
+              ✕
+            </button>
+            <h3>{modalContent.titulo}</h3>
+            <p>{modalContent.descripcion}</p>
+          </div>
         </div>
-      </div>
-    </section>
+      )}
+    </div>
   );
 };
 

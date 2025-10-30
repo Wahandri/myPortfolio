@@ -9,68 +9,95 @@ const proyectosData = [
   {
     id: "comer-ia",
     titulo: "Comer-IA",
-    descripcion:
-      "Aplicación con Next.js que genera recetas personalizadas usando la API de OpenAI, con filtros por ingredientes, dieta y dificultad.",
+    descripcion: `Desarrollé una aplicación web con Next.js que genera recetas personalizadas usando la API de OpenAI. 
+    Los usuarios ingresan ingredientes y aplican filtros (tipo de comida, dificultad, dieta) para obtener recetas coherentes y detalladas. 
+    Desde el diseño de la interfaz hasta la implementación, aprendí a integrar IA en aplicaciones web, gestionar dominios DNS, desplegar en Vercel y crear interfaces responsive.
+
+    Este proyecto me permitió mejorar en Next.js, React, CSS y el manejo de APIs externas, además de resolver desafíos como la coherencia de la IA y la optimización del rendimiento.`,
     imagen: comerIA,
     enlaces: [
-      { etiqueta: "Ver demo", url: "https://www.comer-ia.com/", tipo: "primario" }
-    ]
+      { etiqueta: "Visitar web", url: "https://www.comer-ia.com/", tipo: "primario" },
+    ],
+    skills: ["html", "css", "js", "nextjs"],
   },
   {
     id: "digimon-online",
-    titulo: "Digimon Online",
-    descripcion:
-      "Galería responsive que organiza episodios de Digimon Adventure y guarda el progreso de visionado con localStorage.",
+    titulo: "Digimon-Online",
+    descripcion: `Aplicación web para ver la serie Digimon Adventure completa en castellano. 
+    Muestra todos los episodios en una galería con miniaturas, además de marcar los vistos para llevar un control del progreso.
+
+    La app organiza los episodios a partir de un archivo JSON, utiliza localStorage para guardar el progreso de visionado y gestiona la reproducción de cada capítulo directamente desde la web.`,
     imagen: digimonOnline,
     enlaces: [
-      { etiqueta: "Ver demo", url: "https://wahandri-digimon.vercel.app/", tipo: "primario" },
-      { etiqueta: "Código", url: "https://github.com/Wahandri/digimon-castellano" }
-    ]
+      { etiqueta: "Visitar web", url: "https://wahandri-digimon.vercel.app/", tipo: "primario" },
+      // { etiqueta: "Código", url: "https://github.com/Wahandri/digimon-castellano" },
+    ],
+    skills: ["html", "css", "js", "nextjs"],
   },
   {
     id: "wahaha",
     titulo: "Wahaha",
-    descripcion:
-      "Plataforma full stack para descubrir, escuchar y guardar chistes, con valoraciones y favoritos en tiempo real.",
+    descripcion: `Wahaha es una plataforma interactiva y divertida donde los usuarios pueden ver, escuchar, puntuar y añadir a favoritos 
+    chistes subidos por otros miembros de la comunidad.
+
+    Diseñada como una pequeña red social para compartir y evaluar chistes, Wahaha permite a los usuarios disfrutar de una experiencia única 
+    al combinar elementos de humor y socialización.
+
+    Este es un proyecto full stack que desarrollé desde cero como parte de mi proyecto final de curso, el cual completé con éxito. 
+    Con el tiempo, he realizado mejoras específicas en la experiencia de usuario y diseño.`,
     imagen: jokesWeb,
     enlaces: [
       { etiqueta: "Ver demo", url: "https://youtu.be/5QpQYx3MyBo", tipo: "primario" },
-      { etiqueta: "Código", url: "https://github.com/Wahandri/JokesWeb" }
-    ]
+      // { etiqueta: "Código", url: "https://github.com/Wahandri/JokesWeb" },
+    ],
+    skills: ["html", "css", "js", "react"],
   },
   {
     id: "simona-zappoli",
-    titulo: "Simona Zappoli",
-    descripcion:
-      "Landing page profesional desarrollada en React para un negocio de coaching, con diseño limpio y contenido dinámico.",
+    titulo: "SimonaZappoli",
+    descripcion: `Simonazappoli es una web estática que diseñé y creé para el negocio freelance de una amiga dedicada al coaching emocional, 
+    nutrición, masajes, meditación y yoga.
+
+    Este proyecto fue una oportunidad para acercarme a un entorno laboral real, donde tuve que escuchar peticiones, solucionar problemas 
+    y trabajar en el diseño, a pesar de no ser diseñador. 
+    A través de reuniones online y telefónicas con Simona, logramos definir un diseño que cumpliera con sus expectativas y ofreciera una 
+    experiencia de usuario cómoda.`,
     imagen: shaktiWeb,
     enlaces: [
-      { etiqueta: "Ver demo", url: "https://simona-zappoli.pages.dev/", tipo: "primario" },
-      { etiqueta: "Código", url: "https://github.com/Wahandri/ShaktiYoga" }
-    ]
+      { etiqueta: "Visitar web", url: "https://simona-zappoli.pages.dev/", tipo: "primario" },
+      // { etiqueta: "Código", url: "https://github.com/Wahandri/ShaktiYoga" },
+    ],
+    skills: ["html", "css", "js", "react"],
   },
   {
     id: "adivina-el-numero",
     titulo: "Adivina el Número",
-    descripcion:
-      "Juego web clásico creado con HTML, CSS y JavaScript para practicar lógica y manipulación del DOM.",
+    descripcion: `Este juego simple hecho con HTML, CSS y JavaScript desafía al jugador a adivinar un número secreto 
+    que varía en dificultad a medida que avanzas de nivel.
+
+    Creado principalmente como ejercicio para practicar lógica y fortalecer mis habilidades en JavaScript.`,
     imagen: findTheNumber,
     enlaces: [
       { etiqueta: "Jugar", url: "https://gessthenumber.pages.dev/", tipo: "primario" },
-      { etiqueta: "Código", url: "https://github.com/Wahandri/GessTheNumber" }
-    ]
+      // { etiqueta: "Código", url: "https://github.com/Wahandri/GessTheNumber" },
+    ],
+    skills: ["html", "css", "js"],
   },
   {
     id: "rick-and-morty",
-    titulo: "Rick and Morty",
-    descripcion:
-      "Explorador de personajes con scroll infinito y búsqueda instantánea, construido consumiendo una API pública.",
+    titulo: "Rick and Morty API",
+    descripcion: `Esta es una web sencilla que consume una API pública de Rick y Morty. 
+    Permite explorar todos los personajes de la serie con un scroll infinito y cuenta con un input de búsqueda que filtra 
+    los personajes a medida que se escribe.
+
+    Inspirado por mi pasión por la serie, me dediqué especialmente al diseño CSS para crear una experiencia visual atractiva.`,
     imagen: rickAndMorty,
     enlaces: [
-      { etiqueta: "Ver demo", url: "https://rick-and-morty-characters.pages.dev/", tipo: "primario" },
-      { etiqueta: "Código", url: "https://github.com/Wahandri/Characters-Rick-and-Morty" }
-    ]
-  }
+      { etiqueta: "Visitar web", url: "https://rick-and-morty-characters.pages.dev/", tipo: "primario" },
+      // { etiqueta: "Código", url: "https://github.com/Wahandri/Characters-Rick-and-Morty" },
+    ],
+    skills: ["html", "css", "js", "react"],
+  },
 ];
 
 export default proyectosData;
