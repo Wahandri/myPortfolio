@@ -4,11 +4,13 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export default function BodyEnv() {
-  const { contacto, ubicacion } = datos;
+  const { contacto = {}, ubicacion = '' } = datos;
+  const email = contacto?.email ?? '';
+  const linkedin = contacto?.linkedin ?? '';
 
   const env = `# contacto.env
-EMAIL=${contacto.email}
-LINKEDIN=${contacto.linkedin}
+EMAIL=${email}
+LINKEDIN=${linkedin}
 LOCATION="${ubicacion}"`;
 
   return (
