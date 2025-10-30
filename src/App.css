@@ -104,10 +104,24 @@
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.55);
 }
 
-.borderCardWhite {
-  border-radius: 50px;
-  background: #e0e0e0;
-  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+.borderCard2 {
+    border-radius: 20px;
+  background: linear-gradient(
+    170deg,
+    rgba(88, 86, 86, 0.623) 0%,
+    rgb(63, 63, 63) 100%
+  );
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.55);
+}
+
+.borderCardBg {
+  border-radius: 20px;
+  background: linear-gradient(
+    170deg,
+    rgba(58, 56, 56, 0.212) 0%,
+    rgba(31, 31, 31, 0.219) 100%
+  );
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.55);
 }
 
 .border-radius {

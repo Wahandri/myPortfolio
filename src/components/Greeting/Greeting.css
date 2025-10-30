@@ -8,11 +8,9 @@
 }
 
 .helloImg {
-  display: -ms-grid;
-  width: 100%;
+  display: flex;
+  width: 90%;
   height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
 }

@@ -27,7 +27,7 @@ export default function Projects() {
       <h1 className="experience borderCard">Mi Experiencia</h1>
       <div className="listProject">
         {/* Comer-IA */}
-        <div className="shadowProject borderCard flexCenter reverse">
+        <div className="shadowProject borderCard2 flexCenter reverse">
           <div className="cardProject flexCenter">
             <img className="imgProject" src={comerIA} alt="" />
             <div className="descriptionProject flexCenter column">
@@ -68,7 +68,7 @@ export default function Projects() {
           </div>
         </div>
         {/* DigimonOnline */}
-        <div className="shadowProject borderCard flexCenter ">
+        <div className="shadowProject borderCard2 flexCenter ">
           <div className="cardProject flexCenter">
             <img className="imgProject" src={digimonOnline} alt="" />
             <div className="descriptionProject flexCenter column">
@@ -107,7 +107,7 @@ export default function Projects() {
           </div>
         </div>
         {/* JokesWeb */}
-        <div className="shadowProject borderCard flexCenter reverse">
+        <div className="shadowProject borderCard2 flexCenter reverse">
           <div className="cardProject flexCenter">
             <img className="imgProject" src={jokesWeb} alt="" />
             <div className="descriptionProject flexCenter column">
@@ -155,7 +155,7 @@ export default function Projects() {
           </div>
         </div>
         {/* SimonaZappoli */}
-        <div className="shadowProject borderCard flexCenter ">
+        <div className="shadowProject borderCard2 flexCenter ">
           <div className="cardProject flexCenter">
             <img className="imgProject" src={shaktiWeb} alt="" />
             <div className="descriptionProject flexCenter column">
@@ -195,7 +195,7 @@ export default function Projects() {
           </div>
         </div>
         {/* FindTheNumber */}
-        <div className="shadowProject borderCard flexCenter reverse">
+        <div className="shadowProject borderCard2 flexCenter reverse">
           <div className="cardProject flexCenter">
             <img className="imgProject" src={FindTheNumber} alt="" />
             <div className="descriptionProject flexCenter column">
@@ -230,7 +230,7 @@ export default function Projects() {
           </div>
         </div>
         {/* Rick and Morty API */}
-        <div className="shadowProject borderCard flexCenter ">
+        <div className="shadowProject borderCard2 flexCenter ">
           <div className="cardProject flexCenter">
             <img className="imgProject" src={imgRAM} alt="" />
             <div className="descriptionProject flexCenter column">

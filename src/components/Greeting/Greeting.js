@@ -6,10 +6,10 @@ import VSC from "../VSC/VSC";
 
 export default function Greeting() {
   return (
-    <div className="boxGreeting borderCard flexCenter">
+    <div className="boxGreeting flexCenter">
       {/* <div className="boxMyDescription hello"> */}
       <div className="helloImg">
-        <div className="textStart">
+        <div className="textStart padding-20 borderCard">
           <h1>
             Me llamo <span class="color2">Manuel</span>
           </h1>

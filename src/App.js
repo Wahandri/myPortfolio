@@ -9,7 +9,7 @@ import CV from "./components/CV/CV";
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App borderCardBg">
         <Header />
         <div className="paddingApp">
           <Routes>
