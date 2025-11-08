@@ -33,14 +33,16 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
         modules={[Navigation, Pagination, Autoplay]}
         loop
         speed={700}
-        spaceBetween={30}
+        spaceBetween={16}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         pagination={{ clickable: true, dynamicBullets: true }}
         navigation
         breakpoints={{
-          0: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
+          0: { slidesPerView: 1, spaceBetween: 16 },
+          600: { slidesPerView: 2, spaceBetween: 20 },
+          900: { slidesPerView: 3, spaceBetween: 24 },
+          1200: { slidesPerView: 4, spaceBetween: 28 },
+          1600: { slidesPerView: 5, spaceBetween: 32 },
         }}
         className="proyectos-swiper"
       >
