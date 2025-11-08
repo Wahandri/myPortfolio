@@ -2,6 +2,24 @@
   color: #9fd86b;
 }
 
+.Body2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  padding: 5px;
+  font-family: inherit;
+  background-image: url("./images/fondoTextura.png"); /* ruta a tu imagen */
+  background-repeat: repeat-y;          /* se repite solo hacia abajo */
+  background-position: center top;      /* centrado horizontalmente */
+  background-attachment: scroll;        /* se mueve con el scroll */
+  background-size: contain;             /* mantiene proporciones */
+  background-color: #2b2b2b8f;            /* color base detrás */
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+
+
 .boxSizeText {
   font-size: 15px;
 }
@@ -115,13 +133,22 @@
 }
 
 .borderCardBg {
-  border-radius: 20px;
-  background: linear-gradient(
-    170deg,
-    rgba(58, 56, 56, 0.212) 0%,
-    rgba(31, 31, 31, 0.219) 100%
-  );
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  margin: 0;
+  padding: 5px;
+  font-family: inherit;
+  /* background-image: url("./images/fondoDev.png");  ruta a tu imagen */
+  background-repeat:repeat;
+  background-position: center top;      /* centrado horizontalmente */
+  background-attachment: scroll;        /* se mueve con el scroll */
+  background-size: contain;             /* mantiene proporciones */
+  background-color: #00000000;            /* color base detrás */
+  margin: 0;
+  padding: 0;
+  z-index: -1;
 }
 
 .border-radius {

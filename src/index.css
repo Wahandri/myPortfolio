@@ -4,13 +4,14 @@ body {
   font-size: 1rem;
   margin: 0;
   padding: 5px;
+  width: 100vw;
   font-family: inherit;
-  background-image: url("./images/fondoDev.png"); /* ruta a tu imagen */
+  background-image: url("./images/fondoTextura.png"); /* ruta a tu imagen */
   background-repeat: repeat-y;          /* se repite solo hacia abajo */
   background-position: center top;      /* centrado horizontalmente */
   background-attachment: scroll;        /* se mueve con el scroll */
   background-size: contain;             /* mantiene proporciones */
-  background-color: #ffffff;            /* color base detrás */
+  background-color: #00000000;            /* color base detrás */
   margin: 0;
   padding: 0;
 }
