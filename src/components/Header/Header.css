@@ -4,6 +4,9 @@
     color: #9fd86b;
     align-items: center;
     /* box-shadow: 0 0 10px #9fd86b; */
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .logoName {

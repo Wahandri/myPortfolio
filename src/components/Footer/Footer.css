@@ -3,6 +3,9 @@
   flex-direction: column;
   justify-content:space-around;
   align-items: center;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .flex2 {
@@ -21,6 +24,7 @@
   width: 100%;
   padding-bottom: 15px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;
 }
 
 /* Animacion */
