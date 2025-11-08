@@ -13,11 +13,6 @@ function App() {
       <div className="App borderCardBg">
         <Header />
         <div className="paddingApp">
-          {/**
-           * Ejemplo de uso directo del carrusel:
-           * import ProyectosCarousel from "./components/ProyectosCarousel/ProyectosCarousel";
-           * <ProyectosCarousel proyectos={proyectosData} />
-           */}
           <Routes>
             <Route path="/" element={<Start proyectos={proyectosData} />} />
             <Route path="/cv" element={<CV />} />

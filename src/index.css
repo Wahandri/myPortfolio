@@ -3,11 +3,11 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1rem;
   margin: 0;
-  padding: 5px;
+  /* padding: 5px; */
   width: 100vw;
   font-family: inherit;
   background-image: url("./images/fondoTextura.png"); /* ruta a tu imagen */
-  background-repeat: repeat-y;          /* se repite solo hacia abajo */
+  background-repeat: repeat;
   background-position: center top;      /* centrado horizontalmente */
   background-attachment: scroll;        /* se mueve con el scroll */
   background-size: contain;             /* mantiene proporciones */

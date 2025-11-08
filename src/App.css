@@ -140,16 +140,16 @@
   margin: 0;
   padding: 5px;
   font-family: inherit;
-  /* background-image: url("./images/fondoDev.png");  ruta a tu imagen */
-  background-repeat:repeat;
-  background-position: center top;      /* centrado horizontalmente */
-  background-attachment: scroll;        /* se mueve con el scroll */
-  background-size: contain;             /* mantiene proporciones */
-  background-color: #00000000;            /* color base detrás */
-  margin: 0;
-  padding: 0;
+
+  background-image: url("./images/fondoDev.png");
+  background-repeat: repeat;          /* se repite en ambas direcciones */
+  background-position: top left;      /* empieza desde la esquina superior izquierda */
+  background-size: auto;              /* usa el tamaño real de la imagen */
+  background-attachment: scroll;      /* se mueve con el scroll */
+  background-color: transparent;      /* sin color de fondo */
   z-index: -1;
 }
+
 
 .border-radius {
   border-radius: 10px;
