@@ -12,7 +12,7 @@ const MAX_LENGTH = 380;
 const ProyectosCarousel = ({ proyectos = [] }) => {
   const [videoOpen, setVideoOpen] = useState(false);
   const [videoUrl, setVideoUrl] = useState("");
-  const [modalContent, setModalContent] = useState(null);
+  const [modalIndex, setModalIndex] = useState(null);
 
   const openVideo = (url) => {
     setVideoUrl(url);
@@ -21,11 +21,36 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
 
   const closeVideo = () => setVideoOpen(false);
 
-  const openModal = (titulo, descripcion, imagen, enlaces = []) => {
-    setModalContent({ titulo, descripcion, imagen, enlaces });
+  const openModal = (index) => {
+    if (!Array.isArray(proyectos) || proyectos.length === 0) return;
+    setModalIndex(index);
   };
 
-  const closeModal = () => setModalContent(null);
+  const closeModal = () => setModalIndex(null);
+
+  const showPrevModal = (event) => {
+    if (event) event.stopPropagation();
+    if (!Array.isArray(proyectos) || proyectos.length <= 1) return;
+    setModalIndex((prevIndex) => {
+      if (prevIndex === null) return prevIndex;
+      return (prevIndex - 1 + proyectos.length) % proyectos.length;
+    });
+  };
+
+  const showNextModal = (event) => {
+    if (event) event.stopPropagation();
+    if (!Array.isArray(proyectos) || proyectos.length <= 1) return;
+    setModalIndex((prevIndex) => {
+      if (prevIndex === null) return prevIndex;
+      return (prevIndex + 1) % proyectos.length;
+    });
+  };
+
+  const modalProyecto =
+    modalIndex !== null && Array.isArray(proyectos) && proyectos[modalIndex]
+      ? proyectos[modalIndex]
+      : null;
+  const hasMultipleProjects = Array.isArray(proyectos) && proyectos.length > 1;
 
   return (
     <div className="proyectos-carousel-container">
@@ -45,7 +70,7 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
         }}
         className="proyectos-swiper"
       >
-        {proyectos.map((proyecto) => {
+        {proyectos.map((proyecto, index) => {
           const textoLargo =
             proyecto.descripcion && proyecto.descripcion.length > MAX_LENGTH;
           const textoVisible = textoLargo
@@ -54,7 +79,19 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
 
           return (
             <SwiperSlide key={proyecto.id || proyecto.titulo}>
-              <div className="card">
+              <div
+                className="card"
+                onClick={() => openModal(index)}
+                role="button"
+                tabIndex={0}
+                aria-label={`Abrir detalles del proyecto ${proyecto.titulo}`}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    openModal(index);
+                  }
+                }}
+              >
                 {proyecto.imagen && (
                   <img
                     src={proyecto.imagen}
@@ -65,19 +102,8 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
 
                 <p className="badge">{proyecto.titulo}</p>
 
-                {/* Descripción clicable */}
                 {proyecto.descripcion && (
-                  <div
-                    className="card-description clickable"
-                    onClick={() =>
-                      openModal(
-                        proyecto.titulo,
-                        proyecto.descripcion,
-                        proyecto.imagen,
-                        proyecto.enlaces
-                      )
-                    }
-                  >
+                  <div className="card-description">
                     <p>{textoVisible}</p>
                   </div>
                 )}
@@ -95,7 +121,10 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
                           <button
                             key={index}
                             className="action-button primary"
-                            onClick={() => openVideo(enlace.url)}
+                            onClick={(event) => {
+                              event.stopPropagation();
+                              openVideo(enlace.url);
+                            }}
                           >
                             {enlace.etiqueta}
                           </button>
@@ -108,6 +137,7 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
                             className={`action-button ${
                               enlace.tipo === "primario" ? "primary" : ""
                             }`}
+                            onClick={(event) => event.stopPropagation()}
                           >
                             {enlace.etiqueta}
                           </a>
@@ -125,27 +155,48 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
       <VideoPopup isOpen={videoOpen} onClose={closeVideo} videoUrl={videoUrl} />
 
       {/* Modal del texto completo */}
-      {modalContent && (
+      {modalProyecto && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={closeModal}>
               ✕
             </button>
-            {modalContent.imagen && (
+            {hasMultipleProjects && (
+              <>
+                <button
+                  type="button"
+                  className="modal-nav modal-nav-prev"
+                  onClick={showPrevModal}
+                  aria-label="Proyecto anterior"
+                >
+                  ‹
+                </button>
+                <button
+                  type="button"
+                  className="modal-nav modal-nav-next"
+                  onClick={showNextModal}
+                  aria-label="Proyecto siguiente"
+                >
+                  ›
+                </button>
+              </>
+            )}
+            {modalProyecto.imagen && (
               <img
-                src={modalContent.imagen}
-                alt={modalContent.titulo}
+                src={modalProyecto.imagen}
+                alt={modalProyecto.titulo}
                 className="modal-image"
               />
             )}
-            <h3>{modalContent.titulo}</h3>
+            <p className="badge modal-badge">{modalProyecto.titulo}</p>
+            <h3 className="modal-title">{modalProyecto.titulo}</h3>
             <div className="modal-description">
-              <p>{modalContent.descripcion}</p>
+              <p>{modalProyecto.descripcion}</p>
             </div>
-            {Array.isArray(modalContent.enlaces) &&
-              modalContent.enlaces.length > 0 && (
+            {Array.isArray(modalProyecto.enlaces) &&
+              modalProyecto.enlaces.length > 0 && (
                 <div className="modal-actions">
-                  {modalContent.enlaces.map((enlace, index) => {
+                  {modalProyecto.enlaces.map((enlace, index) => {
                     const esVideo =
                       enlace.etiqueta.toLowerCase().includes("demo") &&
                       enlace.url.includes("youtu");
@@ -154,7 +205,10 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
                       <button
                         key={`${enlace.url}-${index}`}
                         className="action-button primary"
-                        onClick={() => openVideo(enlace.url)}
+                        onClick={(event) => {
+                          event.stopPropagation();
+                          openVideo(enlace.url);
+                        }}
                       >
                         {enlace.etiqueta}
                       </button>
@@ -167,6 +221,7 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
                         className={`action-button ${
                           enlace.tipo === "primario" ? "primary" : ""
                         }`}
+                        onClick={(event) => event.stopPropagation()}
                       >
                         {enlace.etiqueta}
                       </a>
