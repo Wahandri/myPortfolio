@@ -28,9 +28,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex: 1 1 auto;
-  min-width: 0;
-  width: 100%;
+  flex: 0 0 auto;
+  width: 320px;
+  max-width: 100%;
   background: #747474; /* gris suave */
   padding: 24px;
   border-radius: 14px;
@@ -189,10 +189,10 @@
 
 .swiper-slide {
   display: flex;
+  justify-content: center;
   height: auto;
   box-sizing: border-box;
-  flex: 1 1 auto;
-  min-width: 0;
+  flex: 0 0 auto;
 }
 
 
@@ -274,9 +274,9 @@
 
 .modal-content {
   background: #f6f6f6;
-  padding: 2rem;
-  border-radius: 14px;
-  max-width: 700px;
+  padding: 2.5rem;
+  border-radius: 20px;
+  max-width: 800px;
   width: 90%;
   max-height: 80vh;
   overflow-y: auto;
@@ -285,15 +285,38 @@
   animation: fadeIn 0.3s ease;
 }
 
+.modal-image {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
 .modal-content h3 {
   margin-bottom: 1rem;
   color: #4a4a4a;
+  text-align: center;
 }
 
-.modal-content p {
+.modal-description {
+  max-height: 40vh;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal-description p {
   color: #333;
   line-height: 1.7;
   white-space: pre-line;
+  margin: 0;
+}
+
+.modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
 }
 
 .modal-close {
