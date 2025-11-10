@@ -21,8 +21,8 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
 
   const closeVideo = () => setVideoOpen(false);
 
-  const openModal = (titulo, descripcion) => {
-    setModalContent({ titulo, descripcion });
+  const openModal = (titulo, descripcion, imagen, enlaces = []) => {
+    setModalContent({ titulo, descripcion, imagen, enlaces });
   };
 
   const closeModal = () => setModalContent(null);
@@ -40,8 +40,7 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
         breakpoints={{
           0: { slidesPerView: 1, spaceBetween: 16 },
           600: { slidesPerView: 2, spaceBetween: 20 },
-          768: { slidesPerView: 3, spaceBetween: 24 },
-          1024: { slidesPerView: 4, spaceBetween: 28 },
+          1024: { slidesPerView: 3, spaceBetween: 24 },
           1440: { slidesPerView: 5, spaceBetween: 32 },
         }}
         className="proyectos-swiper"
@@ -71,7 +70,12 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
                   <div
                     className="card-description clickable"
                     onClick={() =>
-                      openModal(proyecto.titulo, proyecto.descripcion)
+                      openModal(
+                        proyecto.titulo,
+                        proyecto.descripcion,
+                        proyecto.imagen,
+                        proyecto.enlaces
+                      )
                     }
                   >
                     <p>{textoVisible}</p>
@@ -127,8 +131,49 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
             <button className="modal-close" onClick={closeModal}>
               ✕
             </button>
+            {modalContent.imagen && (
+              <img
+                src={modalContent.imagen}
+                alt={modalContent.titulo}
+                className="modal-image"
+              />
+            )}
             <h3>{modalContent.titulo}</h3>
-            <p>{modalContent.descripcion}</p>
+            <div className="modal-description">
+              <p>{modalContent.descripcion}</p>
+            </div>
+            {Array.isArray(modalContent.enlaces) &&
+              modalContent.enlaces.length > 0 && (
+                <div className="modal-actions">
+                  {modalContent.enlaces.map((enlace, index) => {
+                    const esVideo =
+                      enlace.etiqueta.toLowerCase().includes("demo") &&
+                      enlace.url.includes("youtu");
+
+                    return esVideo ? (
+                      <button
+                        key={`${enlace.url}-${index}`}
+                        className="action-button primary"
+                        onClick={() => openVideo(enlace.url)}
+                      >
+                        {enlace.etiqueta}
+                      </button>
+                    ) : (
+                      <a
+                        key={`${enlace.url}-${index}`}
+                        href={enlace.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={`action-button ${
+                          enlace.tipo === "primario" ? "primary" : ""
+                        }`}
+                      >
+                        {enlace.etiqueta}
+                      </a>
+                    );
+                  })}
+                </div>
+              )}
           </div>
         </div>
       )}
