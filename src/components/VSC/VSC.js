@@ -22,6 +22,9 @@ import logo from "../../images/empyVSC.png";
  * - Doble clic en la barra de título también alterna el plegado.
  */
 export default function VSC() {
+  const MOBILE_BREAKPOINT = 768;
+  const isInitialMobile =
+    typeof window !== "undefined" && window.innerWidth <= MOBILE_BREAKPOINT;
   const fileList = [
     { name: "datos.json", icon: iconJson },
     { name: "SobreMi.md", icon: iconMd },
@@ -35,38 +38,36 @@ export default function VSC() {
 
   // Explorador
   const [isFolderOpen, setIsFolderOpen] = useState(true);
-  const [isExplorerOpen, setIsExplorerOpen] = useState(true);
+  const [isMobile, setIsMobile] = useState(isInitialMobile);
+  const [isExplorerOpen, setIsExplorerOpen] = useState(!isInitialMobile);
 
   // Ventana plegada/desplegada (oculta todo menos la barra de título)
   const [isWindowCollapsed, setIsWindowCollapsed] = useState(false);
   const toggleWindowCollapsed = () => setIsWindowCollapsed((v) => !v);
 
-  // Cerrar explorador por defecto en móviles en el primer render
-  useEffect(() => {
-    if (typeof window !== "undefined" && window.innerWidth <= 700) {
-      setIsExplorerOpen(false);
-    }
-  }, []);
-
-  // Si el viewport vuelve a ser >700px, reabrimos el explorador automáticamente
+  // Controla el modo móvil/escritorio y el estado por defecto del explorador
   useEffect(() => {
     if (typeof window === "undefined") return;
-    const onResize = () => {
-      if (window.innerWidth > 700) {
-        setIsExplorerOpen(true);
-      }
+
+    const updateLayout = () => {
+      const mobile = window.innerWidth <= MOBILE_BREAKPOINT;
+      setIsMobile(mobile);
     };
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
+
+    updateLayout();
+    window.addEventListener("resize", updateLayout);
+    return () => window.removeEventListener("resize", updateLayout);
   }, []);
+
+  useEffect(() => {
+    setIsExplorerOpen(isMobile ? false : true);
+  }, [isMobile]);
 
   const handleOpenFile = (fileName) => {
     if (!openTabs.includes(fileName)) setOpenTabs([...openTabs, fileName]);
     setActiveTab(fileName);
     // En móvil, cerrar explorador al elegir archivo
-    if (typeof window !== "undefined" && window.innerWidth <= 700) {
-      setIsExplorerOpen(false);
-    }
+    if (isMobile) setIsExplorerOpen(false);
   };
 
   const closeTab = (fileName) => {
