@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -13,6 +13,7 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
   const [videoOpen, setVideoOpen] = useState(false);
   const [videoUrl, setVideoUrl] = useState("");
   const [modalIndex, setModalIndex] = useState(null);
+  const [imageIndexes, setImageIndexes] = useState({});
 
   const openVideo = (url) => {
     setVideoUrl(url);
@@ -52,6 +53,40 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
       : null;
   const hasMultipleProjects = Array.isArray(proyectos) && proyectos.length > 1;
 
+  // Slideshow automático para proyectos con múltiples imágenes
+  useEffect(() => {
+    const intervals = {};
+
+    proyectos.forEach((proyecto, index) => {
+      if (Array.isArray(proyecto.imagenes) && proyecto.imagenes.length > 1) {
+        intervals[index] = setInterval(() => {
+          setImageIndexes((prev) => ({
+            ...prev,
+            [index]: ((prev[index] || 0) + 1) % proyecto.imagenes.length,
+          }));
+        }, 3000); // Cambiar imagen cada 3 segundos
+      }
+    });
+
+    return () => {
+      Object.values(intervals).forEach((interval) => clearInterval(interval));
+    };
+  }, [proyectos]);
+
+  // Slideshow para el modal
+  useEffect(() => {
+    if (modalProyecto && Array.isArray(modalProyecto.imagenes) && modalProyecto.imagenes.length > 1) {
+      const modalInterval = setInterval(() => {
+        setImageIndexes((prev) => ({
+          ...prev,
+          modal: ((prev.modal || 0) + 1) % modalProyecto.imagenes.length,
+        }));
+      }, 3000);
+
+      return () => clearInterval(modalInterval);
+    }
+  }, [modalProyecto]);
+
   return (
     <div className="proyectos-carousel-container">
       <Swiper
@@ -64,9 +99,8 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
         navigation
         breakpoints={{
           0: { slidesPerView: 1, spaceBetween: 16 },
-          600: { slidesPerView: 2, spaceBetween: 20 },
-          1024: { slidesPerView: 3, spaceBetween: 24 },
-          1440: { slidesPerView: 5, spaceBetween: 32 },
+          900: { slidesPerView: 2, spaceBetween: 20 },
+          1600: { slidesPerView: 3, spaceBetween: 24 },
         }}
         className="proyectos-swiper"
       >
@@ -95,6 +129,13 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
                 {proyecto.imagen && (
                   <img
                     src={proyecto.imagen}
+                    alt={proyecto.titulo}
+                    className="card-image"
+                  />
+                )}
+                {proyecto.imagenes && Array.isArray(proyecto.imagenes) && proyecto.imagenes.length > 0 && (
+                  <img
+                    src={proyecto.imagenes[imageIndexes[index] || 0]}
                     alt={proyecto.titulo}
                     className="card-image"
                   />
@@ -184,6 +225,13 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
             {modalProyecto.imagen && (
               <img
                 src={modalProyecto.imagen}
+                alt={modalProyecto.titulo}
+                className="modal-image"
+              />
+            )}
+            {modalProyecto.imagenes && Array.isArray(modalProyecto.imagenes) && modalProyecto.imagenes.length > 0 && (
+              <img
+                src={modalProyecto.imagenes[imageIndexes.modal || 0]}
                 alt={modalProyecto.titulo}
                 className="modal-image"
               />

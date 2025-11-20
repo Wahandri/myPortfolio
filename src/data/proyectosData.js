@@ -4,8 +4,27 @@ import jokesWeb from "../images/JokesWeb.png";
 import shaktiWeb from "../images/simonaZappoliWeb.png";
 import findTheNumber from "../images/NumberGammer.png";
 import rickAndMorty from "../images/imgRAM.png";
+import dj1 from "../images/dj1.png";
+import dj2 from "../images/dj2.png";
+import dj3 from "../images/dj3.png";
+import dj4 from "../images/dj4.png";
 
 const proyectosData = [
+  {
+    id: "jotalopez-dj",
+    titulo: "JotaLopez DJ",
+    descripcion: `Web profesional diseñada para un servicio de DJ especializado en bodas y eventos. 
+    El sitio presenta los servicios ofrecidos, muestra el equipo profesional disponible y permite a los clientes 
+    conocer la experiencia y propuesta de valor.
+
+    Desarrollada con un diseño moderno y responsive, la web facilita el contacto directo con los clientes 
+    y muestra de forma atractiva el ambiente y la calidad del servicio de DJ para eventos especiales.`,
+    imagenes: [dj1, dj2, dj3, dj4],
+    enlaces: [
+      { etiqueta: "Visitar web", url: "https://jotalopezdj.vercel.app/", tipo: "primario" },
+    ],
+    skills: ["html", "css", "js", "nextjs"],
+  },
   {
     id: "comer-ia",
     titulo: "Comer-IA",

@@ -34,7 +34,7 @@ export default function VSC() {
 
   // Pestañas y activa
   const [openTabs, setOpenTabs] = useState(fileList.map((f) => f.name));
-  const [activeTab, setActiveTab] = useState("SobreMi.md");
+  const [activeTab, setActiveTab] = useState("datos.json");
 
   // Explorador
   const [isFolderOpen, setIsFolderOpen] = useState(true);
