@@ -89,6 +89,11 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
 
   return (
     <div className="proyectos-carousel-container">
+      <div className="section-header">
+        <h3 className="fontTitle">Proyectos Destacados</h3>
+        <p className="proyectos-subtitle">Explora algunos de mis trabajos más recientes y significativos</p>
+      </div>
+
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         loop
@@ -175,9 +180,8 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
                             href={enlace.url}
                             target="_blank"
                             rel="noreferrer"
-                            className={`action-button ${
-                              enlace.tipo === "primario" ? "primary" : ""
-                            }`}
+                            className={`action-button ${enlace.tipo === "primario" ? "primary" : ""
+                              }`}
                             onClick={(event) => event.stopPropagation()}
                           >
                             {enlace.etiqueta}
@@ -266,9 +270,8 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
                         href={enlace.url}
                         target="_blank"
                         rel="noreferrer"
-                        className={`action-button ${
-                          enlace.tipo === "primario" ? "primary" : ""
-                        }`}
+                        className={`action-button ${enlace.tipo === "primario" ? "primary" : ""
+                          }`}
                         onClick={(event) => event.stopPropagation()}
                       >
                         {enlace.etiqueta}

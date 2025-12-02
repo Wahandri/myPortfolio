@@ -1,0 +1,500 @@
+/* =============================
+   CONTENEDOR PRINCIPAL
+============================= */
+.github-invite-container {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 4rem 2rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =============================
+   SECTION HEADER
+============================= */
+.github-section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+}
+
+.github-section-title {
+  font-size: 2.2rem;
+  color: #9fd86b;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.github-section-subtitle {
+  font-size: 1.1rem;
+  color: #b0b0b0;
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+
+/* =============================
+   SECCIÓN DE GITHUB
+============================= */
+.github-card {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-template-rows: auto auto;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Layout de la sección:
+   [Profile Info] [Calendar]
+   [Stats]        [Calendar]
+   [Button]       [Button span]
+*/
+.github-card .gh-profile-section {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.github-card .gh-calendar-container {
+  grid-column: 2;
+  grid-row: 1 / 3;
+}
+
+.github-card .github-button {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* =============================
+   HEADER DEL PERFIL
+============================= */
+.gh-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.gh-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #9fd86b;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(159, 216, 107, 0.25);
+}
+
+.gh-avatar:hover {
+  transform: scale(1.05);
+  border-color: #8cc85d;
+}
+
+.gh-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.gh-name {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #f6f6f6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.gh-name:hover {
+  color: #9fd86b;
+}
+
+.gh-username {
+  font-size: 0.95rem;
+  color: #b0b0b0;
+}
+
+/* =============================
+   BIO
+============================= */
+.gh-bio {
+  font-size: 1rem;
+  color: #d0d0d0;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+  background: rgba(159, 216, 107, 0.05);
+  border-left: 3px solid #9fd86b;
+  border-radius: 4px;
+}
+
+/* =============================
+   ESTADÍSTICAS
+============================= */
+.gh-stats {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  background: rgba(159, 216, 107, 0.08);
+  padding: 1.25rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(159, 216, 107, 0.2);
+}
+
+.gh-stat {
+  text-align: center;
+  flex: 1;
+}
+
+.gh-stat-value {
+  display: block;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #9fd86b;
+  margin-bottom: 0.25rem;
+}
+
+.gh-stat-label {
+  font-size: 0.75rem;
+  color: #b0b0b0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* =============================
+   BOTÓN
+============================= */
+.github-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.85rem 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.github-button-icon {
+  transition: transform 0.3s ease;
+}
+
+.github-button:hover .github-button-icon {
+  transform: rotate(360deg);
+}
+
+/* =============================
+   ESTADOS DE CARGA Y ERROR
+============================= */
+.loading {
+  text-align: center;
+  font-size: 1rem;
+  color: #9fd86b;
+  padding: 2rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.error-msg {
+  color: #ff6b6b;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.error-msg a {
+  color: #9fd86b;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.error-msg a:hover {
+  color: #8cc85d;
+}
+
+/* =============================
+   RESPONSIVE
+============================= */
+@media (max-width: 1200px) {
+  .github-card {
+    max-width: 1000px;
+    grid-template-columns: 350px 1fr;
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .github-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .github-card .gh-profile-section {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .github-card .gh-calendar-container {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .github-card .github-button {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .github-invite-container {
+    padding: 3rem 1rem;
+  }
+
+  .github-card {
+    padding: 1.5rem;
+  }
+
+  .gh-avatar {
+    width: 70px;
+    height: 70px;
+  }
+
+  .gh-name {
+    font-size: 1.3rem;
+  }
+
+  .gh-stats {
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .gh-stat-value {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .github-invite-container {
+    padding: 2rem 0.5rem;
+  }
+
+  .github-card {
+    padding: 1.25rem;
+  }
+
+  .gh-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .gh-avatar {
+    width: 90px;
+    height: 90px;
+  }
+
+  .gh-name {
+    font-size: 1.2rem;
+  }
+
+  .gh-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .gh-stat {
+    padding: 0.5rem;
+  }
+
+  .github-button {
+    font-size: 0.95rem;
+    padding: 0.75rem 1.25rem;
+  }
+}
+
+/* =============================
+   CALENDARIO DE CONTRIBUCIONES
+============================= */
+.gh-calendar-container {
+  margin: 0;
+  padding: 0;
+}
+
+.gh-calendar-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f6f6f6;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.gh-calendar {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5rem 0;
+}
+
+/* Sobrescribir estilos por defecto de la librería */
+.gh-calendar :global(.calendar) {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+/* Ocultar enlaces de accesibilidad y ayuda - v2 */
+#github-calendar .contrib-footer,
+#github-calendar .float-left,
+#github-calendar .float-right,
+#github-calendar a[aria-label],
+#github-calendar .f6,
+.calendar .contrib-footer,
+.calendar .float-left,
+.calendar .float-right {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Personalizar colores del calendario - Tonos de verde del portfolio */
+.gh-calendar :global(.calendar-graph text) {
+  fill: #b0b0b0 !important;
+  font-size: 10px !important;
+}
+
+/* Cuadraditos de contribuciones - Esquema de colores personalizado */
+/* Nivel 0: Sin contribuciones - Gris oscuro/negro */
+.gh-calendar :global(.calendar .contrib-column .day[data-level="0"]) {
+  fill: rgba(40, 40, 40, 0.6) !important;
+  stroke: rgba(60, 60, 60, 0.4) !important;
+}
+
+.gh-calendar :global(.calendar .contrib-column .day[data-level="1"]) {
+  fill: rgba(159, 216, 107, 0.3) !important;
+  stroke: rgba(159, 216, 107, 0.4) !important;
+}
+
+.gh-calendar :global(.calendar .contrib-column .day[data-level="2"]) {
+  fill: rgba(159, 216, 107, 0.6) !important;
+  stroke: rgba(159, 216, 107, 0.7) !important;
+}
+
+.gh-calendar :global(.calendar .contrib-column .day[data-level="3"]) {
+  fill: rgba(159, 216, 107, 0.8) !important;
+  stroke: rgba(159, 216, 107, 0.9) !important;
+}
+
+.gh-calendar :global(.calendar .contrib-column .day[data-level="4"]) {
+  fill: #9fd86b !important;
+  stroke: #8cc85d !important;
+}
+
+/* Efecto hover en los cuadraditos */
+.gh-calendar :global(.calendar .contrib-column .day:hover) {
+  stroke: #9fd86b !important;
+  stroke-width: 2px !important;
+}
+
+/* Leyenda del calendario */
+.gh-calendar :global(.calendar-graph .contrib-legend) {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.gh-calendar :global(.contrib-legend text) {
+  fill: #b0b0b0 !important;
+  font-size: 11px !important;
+}
+
+/* Estilos para tooltips si están habilitados */
+.gh-calendar :global(.calendar-tooltip) {
+  background: rgba(31, 31, 31, 0.95) !important;
+  border: 1px solid rgba(159, 216, 107, 0.3) !important;
+  color: #f6f6f6 !important;
+  padding: 8px 12px !important;
+  border-radius: 6px !important;
+  font-size: 12px !important;
+}
+
+.gh-calendar :global(.calendar-tooltip strong) {
+  color: #9fd86b !important;
+}
+
+/* Responsive del calendario */
+@media (max-width: 768px) {
+  .gh-calendar-container {
+    margin: 1rem 0;
+    padding: 1rem 0 0 0;
+  }
+
+  .gh-calendar-title {
+    font-size: 1.1rem;
+  }
+
+  .gh-calendar {
+    font-size: 0.85rem;
+  }
+
+  /* Hacer que los cuadraditos sean más pequeños en móvil */
+  .gh-calendar :global(.calendar .contrib-column .day) {
+    rx: 1 !important;
+    ry: 1 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .gh-calendar-container {
+    margin: 0.75rem 0;
+    padding: 0.75rem 0 0 0;
+  }
+
+  .gh-calendar-title {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .gh-calendar {
+    font-size: 0.8rem;
+  }
+
+  /* Asegurar scroll horizontal suave en móviles */
+  .gh-calendar {
+    -webkit-overflow-scrolling: touch;
+  }
+}

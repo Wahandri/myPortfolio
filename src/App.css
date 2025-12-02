@@ -24,12 +24,18 @@
   margin: 0;
   padding: 5px;
   font-family: inherit;
-  background-image: url("./images/fondoTextura.png"); /* ruta a tu imagen */
-  background-repeat: repeat-y;          /* se repite solo hacia abajo */
-  background-position: center top;      /* centrado horizontalmente */
-  background-attachment: scroll;        /* se mueve con el scroll */
-  background-size: contain;             /* mantiene proporciones */
-  background-color: #2b2b2b8f;            /* color base detrás */
+  background-image: url("./images/fondoTextura.png");
+  /* ruta a tu imagen */
+  background-repeat: repeat-y;
+  /* se repite solo hacia abajo */
+  background-position: center top;
+  /* centrado horizontalmente */
+  background-attachment: scroll;
+  /* se mueve con el scroll */
+  background-size: contain;
+  /* mantiene proporciones */
+  background-color: #2b2b2b8f;
+  /* color base detrás */
   margin: 0;
   padding: 0;
   z-index: 2;
@@ -130,21 +136,17 @@
 
 .borderCard {
   border-radius: 20px;
-  background: linear-gradient(
-    170deg,
-    rgba(58, 56, 56, 0.623) 0%,
-    rgb(31, 31, 31) 100%
-  );
+  background: linear-gradient(170deg,
+      rgba(58, 56, 56, 0.623) 0%,
+      rgb(31, 31, 31) 100%);
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.55);
 }
 
 .borderCard2 {
-    border-radius: 20px;
-  background: linear-gradient(
-    170deg,
-    rgba(88, 86, 86, 0.623) 0%,
-    rgb(63, 63, 63) 100%
-  );
+  border-radius: 20px;
+  background: linear-gradient(170deg,
+      rgba(88, 86, 86, 0.623) 0%,
+      rgb(63, 63, 63) 100%);
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.55);
 }
 
@@ -158,11 +160,16 @@
   font-family: inherit;
 
   background-image: url("./images/fondoDev.png");
-  background-repeat: repeat;          /* se repite en ambas direcciones */
-  background-position: top left;      /* empieza desde la esquina superior izquierda */
-  background-size: auto;              /* usa el tamaño real de la imagen */
-  background-attachment: scroll;      /* se mueve con el scroll */
-  background-color: transparent;      /* sin color de fondo */
+  background-repeat: repeat;
+  /* se repite en ambas direcciones */
+  background-position: top left;
+  /* empieza desde la esquina superior izquierda */
+  background-size: auto;
+  /* usa el tamaño real de la imagen */
+  background-attachment: scroll;
+  /* se mueve con el scroll */
+  background-color: transparent;
+  /* sin color de fondo */
   z-index: -1;
 }
 
@@ -195,6 +202,7 @@
 
 .fontTitle {
   font-size: 50px;
+  color: #9FD86B;
 }
 
 /* BUTTON */
@@ -208,26 +216,28 @@
   font-size: 18px;
   letter-spacing: 1px;
   text-decoration: none;
-  color: #8d50ff;
+  color: #9FD86B;
   background: transparent;
   cursor: pointer;
   transition: ease-out 0.8s;
-  border: 2px solid #8d50ff;
+  border: 2px solid #9FD86B;
   border-radius: 10px;
-  box-shadow: inset 0 0 0 0 #8d50ff;
+  box-shadow: inset 0 0 0 0 #9FD86B;
 }
+
 .myBtn:hover {
-  color: white;
-  box-shadow: inset 0 -100px 0 0 #8d50ff;
+  color: #000000;
+  box-shadow: inset 0 -100px 0 0 #9FD86B;
 }
+
 .myBtn.active {
-  color: white;
-  background-color: #8d50ff;
+  color: #000000;
+  background-color: #9FD86B;
 }
 
 /* ---------------------------------------------------------------------- */
 @media (max-width: 768px) {
   .fontTitle {
-  font-size: 40px;
+    font-size: 40px;
   }
 }

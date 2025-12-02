@@ -2,6 +2,7 @@ import React from "react";
 import "./Start.css";
 import Greeting from "../Greeting/Greeting";
 import ProyectosCarousel from "../ProyectosCarousel/ProyectosCarousel";
+import GitHubInvite from "../GitHubInvite/GitHubInvite";
 import VSC from "../VSC/VSC";
 // import Experience from "../Experience/Experience";
 
@@ -11,10 +12,16 @@ export default function Start({ proyectos = [] }) {
     <div>
       <Greeting />
       <VSC />
-      <div>
-        <h2 className="borderCard flexCenter fontTitle">Experiencia</h2>
+
+      {/* Sección de Experiencia Unificada */}
+      <div className="experience-section">
+        <div className="experience-content borderCard">
+          {/* <h2 className="flexCenter fontTitle experience-title">Experiencia</h2> */}
+          <ProyectosCarousel proyectos={proyectos} />
+          <GitHubInvite />
+        </div>
       </div>
-      <ProyectosCarousel proyectos={proyectos} />
+
       {/* <Experience /> */}
     </div>
   );
