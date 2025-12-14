@@ -82,7 +82,7 @@ export default function Projects() {
           </div>
           <div className="boxH3">
             <div className="boxTitleProject">
-              <h1 className="color2">Digimon-Online</h1>
+              <h1 className="color2">play-online</h1>
               <div className="btnsLink">
                 <BtnLink to="https://wahandri-digimon.vercel.app/">Ver</BtnLink>
                 <BtnLink to="https://github.com/Wahandri/digimon-castellano">

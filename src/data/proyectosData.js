@@ -1,13 +1,19 @@
-import comerIA from "../images/comeriaImage.png";
+import comerIA1 from "../images/comer-ia/comeria1.png";
+import comerIA2 from "../images/comer-ia/comeria2.png";
+import comerIA3 from "../images/comer-ia/comeria3.png";
+import comerIA4 from "../images/comer-ia/comeria4.png";
 import digimonOnline from "../images/digimonOnline.png";
 import jokesWeb from "../images/JokesWeb.png";
 import shaktiWeb from "../images/simonaZappoliWeb.png";
 import findTheNumber from "../images/NumberGammer.png";
 import rickAndMorty from "../images/imgRAM.png";
-import dj1 from "../images/dj1.png";
-import dj2 from "../images/dj2.png";
-import dj3 from "../images/dj3.png";
-import dj4 from "../images/dj4.png";
+import dj1 from "../images/jotalopezdj/dj1.png";
+import dj2 from "../images/jotalopezdj/dj2.png";
+import dj3 from "../images/jotalopezdj/dj3.png";
+import dj4 from "../images/jotalopezdj/dj4.png";
+import playOnline1 from "../images/play-online/play-online1.png";
+import playOnline2 from "../images/play-online/play-online2.png";
+import playOnline3 from "../images/play-online/play-online3.png";
 
 const proyectosData = [
   {
@@ -33,23 +39,22 @@ const proyectosData = [
     Desde el diseño de la interfaz hasta la implementación, aprendí a integrar IA en aplicaciones web, gestionar dominios DNS, desplegar en Vercel y crear interfaces responsive.
 
     Este proyecto me permitió mejorar en Next.js, React, CSS y el manejo de APIs externas, además de resolver desafíos como la coherencia de la IA y la optimización del rendimiento.`,
-    imagen: comerIA,
+    imagenes: [comerIA1, comerIA2, comerIA3, comerIA4],
     enlaces: [
       { etiqueta: "Visitar web", url: "https://www.comer-ia.com/", tipo: "primario" },
     ],
     skills: ["html", "css", "js", "nextjs"],
   },
   {
-    id: "digimon-online",
-    titulo: "Digimon-Online",
+    id: "play-online",
+    titulo: "play-online",
     descripcion: `Aplicación web para ver la serie Digimon Adventure completa en castellano. 
     Muestra todos los episodios en una galería con miniaturas, además de marcar los vistos para llevar un control del progreso.
 
     La app organiza los episodios a partir de un archivo JSON, utiliza localStorage para guardar el progreso de visionado y gestiona la reproducción de cada capítulo directamente desde la web.`,
-    imagen: digimonOnline,
+    imagenes: [playOnline1, playOnline2, playOnline3],
     enlaces: [
-      { etiqueta: "Visitar web", url: "https://wahandri-digimon.vercel.app/", tipo: "primario" },
-      // { etiqueta: "Código", url: "https://github.com/Wahandri/digimon-castellano" },
+      { etiqueta: "Visitar web", url: "https://play-online-eight.vercel.app/", tipo: "primario" }
     ],
     skills: ["html", "css", "js", "nextjs"],
   },
