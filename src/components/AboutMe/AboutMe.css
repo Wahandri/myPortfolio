@@ -1,0 +1,38 @@
+.about-me-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.about-me-content {
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about-me-title {
+    margin-bottom: 20px;
+}
+
+.about-me-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 15px;
+}
+
+.highlight-text {
+    color: #9FD86B;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .about-me-content {
+        padding: 20px;
+    }
+}

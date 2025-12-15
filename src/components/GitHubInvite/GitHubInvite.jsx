@@ -173,7 +173,7 @@ const GitHubInvite = ({ username = "wahandri" }) => {
                     href={githubData.html_url}
                     target="_blank"
                     rel="noreferrer"
-                    className="github-button myBtn"
+                    className="unified-btn"
                 >
                     <svg
                         className="github-button-icon"

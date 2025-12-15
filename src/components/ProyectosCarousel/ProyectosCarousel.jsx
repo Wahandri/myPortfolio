@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./ProyectosCarousel.css";
 import VideoPopup from "../VideoPopup/VideoPopup";
+import ProjectModal from "../ProjectModal/ProjectModal";
 
 const MAX_LENGTH = 380;
 
@@ -14,6 +15,7 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
   const [videoUrl, setVideoUrl] = useState("");
   const [modalIndex, setModalIndex] = useState(null);
   const [imageIndexes, setImageIndexes] = useState({});
+  const [infoProject, setInfoProject] = useState(null);
 
   const openVideo = (url) => {
     setVideoUrl(url);
@@ -179,15 +181,26 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
                             key={index}
                             href={enlace.url}
                             target="_blank"
-                            rel="noreferrer"
-                            className={`action-button ${enlace.tipo === "primario" ? "primary" : ""
-                              }`}
+                            rel="noopener noreferrer"
+                            className="unified-btn"
+                            title="Ver Repositorio"
                             onClick={(event) => event.stopPropagation()}
                           >
                             {enlace.etiqueta}
                           </a>
                         );
                       })}
+                      {/* Botón Info */}
+                      <button
+                        className="unified-btn"
+                        onClick={(event) => {
+                          event.stopPropagation();
+                          setInfoProject(proyecto);
+                        }}
+                        title="Más información"
+                      >
+                        ℹ️ Info
+                      </button>
                     </div>
                   )}
               </div>
@@ -283,6 +296,12 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
           </div>
         </div>
       )}
+      {/* Modal de Información Detallada */}
+      <ProjectModal
+        isOpen={!!infoProject}
+        onClose={() => setInfoProject(null)}
+        project={infoProject}
+      />
     </div>
   );
 };

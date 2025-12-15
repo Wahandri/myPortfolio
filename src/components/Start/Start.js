@@ -3,6 +3,7 @@ import "./Start.css";
 import Greeting from "../Greeting/Greeting";
 import ProyectosCarousel from "../ProyectosCarousel/ProyectosCarousel";
 import GitHubInvite from "../GitHubInvite/GitHubInvite";
+import AboutMe from "../AboutMe/AboutMe";
 import VSC from "../VSC/VSC";
 // import Experience from "../Experience/Experience";
 
@@ -17,6 +18,7 @@ export default function Start({ proyectos = [] }) {
       <div className="experience-section">
         <div className="experience-content borderCard">
           {/* <h2 className="flexCenter fontTitle experience-title">Experiencia</h2> */}
+          <AboutMe />
           <GitHubInvite />
           <ProyectosCarousel proyectos={proyectos} />
         </div>

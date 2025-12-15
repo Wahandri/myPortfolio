@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import Start from "./components/Start/Start";
 import CV from "./components/CV/CV";
 import proyectosData from "./data/proyectosData";
+import FloatingActions from "./components/FloatingActions/FloatingActions";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/cv" element={<CV />} />
           </Routes>
         </div>
+        <FloatingActions />
         <Footer />
       </div>
     </Router>
