@@ -19,18 +19,16 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
                     {detalles ? (
                         <>
                             <div className="project-detail-section">
-                                <h3>Problema</h3>
-                                <p>{detalles.problema}</p>
+                                <p className="project-description-text">{detalles.descripcion}</p>
                             </div>
 
                             <div className="project-detail-section">
-                                <h3>Solución</h3>
-                                <p>{detalles.solucion}</p>
-                            </div>
-
-                            <div className="project-detail-section">
-                                <h3>Mi Rol</h3>
-                                <p>{detalles.rol}</p>
+                                <h3>Qué hice</h3>
+                                <ul className="project-contributions-list">
+                                    {detalles.queHice && detalles.queHice.map((item, index) => (
+                                        <li key={index}>{item}</li>
+                                    ))}
+                                </ul>
                             </div>
 
                             {detalles.tecnologias && detalles.tecnologias.length > 0 && (

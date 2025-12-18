@@ -37,9 +37,12 @@ const proyectosData = [
     El sitio presenta los servicios ofrecidos, muestra el equipo profesional disponible y permite a los clientes 
     conocer la experiencia y propuesta de valor.`,
     detalles: {
-      problema: "Digitalizar servicio de DJ para bodas/eventos y facilitar contacto.",
-      solucion: "Web profesional que presenta servicios y equipo, optimizada para conversión.",
-      rol: "Desarrollo Frontend completo, diseño UI/UX y despliegue.",
+      descripcion: "Sitio web corporativo para un DJ de eventos, diseñado para transmitir profesionalidad y facilitar la contratación. Funciona como punto central de información donde los clientes pueden ver equipos, servicios y contactar directamente.",
+      queHice: [
+        "Diseñé una interfaz moderna y atractiva alineada con la marca personal.",
+        "Optimicé la carga de imágenes para asegurar un rendimiento fluido en móviles.",
+        "Implementé un formulario de contacto directo para aumentar la conversión de leads."
+      ],
       tecnologias: [
         { name: "Next.js", icon: nextIcon },
         { name: "React", icon: reactIcon },
@@ -59,9 +62,12 @@ const proyectosData = [
     descripcion: `Desarrollé una aplicación web con Next.js que genera recetas personalizadas usando la API de OpenAI. 
     Los usuarios ingresan ingredientes y aplican filtros (tipo de comida, dificultad, dieta) para obtener recetas coherentes y detalladas.`,
     detalles: {
-      problema: "Dificultad para crear recetas con ingredientes limitados o restricciones.",
-      solucion: "App que genera recetas únicas vía IA (OpenAI) con filtros personalizados.",
-      rol: "Full Stack: integración de API, lógica de negocio e interfaz.",
+      descripcion: "Aplicación que utiliza Inteligencia Artificial para generar recetas de cocina basadas en los ingredientes que el usuario tiene en casa. Ideal para reducir el desperdicio de alimentos y descubrir nuevas ideas culinarias.",
+      queHice: [
+        "Integré la API de OpenAI para generar contenido dinámico y coherente.",
+        "Creé un sistema de filtros (dieta, tiempo, dificultad) para personalizar los resultados.",
+        "Diseñé una UI intuitiva que guía al usuario paso a paso en la creación del prompt."
+      ],
       tecnologias: [
         { name: "Next.js", icon: nextIcon },
         { name: "React", icon: reactIcon },
@@ -81,9 +87,12 @@ const proyectosData = [
     descripcion: `Aplicación web para ver la serie Digimon Adventure completa en castellano. 
     Muestra todos los episodios en una galería con miniaturas, además de marcar los vistos para llevar un control del progreso.`,
     detalles: {
-      problema: "Falta de plataforma centralizada para ver 'Digimon Adventure' con seguimiento.",
-      solucion: "SPA que organiza episodios y guarda progreso de visualización localmente.",
-      rol: "Frontend: gestión de estado, persistencia de datos y UI.",
+      descripcion: "Plataforma de streaming dedicada a la serie Digimon Adventure. Permite a los usuarios ver la serie completa y mantiene un registro local de los episodios vistos para retomar la visualización donde la dejaron.",
+      queHice: [
+        "Implementé persistencia de datos en LocalStorage para guardar el progreso del usuario.",
+        "Desarrollé una galería de episodios con carga diferida (lazy loading) para mejorar la velocidad.",
+        "Creé un reproductor de video personalizado integrado en la interfaz."
+      ],
       tecnologias: [
         { name: "Next.js", icon: nextIcon },
         { name: "React", icon: reactIcon },
@@ -103,9 +112,12 @@ const proyectosData = [
     descripcion: `Wahaha es una plataforma interactiva y divertida donde los usuarios pueden ver, escuchar, puntuar y añadir a favoritos 
     chistes subidos por otros miembros de la comunidad.`,
     detalles: {
-      problema: "Ausencia de espacio social dedicado para compartir y valorar humor.",
-      solucion: "Plataforma social para publicar, votar y guardar chistes favoritos.",
-      rol: "Full Stack (Proyecto Final): arquitectura, backend y frontend.",
+      descripcion: "Red social de humor donde los usuarios pueden publicar, votar y guardar chistes. Es un proyecto Full Stack que simula una comunidad activa con interacción en tiempo real.",
+      queHice: [
+        "Desarrollé una API REST completa con Node.js y Express para gestionar usuarios y contenido.",
+        "Diseñé el esquema de base de datos en MongoDB para almacenar chistes, votos y favoritos.",
+        "Implementé autenticación de usuarios y protección de rutas en el frontend."
+      ],
       tecnologias: [
         { name: "React", icon: reactIcon },
         { name: "Node.js", icon: nodeIcon },
@@ -125,9 +137,12 @@ const proyectosData = [
     descripcion: `Simonazappoli es una web estática que diseñé y creé para el negocio freelance de una amiga dedicada al coaching emocional, 
     nutrición, masajes, meditación y yoga.`,
     detalles: {
-      problema: "Negocio de bienestar necesitaba presencia online profesional sin coste recurrente.",
-      solucion: "Web estática rápida y elegante que comunica servicios y filosofía.",
-      rol: "Diseño y Desarrollo, toma de requisitos y trato con cliente.",
+      descripcion: "Landing page profesional para una especialista en bienestar y coaching. El objetivo era crear una presencia digital elegante y rápida que comunicara claramente sus servicios.",
+      queHice: [
+        "Traduje los requisitos del cliente en un diseño web funcional y estético.",
+        "Optimicé el SEO y la estructura semántica para mejorar la visibilidad en buscadores.",
+        "Aseguré una experiencia de usuario fluida con una navegación sencilla y clara."
+      ],
       tecnologias: [
         { name: "React", icon: reactIcon },
         { name: "CSS", icon: cssIcon },
@@ -148,9 +163,12 @@ const proyectosData = [
     descripcion: `Este juego simple hecho con HTML, CSS y JavaScript desafía al jugador a adivinar un número secreto 
     que varía en dificultad a medida que avanzas de nivel.`,
     detalles: {
-      problema: "Necesidad de consolidar lógica de programación y manipulación del DOM.",
-      solucion: "Minijuego interactivo con dificultad progresiva y feedback inmediato.",
-      rol: "Desarrollo individual enfocado en algoritmos y gamificación.",
+      descripcion: "Juego de lógica clásico donde el usuario debe adivinar un número oculto con pistas de 'mayor' o 'menor'. Un proyecto enfocado en la lógica de programación pura y la manipulación del DOM.",
+      queHice: [
+        "Programé la lógica del juego en JavaScript vanilla sin dependencias.",
+        "Implementé un sistema de puntuación y record para incentivar la rejugabilidad.",
+        "Añadí animaciones CSS para feedback visual de aciertos y errores."
+      ],
       tecnologias: [
         { name: "JavaScript", icon: jsIcon },
         { name: "HTML", icon: htmlIcon },
@@ -171,9 +189,12 @@ const proyectosData = [
     Permite explorar todos los personajes de la serie con un scroll infinito y cuenta con un input de búsqueda que filtra 
     los personajes a medida que se escribe.`,
     detalles: {
-      problema: "Visualizar y filtrar eficientemente grandes volúmenes de datos externos.",
-      solucion: "Interfaz con scroll infinito y búsqueda en tiempo real.",
-      rol: "Frontend: consumo de API, asincronía y diseño responsive.",
+      descripcion: "Buscador de personajes de la serie Rick y Morty que consume su API oficial. Permite filtrar en tiempo real y cargar más resultados dinámicamente.",
+      queHice: [
+        "Consumí la API REST de Rick and Morty utilizando fetch y useEffect.",
+        "Implementé un 'Infinite Scroll' para cargar personajes a medida que el usuario baja.",
+        "Creé un buscador con filtrado instantáneo para mejorar la UX."
+      ],
       tecnologias: [
         { name: "React", icon: reactIcon },
         { name: "JavaScript", icon: jsIcon },

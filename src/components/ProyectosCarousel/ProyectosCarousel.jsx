@@ -168,7 +168,7 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
                         return esVideo ? (
                           <button
                             key={index}
-                            className="action-button primary"
+                            className="unified-btn"
                             onClick={(event) => {
                               event.stopPropagation();
                               openVideo(enlace.url);
