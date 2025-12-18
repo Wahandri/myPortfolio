@@ -2,37 +2,136 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 40px 20px;
+    overflow: hidden;
+    /* Prevent scrollbars during animation */
 }
 
 .about-me-content {
     width: 100%;
-    max-width: 800px;
-    padding: 40px;
+    max-width: 1200px;
+    /* Wider layout */
+    padding: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+
+    /* Subtle blurred background */
+    background: rgba(30, 30, 30, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .about-me-title {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.about-me-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .about-me-text p {
-    font-size: 1.1rem;
-    line-height: 1.6;
+    font-size: 1.35rem;
+    line-height: 1.7;
     color: #e0e0e0;
-    margin-bottom: 15px;
+    margin: 0;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.3s ease-out;
+    /* Smooth fade out */
+}
+
+/* Animations only trigger when visible class is added */
+.about-me-text.visible p {
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+/* Animations for each paragraph */
+.about-me-text.visible p:nth-child(1) {
+    animation-name: slideInLeft;
+    animation-delay: 0.2s;
+}
+
+.about-me-text.visible p:nth-child(2) {
+    animation-name: slideInRight;
+    animation-delay: 0.4s;
+}
+
+.about-me-text.visible p:nth-child(3) {
+    animation-name: slideInUp;
+    animation-delay: 0.6s;
+}
+
+.about-me-text.visible p:nth-child(4) {
+    animation-name: slideInUp;
+    /* Or alternate again */
+    animation-delay: 0.8s;
 }
 
 .highlight-text {
     color: #9FD86B;
     font-weight: bold;
+    text-shadow: 0 0 10px rgba(159, 216, 107, 0.2);
+}
+
+/* Keyframes */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 768px) {
     .about-me-content {
-        padding: 20px;
+        padding: 30px 20px;
+    }
+
+    .about-me-text p {
+        font-size: 1.15rem;
+    }
+
+    .about-me-title {
+        font-size: 2rem;
     }
 }
