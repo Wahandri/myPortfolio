@@ -31,6 +31,61 @@ import mongodbIcon from "../images/mongodb.png";
 
 const proyectosData = [
   {
+    id: "leyabierta",
+    titulo: "Ley Abierta",
+    descripcion: `Plataforma que recopila y presenta leyes y normativas de España en lenguaje claro.
+    Permite filtrar por tipo (ley, orden, resolución), impacto social y fecha, además de buscador.
+    Muestra cards con resumen e impacto para facilitar la consulta rápida de contenido legal.`,
+    detalles: {
+      descripcion: "Plataforma informativa para consultar legislación y normativas españolas con una experiencia más accesible y comprensible para cualquier usuario.",
+      queHice: [
+        "Diseñé una interfaz centrada en búsqueda y filtrado para agilizar la exploración de leyes.",
+        "Organicé las fichas legales en cards con resumen e indicadores de impacto.",
+        "Optimicé la estructura de navegación para que la consulta sea rápida y clara en desktop y móvil."
+      ],
+      tecnologias: [
+        { name: "Next.js", icon: nextIcon },
+        { name: "React", icon: reactIcon },
+        { name: "Tailwind CSS", icon: cssIcon },
+        { name: "Node.js", icon: nodeIcon },
+      ]
+    },
+    imagen: comerIA1,
+    urlWeb: "https://leyabierta.com",
+    urlRepo: null,
+    enlaces: [
+      { etiqueta: "Visitar web", url: "https://leyabierta.com", tipo: "primario" },
+    ],
+    skills: ["nextjs", "react", "css", "js"],
+  },
+  {
+    id: "tarimascobos",
+    titulo: "Tarimas Cobos",
+    descripcion: `Web corporativa para empresa de instalación de tarimas y suelos laminados en Málaga.
+    Incluye hero con llamada a la acción, servicios, por qué elegirnos, FAQ y contacto.
+    Presenta una estructura clara orientada a captación de clientes y conversión.`,
+    detalles: {
+      descripcion: "Sitio web corporativo enfocado en comunicar servicios de instalación de tarimas y facilitar el contacto directo de potenciales clientes.",
+      queHice: [
+        "Estructuré una landing con secciones comerciales enfocadas en conversión.",
+        "Implementé componentes visuales para destacar servicios y ventajas competitivas.",
+        "Mejoré la experiencia responsive para mantener claridad y jerarquía de contenido en móvil."
+      ],
+      tecnologias: [
+        { name: "Next.js", icon: nextIcon },
+        { name: "React", icon: reactIcon },
+        { name: "Tailwind CSS", icon: cssIcon },
+      ]
+    },
+    imagen: dj1,
+    urlWeb: "https://cobos.vercel.app",
+    urlRepo: null,
+    enlaces: [
+      { etiqueta: "Visitar web", url: "https://cobos.vercel.app", tipo: "primario" },
+    ],
+    skills: ["nextjs", "react", "css", "js"],
+  },
+  {
     id: "jotalopez-dj",
     titulo: "JotaLopez DJ",
     descripcion: `Web profesional diseñada para un servicio de DJ especializado en bodas y eventos. 
