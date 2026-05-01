@@ -139,10 +139,9 @@ const proyectosData = [
   {
     id: "play-online",
     titulo: "play-online",
-    descripcion: `Aplicación web para ver la serie Digimon Adventure completa en castellano. 
-    Muestra todos los episodios en una galería con miniaturas, además de marcar los vistos para llevar un control del progreso.`,
+    descripcion: `Web personal para acceder directamente a series y películas disponibles online de forma gratuita, sin tener que lidiar con páginas llenas de publicidad.`,
     detalles: {
-      descripcion: "Plataforma de streaming dedicada a la serie Digimon Adventure. Permite a los usuarios ver la serie completa y mantiene un registro local de los episodios vistos para retomar la visualización donde la dejaron.",
+      descripcion: "Proyecto personal que fue evolucionando con el tiempo. Centraliza enlaces a series y películas gratuitas disponibles en internet, permitiendo acceder al contenido directamente sin pasar por páginas llenas de anuncios.",
       queHice: [
         "Implementé persistencia de datos en LocalStorage para guardar el progreso del usuario.",
         "Desarrollé una galería de episodios con carga diferida (lazy loading) para mejorar la velocidad.",
