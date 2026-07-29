@@ -75,8 +75,20 @@
 
 .about-me-text.visible p:nth-child(4) {
     animation-name: slideInUp;
-    /* Or alternate again */
     animation-delay: 0.8s;
+}
+
+.about-me-text.visible p:nth-child(5) {
+    animation-name: slideInUp;
+    animation-delay: 1s;
+}
+
+.about-cta {
+    color: #9FD86B !important;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    margin-top: 10px !important;
+    text-shadow: 0 0 15px rgba(159, 216, 107, 0.3) !important;
 }
 
 .highlight-text {

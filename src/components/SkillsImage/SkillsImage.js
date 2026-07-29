@@ -12,12 +12,20 @@ import php from '../../images/PHP.png';
 import mysql from '../../images/mySQL.png';
 import sass from '../../images/sass.png';
 import bootstrap from '../../images/Bootstrap.png';
+import python from '../../images/skills/python.svg';
+import typescript from '../../images/skills/typescript.svg';
+import fastapi from '../../images/skills/fastapi.svg';
+import flutter from '../../images/skills/flutter.svg';
+import docker from '../../images/skills/docker.svg';
+import threejs from '../../images/skills/threejs.svg';
+import websocket from '../../images/skills/websocket.svg';
+import ai from '../../images/skills/ai.svg';
+import deepseek from '../../images/skills/deepseek.svg';
 
 const skillsImages = {
-  html, css, js, react, node, mongo, git, php, mysql, sass, bootstrap, nextjs
+  html, css, js, react, node, mongo, git, php, mysql, sass, bootstrap, nextjs,
+  python, typescript, fastapi, flutter, docker, threejs, websocket, ai, deepseek
 }
-
-
 
 export default function SkillsImage( {skill} ) {
     return (

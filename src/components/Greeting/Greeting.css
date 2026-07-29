@@ -77,6 +77,14 @@
   transition: all 0.3s ease-in-out;
 }
 
+.greeting-subtitle {
+  font-size: 18px;
+  color: #b0b0b0;
+  margin-top: 8px;
+  font-weight: 300;
+  max-width: 600px;
+}
+
 @media screen and (max-width: 1450px) {
   .textStart {
     font-size: 25px;

@@ -55,7 +55,6 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
       : null;
   const hasMultipleProjects = Array.isArray(proyectos) && proyectos.length > 1;
 
-  // Slideshow automático para proyectos con múltiples imágenes
   useEffect(() => {
     const intervals = {};
 
@@ -66,7 +65,7 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
             ...prev,
             [index]: ((prev[index] || 0) + 1) % proyecto.imagenes.length,
           }));
-        }, 3000); // Cambiar imagen cada 3 segundos
+        }, 3000);
       }
     });
 
@@ -75,7 +74,6 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
     };
   }, [proyectos]);
 
-  // Slideshow para el modal
   useEffect(() => {
     if (modalProyecto && Array.isArray(modalProyecto.imagenes) && modalProyecto.imagenes.length > 1) {
       const modalInterval = setInterval(() => {
@@ -93,7 +91,9 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
     <div className="proyectos-carousel-container">
       <div className="section-header">
         <h3 className="fontTitle">Proyectos Destacados</h3>
-        <p className="proyectos-subtitle">Explora algunos de mis trabajos más recientes y significativos</p>
+        <p className="proyectos-subtitle">
+          Mis proyectos más recientes y significativos — desde asistentes IA hasta videojuegos 3D
+        </p>
       </div>
 
       <Swiper
@@ -118,6 +118,10 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
             ? proyecto.descripcion.slice(0, MAX_LENGTH) + "..."
             : proyecto.descripcion;
 
+          const imgSrc = proyecto.imagenes
+            ? proyecto.imagenes[imageIndexes[index] || 0]
+            : proyecto.imagen;
+
           return (
             <SwiperSlide key={proyecto.id || proyecto.titulo}>
               <div
@@ -133,22 +137,20 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
                   }
                 }}
               >
-                {proyecto.imagen && (
+                {imgSrc && (
                   <img
-                    src={proyecto.imagen}
-                    alt={proyecto.titulo}
-                    className="card-image"
-                  />
-                )}
-                {proyecto.imagenes && Array.isArray(proyecto.imagenes) && proyecto.imagenes.length > 0 && (
-                  <img
-                    src={proyecto.imagenes[imageIndexes[index] || 0]}
+                    src={imgSrc}
                     alt={proyecto.titulo}
                     className="card-image"
                   />
                 )}
 
-                <p className="badge">{proyecto.titulo}</p>
+                <div className="card-header-badges">
+                  <p className="badge">{proyecto.titulo}</p>
+                  {proyecto.privado && (
+                    <span className="badge-private">🔒 Privado</span>
+                  )}
+                </div>
 
                 {proyecto.descripcion && (
                   <div className="card-description">
@@ -156,63 +158,65 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
                   </div>
                 )}
 
-                {/* Botones */}
-                {Array.isArray(proyecto.enlaces) &&
-                  proyecto.enlaces.length > 0 && (
-                    <div className="card-actions">
-                      {proyecto.enlaces.map((enlace, index) => {
-                        const esVideo =
-                          enlace.etiqueta.toLowerCase().includes("demo") &&
-                          enlace.url.includes("youtu");
+                <div className="card-actions">
+                  {Array.isArray(proyecto.enlaces) &&
+                    proyecto.enlaces.length > 0 && (
+                      <>
+                        {proyecto.enlaces.map((enlace, i) => {
+                          const esVideo =
+                            enlace.etiqueta.toLowerCase().includes("demo") &&
+                            enlace.url.includes("youtu");
 
-                        return esVideo ? (
-                          <button
-                            key={index}
-                            className="unified-btn"
-                            onClick={(event) => {
-                              event.stopPropagation();
-                              openVideo(enlace.url);
-                            }}
-                          >
-                            {enlace.etiqueta}
-                          </button>
-                        ) : (
-                          <a
-                            key={index}
-                            href={enlace.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="unified-btn"
-                            title="Ver Repositorio"
-                            onClick={(event) => event.stopPropagation()}
-                          >
-                            {enlace.etiqueta}
-                          </a>
-                        );
-                      })}
-                      {/* Botón Info */}
-                      <button
-                        className="unified-btn"
-                        onClick={(event) => {
-                          event.stopPropagation();
-                          setInfoProject(proyecto);
-                        }}
-                        title="Más información"
-                      >
-                        ℹ️ Info
-                      </button>
-                    </div>
+                          return esVideo ? (
+                            <button
+                              key={i}
+                              className="unified-btn"
+                              onClick={(event) => {
+                                event.stopPropagation();
+                                openVideo(enlace.url);
+                              }}
+                            >
+                              {enlace.etiqueta}
+                            </button>
+                          ) : (
+                            <a
+                              key={i}
+                              href={enlace.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="unified-btn"
+                              onClick={(event) => event.stopPropagation()}
+                            >
+                              {enlace.etiqueta}
+                            </a>
+                          );
+                        })}
+                      </>
+                    )}
+                  {proyecto.privado && proyecto.disponibleBajoDemanda && (
+                    <span className="unified-btn demand-btn">
+                      📩 Bajo demanda
+                    </span>
                   )}
+                  <button
+                    className="unified-btn"
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      setInfoProject(proyecto);
+                    }}
+                    title="Más información"
+                  >
+                    ℹ️ Info
+                  </button>
+                </div>
               </div>
             </SwiperSlide>
           );
         })}
       </Swiper>
 
-      {/* Popup del video */}
       <VideoPopup isOpen={videoOpen} onClose={closeVideo} videoUrl={videoUrl} />
 
-      {/* Modal del texto completo */}
       {modalProyecto && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -239,21 +243,25 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
                 </button>
               </>
             )}
-            {modalProyecto.imagen && (
+            {modalProyecto.imagenes ? (
+              <img
+                src={modalProyecto.imagenes[imageIndexes.modal || 0]}
+                alt={modalProyecto.titulo}
+                className="modal-image"
+              />
+            ) : modalProyecto.imagen && (
               <img
                 src={modalProyecto.imagen}
                 alt={modalProyecto.titulo}
                 className="modal-image"
               />
             )}
-            {modalProyecto.imagenes && Array.isArray(modalProyecto.imagenes) && modalProyecto.imagenes.length > 0 && (
-              <img
-                src={modalProyecto.imagenes[imageIndexes.modal || 0]}
-                alt={modalProyecto.titulo}
-                className="modal-image"
-              />
-            )}
             <p className="badge modal-badge">{modalProyecto.titulo}</p>
+            {modalProyecto.privado && (
+              <div className="private-badge-modal">
+                🔒 Proyecto privado
+              </div>
+            )}
             <h3 className="modal-title">{modalProyecto.titulo}</h3>
             <div className="modal-description">
               <p>{modalProyecto.descripcion}</p>
@@ -283,8 +291,7 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
                         href={enlace.url}
                         target="_blank"
                         rel="noreferrer"
-                        className={`action-button ${enlace.tipo === "primario" ? "primary" : ""
-                          }`}
+                        className={`action-button ${enlace.tipo === "primario" ? "primary" : ""}`}
                         onClick={(event) => event.stopPropagation()}
                       >
                         {enlace.etiqueta}
@@ -296,7 +303,7 @@ const ProyectosCarousel = ({ proyectos = [] }) => {
           </div>
         </div>
       )}
-      {/* Modal de Información Detallada */}
+
       <ProjectModal
         isOpen={!!infoProject}
         onClose={() => setInfoProject(null)}

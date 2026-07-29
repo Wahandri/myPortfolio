@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <rect x="50" y="50" width="700" height="350" rx="12" fill="#16213e" stroke="#9FD86B" stroke-width="2"/>
+  <circle cx="400" cy="180" r="50" fill="none" stroke="#9FD86B" stroke-width="3"/>
+  <path d="M380 180 L390 195 L420 165" fill="none" stroke="#9FD86B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="36" fill="#9FD86B" text-anchor="middle" font-weight="bold">NOVA</text>
+  <text x="400" y="320" font-family="Arial, sans-serif" font-size="18" fill="#b0b0b0" text-anchor="middle">Asistente IA Personal</text>
+  <text x="400" y="360" font-family="Arial, sans-serif" font-size="14" fill="#666" text-anchor="middle">Screenshot NOVA v1</text>
+</svg>

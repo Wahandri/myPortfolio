@@ -1,19 +1,24 @@
 {
   "nombre": "Manuel García Cobos",
-  "titulo": "Desarrollador Web Junior",
+  "titulo": "AI-Augmented Full-Stack Developer",
   "ubicacion": "Málaga, España",
   "contacto": {
     "email": "wahandricode@gmail.com",
-    "linkedin": "https://www.linkedin.com/in/manuel-garc%C3%ADa-cobos-6b5413272/"
+    "linkedin": "https://www.linkedin.com/in/manuel-garc%C3%ADa-cobos-6b5413272/",
+    "github": "https://github.com/Wahandri",
+    "web": "https://cv.wahandri.com"
   },
   "habilidades": [
-    "HTML", "CSS", "JavaScript", "Git", "React",
-    "Node.js", "Next.js", "Express", "MongoDB", "MySQL"
+    "HTML", "CSS", "JavaScript", "TypeScript", "Python",
+    "React", "Next.js", "Node.js", "FastAPI", "Flutter",
+    "Three.js", "Docker", "Git", "MongoDB", "MySQL",
+    "WebSockets", "IA/LLMs", "DeepSeek", "Ollama"
   ],
   "intereses": [
-    "Desarrollo de software",
-    "Inteligencia Artificial",
-    "Documentales",
+    "Desarrollo de software con IA",
+    "Inteligencia Artificial y Agentes",
+    "Automatización y DevOps",
+    "Videojuegos",
     "Baloncesto",
     "Senderismo"
   ],
@@ -28,5 +33,6 @@
       "titulo": "Educación Secundaria Obligatoria (E.S.O.)",
       "fecha": "Junio 2010"
     }
-  ]
+  ],
+  "filosofia": "Programador de formación clásica, potenciado por IA. Creo que la programación no ha muerto: se ha transformado. Ahora puedo construir sistemas complejos que antes requerían equipos enteros, usando agentes IA como mis aliados. Sigo escribiendo código, tomando decisiones arquitectónicas, y resolviendo problemas — pero con una velocidad y alcance que antes eran imposibles."
 }

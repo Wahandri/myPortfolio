@@ -3,18 +3,20 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function BodyJs() {
-  const code = `// Skills.js
-
+  const code = `// Skills.js — AI-Augmented Developer
 const skills = {
-  frontend: ["HTML5", "CSS3", "JavaScript (ES6+)", "React.js", "Next.js"],
-  backend: ["Node.js", "Express.js"],
-  databases: ["MongoDB", "MySQL"],
-  tools: ["Git", "Docker"],
-  methodologies: ["Agile", "Scrum", "UI/UX"],
-  softSkills: ["Trabajo en equipo", "Comunicación", "Resolutivo", "Adaptabilidad"],
+  frontend: ["HTML5", "CSS3", "JavaScript (ES6+)", "TypeScript", "React.js", "Next.js", "Three.js"],
+  backend: ["Python (FastAPI)", "Node.js", "Express.js", "WebSockets", "REST APIs"],
+  mobile: ["Flutter", "Dart"],
+  databases: ["MongoDB", "MySQL", "MariaDB"],
+  devops: ["Docker", "Linux", "Cloudflare", "Git"],
+  ai_ml: ["DeepSeek API", "Ollama", "LangChain", "OpenAI API", "PyTorch"],
+  agents: ["opencode (coder agent)", "NOVA (personal AI assistant)", "Custom agent workflows"],
+  games: ["Three.js", "WebSockets multiplayer", "Voxel rendering"],
+  tools: ["Git", "Docker Compose", "VS Code", "Postman", "Figma"],
 };
 
-export default skills;`;
+module.exports = { developer: "Manuel García Cobos", creed: "Código + IA = ∞" };`;
 
   return (
     <div className="boxSizeText">

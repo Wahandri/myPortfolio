@@ -5,19 +5,28 @@ import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 export default function BodyMd() {
   const md = `# Sobre mí
 
-Soy Manuel García Cobos, desarrollador web Full Stack que llegó al código desde la hostelería,
-impulsado por la curiosidad y las ganas de crear cosas útiles.
+Soy Manuel García Cobos, AI-Augmented Full-Stack Developer.
 
-Tras varios años en atención al cliente, en 2022 decidí dar el salto y formarme como desarrollador
-en CodeSpace Academy, donde cursé un bootcamp de un año y adquirí una sólida base en:
-HTML, CSS, JavaScript, React, Node, Express, MongoDB y MySQL.
+Mi historia es la de un programador de formación clásica que abrazó
+la revolución de la IA. Estudié desarrollo web full-stack en CodeSpace
+Academy (2022-2023) y desde entonces he construido decenas de proyectos,
+desde apps Android con Flutter hasta videojuegos 3D multijugador.
 
-Desde entonces he seguido aprendiendo y creando proyectos propios para mejorar mis habilidades.
-Me considero resolutivo, autodidacta y detallista, con un enfoque en interfaces limpias, 
-APIs eficientes y una experiencia de usuario cuidada.
+Pero lo que realmente me define es cómo trabajo hoy: **código + agentes IA**.
+No soy un "prompter" — soy un programador que usa IA como amplificador de
+su capacidad. Cada línea la escribo yo, cada decisión arquitectónica la tomo
+yo, pero con una velocidad y alcance que multiplican mi productividad.
 
-Actualmente busco seguir creciendo como desarrollador y participar en proyectos donde el diseño 
-y la funcionalidad vayan de la mano.
+## Stack Principal
+- **Frontend**: React, Next.js, TypeScript, Three.js, Flutter
+- **Backend**: Python (FastAPI), Node.js, WebSockets
+- **Infra**: Docker, Linux, Cloudflare Tunnels, MariaDB
+- **IA**: DeepSeek API, Ollama, LangChain, Agentes (opencode)
+
+## Filosofía
+"La programación no ha muerto — se ha transformado. Ahora construyo
+sistemas que antes requerían equipos enteros, usando agentes IA como
+mis aliados."
 `;
 
   return (

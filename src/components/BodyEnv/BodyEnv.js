@@ -7,10 +7,15 @@ export default function BodyEnv() {
   const { contacto = {}, ubicacion = '' } = datos;
   const email = contacto?.email ?? '';
   const linkedin = contacto?.linkedin ?? '';
+  const github = contacto?.github ?? '';
+  const web = contacto?.web ?? '';
 
   const env = `# contacto.env
+# AI-Augmented Full-Stack Developer
 EMAIL=${email}
 LINKEDIN=${linkedin}
+GITHUB=${github}
+WEB=${web}
 LOCATION="${ubicacion}"`;
 
   return (

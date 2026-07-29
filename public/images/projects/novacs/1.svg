@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0a0a0a"/>
+  <rect x="50" y="50" width="700" height="350" rx="12" fill="#1a1a1a" stroke="#ff4444" stroke-width="2"/>
+  <polygon points="400,100 450,200 400,180 350,200" fill="#ff4444" opacity="0.8"/>
+  <polygon points="400,130 430,200 400,185 370,200" fill="#ff6644" opacity="0.6"/>
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="36" fill="#ff4444" text-anchor="middle" font-weight="bold">NovaCS</text>
+  <text x="400" y="320" font-family="Arial, sans-serif" font-size="18" fill="#b0b0b0" text-anchor="middle">FPS Voxel Multijugador</text>
+  <text x="400" y="360" font-family="Arial, sans-serif" font-size="14" fill="#666" text-anchor="middle">Screenshot NovaCS v'$i'</text>
+</svg>

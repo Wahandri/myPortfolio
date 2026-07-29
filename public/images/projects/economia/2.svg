@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0d1117"/>
+  <rect x="50" y="50" width="700" height="350" rx="12" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
+  <polyline points="150,300 250,230 350,260 450,180 550,200 650,150" fill="none" stroke="#58a6ff" stroke-width="3"/>
+  <polyline points="150,320 250,270 350,290 450,220 550,240 650,190" fill="none" stroke="#3fb950" stroke-width="2" opacity="0.5"/>
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="36" fill="#58a6ff" text-anchor="middle" font-weight="bold">EconomIA</text>
+  <text x="400" y="320" font-family="Arial, sans-serif" font-size="18" fill="#b0b0b0" text-anchor="middle">Análisis Financiero Inteligente</text>
+</svg>

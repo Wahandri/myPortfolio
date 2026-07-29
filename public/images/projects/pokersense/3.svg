@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <rect x="50" y="50" width="700" height="350" rx="12" fill="#16213e" stroke="#e94560" stroke-width="2"/>
+  <circle cx="400" cy="160" r="45" fill="none" stroke="#e94560" stroke-width="3"/>
+  <text x="400" y="170" font-family="Arial, sans-serif" font-size="18" fill="#e94560" text-anchor="middle">♠ ♥ ♦ ♣</text>
+  <text x="400" y="260" font-family="Arial, sans-serif" font-size="36" fill="#e94560" text-anchor="middle" font-weight="bold">PokerSense</text>
+  <text x="400" y="300" font-family="Arial, sans-serif" font-size="18" fill="#b0b0b0" text-anchor="middle">Asistente Poker con IA</text>
+</svg>

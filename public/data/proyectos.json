@@ -1,0 +1,343 @@
+[
+  {
+    "id": "nova",
+    "titulo": "NOVA — Asistente IA Personal",
+    "descripcion": "Asistente personal con IA que controla el servidor, responde preguntas, ejecuta herramientas y mantiene conversaciones contextuales. Incluye app Android nativa (Flutter), backend WebSocket en Python, integración con DeepSeek y Ollama, +22 herramientas (Docker, archivos, backups, BOE, generación de imágenes, I Ching, alarmas, notas, records, traducción, clima y más). Pipeline de auto-update que compila y distribuye la APK automáticamente.",
+    "detalles": {
+      "descripcion": "Proyecto estrella. Un asistente IA completo con app móvil, backend inteligente y más de 20 herramientas integradas. NOVA es mi asistente personal que gestiona el servidor, responde preguntas, ejecuta comandos, y se actualiza sola.",
+      "queHice": [
+        "Diseñé e implementé la arquitectura completa: app Flutter + WebSocket Python + motor IA dual (DeepSeek/Ollama)",
+        "Programé las 22 herramientas del sistema: Docker, archivos, backups, web scraping, generación imágenes, búsqueda BOE, I Ching, TTS, alarmas, notas, clima y traducción",
+        "Implementé el pipeline de auto-update: compila APK en el servidor y la distribuye a los dispositivos automáticamente",
+        "Diseñé el modo Coder: NOVA traduce peticiones en español a prompts técnicos y usa opencode para modificar código del servidor",
+        "Persistencia de conversaciones en MariaDB con historial completo"
+      ],
+      "tecnologias": [
+        "Flutter",
+        "Dart",
+        "Python",
+        "FastAPI",
+        "WebSockets",
+        "DeepSeek",
+        "Ollama",
+        "MariaDB",
+        "Docker"
+      ]
+    },
+    "imagenes": ["/images/projects/nova/1.svg", "/images/projects/nova/2.svg", "/images/projects/nova/3.svg"],
+    "enlaces": [],
+    "skills": ["flutter", "python", "ai", "deepseek", "websocket", "docker"],
+    "privado": true,
+    "disponibleBajoDemanda": true
+  },
+  {
+    "id": "novacs",
+    "titulo": "NovaCS / L-Town — FPS Voxel Online",
+    "descripcion": "Videojuego FPS multijugador en primera persona directamente en el navegador. Voxel shooter mobile-first con 11 personajes jugables, arena generada proceduralmente de 750x750, hasta 300 jugadores por servidor, hitreg server-side con lag compensation, granadas HE, mapas Dust2/Inferno procedurales. PWA instalable. Sin assets externos: texturas y audio 100% procedurales.",
+    "detalles": {
+      "descripcion": "Un FPS multijugador hecho desde cero: servidor en Node.js con WebSockets, cliente en Three.js con renderizado voxel, y todo el audio/textura generado proceduralmente. Mobile-first con joystick táctil y PWA instalable.",
+      "queHice": [
+        "Desarrollé el servidor de juego en Node.js con WebSockets, game loop a 20Hz, 3 salas persistentes (FFA/Teams/Zombie)",
+        "Implementé hitreg server-side con lag compensation, balística y sistema de daño completo",
+        "Programé el cliente Three.js con renderizado voxel, animaciones, HUD y minimapa",
+        "Diseñé 11 personajes jugables con habilidades únicas y 10+ armas con stats balanceados",
+        "Sistema de granadas HE con metralla, físicas y daño por proximidad",
+        "Mapas Dust2 e Inferno generados proceduralmente con voxels",
+        "Arquitectura PWA mobile-first con joystick táctil y controles por touch"
+      ],
+      "tecnologias": [
+        "Node.js",
+        "JavaScript",
+        "Three.js",
+        "WebSockets",
+        "HTML",
+        "CSS"
+      ]
+    },
+    "imagenes": ["/images/projects/novacs/1.svg", "/images/projects/novacs/2.svg"],
+    "urlWeb": "https://cs.wahandri.com",
+    "enlaces": [
+      { "etiqueta": "Jugar ahora", "url": "https://cs.wahandri.com", "tipo": "primario" }
+    ],
+    "skills": ["js", "node", "websocket", "threejs", "html", "css"],
+    "privado": false
+  },
+  {
+    "id": "pokersense",
+    "titulo": "PokerSense — Asistente de Poker con IA",
+    "descripcion": "Asistente completo para Texas Hold'em Poker. Evalúa manos con simulación Monte Carlo (10k+ trials), calcula equity/odds, y recomienda acciones (fold/call/raise) con análisis estratégico vía DeepSeek AI. Incluye OCR de screenshots, historial de manos, estadísticas, dashboard web React y app Android Flutter con overlay flotante.",
+    "detalles": {
+      "descripcion": "Suite completa de poker: API de evaluación Monte Carlo, análisis con IA, OCR de capturas, dashboard web y app Android. Calcula equity, pot odds, y da recomendaciones estratégicas en tiempo real.",
+      "queHice": [
+        "Implementé el motor Monte Carlo con treys hand evaluator para simular 10k+ manos por evaluación",
+        "Integré DeepSeek API para análisis estratégico contextual y recomendaciones",
+        "Desarrollé OCR con Tesseract para evaluar manos desde screenshots",
+        "Construí dashboard web React + Vite + TypeScript con historial y estadísticas",
+        "Creé app Android Flutter con overlay flotante para usar mientras juegas",
+        "Sistema de logging persistente en MariaDB con tracking de todas las manos"
+      ],
+      "tecnologias": [
+        "Python",
+        "FastAPI",
+        "React",
+        "TypeScript",
+        "Flutter",
+        "Dart",
+        "DeepSeek",
+        "MariaDB",
+        "Docker"
+      ]
+    },
+    "imagenes": ["/images/projects/pokersense/1.svg", "/images/projects/pokersense/2.svg", "/images/projects/pokersense/3.svg"],
+    "enlaces": [],
+    "skills": ["python", "fastapi", "react", "typescript", "flutter", "ai", "deepseek", "docker"],
+    "privado": true,
+    "disponibleBajoDemanda": true
+  },
+  {
+    "id": "economia",
+    "titulo": "EconomIA — Pipeline de Análisis Financiero",
+    "descripcion": "Pipeline completo de datos financieros que recolecta, procesa y analiza 50+ activos (acciones, ETFs, cripto, forex, materias primas, índices). Genera indicadores técnicos, predicciones con IA (Ollama), contexto de mercado y resumen de noticias RSS. Dashboard web en modo oscuro con gráficos Chart.js y estadísticas en tiempo real.",
+    "detalles": {
+      "descripcion": "Sistema ETL + IA para análisis financiero. Recolecta datos de 50+ activos, calcula indicadores técnicos, genera predicciones con IA, y lo visualiza todo en un dashboard oscuro con gráficos interactivos.",
+      "queHice": [
+        "Diseñé el pipeline de datos: recolectores Python, procesamiento batch, y almacenamiento en MariaDB",
+        "Implementé 20+ indicadores técnicos (SMA, EMA, RSI, MACD, Bollinger, etc.) sobre datos OHLCV",
+        "Integré Ollama para generar predicciones y análisis de sentimiento de mercado",
+        "Construí dashboard web single-page con Chart.js, modo oscuro y Tailwind CSS",
+        "Sistema de noticias RSS con filtrado por relevancia usando IA",
+        "Arquitectura modular con collectors, processors, analyzers y dashboard separados"
+      ],
+      "tecnologias": [
+        "Python",
+        "FastAPI",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Ollama",
+        "MariaDB",
+        "Docker"
+      ]
+    },
+    "imagenes": ["/images/projects/economia/1.svg", "/images/projects/economia/2.svg"],
+    "enlaces": [],
+    "skills": ["python", "fastapi", "js", "ai", "docker"],
+    "privado": true,
+    "disponibleBajoDemanda": true
+  },
+  {
+    "id": "iching",
+    "titulo": "I Ching API — Oráculo Cuántico con IA",
+    "descripcion": "API REST para el oráculo I Ching con generación de hexagramas basada en entropía del sistema, interpretación con IA (DeepSeek/Ollama), y análisis completo de resultados. Incluye tirada ritual, contexto de líneas mutables, y interpretación en lenguaje natural. Arquitectura modular con FastAPI v2, Pydantic v2, y documentación OpenAPI automática.",
+    "detalles": {
+      "descripcion": "API pública del I Ching que combina generación por entropía real del sistema con interpretación por IA. Un oráculo moderno con raíces ancestrales.",
+      "queHice": [
+        "Implementé la generación de hexagramas usando entropía del sistema (/dev/urandom) para mayor autenticidad",
+        "Integré DeepSeek y Ollama para interpretación contextual de los hexagramas y líneas mutables",
+        "Diseñé arquitectura modular con routers y servicios separados siguiendo principios clean architecture",
+        "Documentación automática con OpenAPI/Swagger, validación con Pydantic v2",
+        "Endpoints REST completos: tirada, interpretación, análisis, historial"
+      ],
+      "tecnologias": [
+        "Python",
+        "FastAPI",
+        "DeepSeek",
+        "Ollama",
+        "Docker"
+      ]
+    },
+    "imagenes": ["/images/projects/iching/1.svg"],
+    "urlWeb": "https://iching.wahandri.com",
+    "enlaces": [
+      { "etiqueta": "Visitar API", "url": "https://iching.wahandri.com", "tipo": "primario" },
+      { "etiqueta": "Docs API", "url": "https://iching.wahandri.com/docs", "tipo": "secundario" }
+    ],
+    "skills": ["python", "fastapi", "deepseek", "ai", "docker"],
+    "privado": false
+  },
+  {
+    "id": "leyabierta",
+    "titulo": "Ley Abierta",
+    "descripcion": "Plataforma que recopila y presenta leyes y normativas de España en lenguaje claro. Permite filtrar por tipo (ley, orden, resolución), impacto social y fecha, además de buscador. Muestra cards con resumen e impacto para facilitar la consulta rápida de contenido legal.",
+    "detalles": {
+      "descripcion": "Plataforma informativa para consultar legislación y normativas españolas con una experiencia más accesible y comprensible para cualquier usuario.",
+      "queHice": [
+        "Diseñé una interfaz centrada en búsqueda y filtrado para agilizar la exploración de leyes.",
+        "Organicé las fichas legales en cards con resumen e indicadores de impacto.",
+        "Optimicé la estructura de navegación para que la consulta sea rápida y clara en desktop y móvil."
+      ],
+      "tecnologias": ["Next.js", "React", "CSS", "Node.js"]
+    },
+    "imagenes": ["/images/projects/comer-ia/comeria1.png", "/images/projects/comer-ia/comeria2.png", "/images/projects/comer-ia/comeria3.png", "/images/projects/comer-ia/comeria4.png"],
+    "urlWeb": "https://leyabierta.com",
+    "enlaces": [
+      { "etiqueta": "Visitar web", "url": "https://leyabierta.com", "tipo": "primario" }
+    ],
+    "skills": ["nextjs", "react", "css", "js"],
+    "privado": false
+  },
+  {
+    "id": "tarimascobos",
+    "titulo": "Tarimas Cobos",
+    "descripcion": "Web corporativa para empresa de instalación de tarimas y suelos laminados en Málaga. Incluye hero con llamada a la acción, servicios, por qué elegirnos, FAQ y contacto. Estructura clara orientada a captación de clientes y conversión.",
+    "detalles": {
+      "descripcion": "Sitio web corporativo enfocado en comunicar servicios de instalación de tarimas y facilitar el contacto directo de potenciales clientes.",
+      "queHice": [
+        "Estructuré una landing con secciones comerciales enfocadas en conversión.",
+        "Implementé componentes visuales para destacar servicios y ventajas competitivas.",
+        "Mejoré la experiencia responsive para mantener claridad y jerarquía de contenido en móvil."
+      ],
+      "tecnologias": ["Next.js", "React", "CSS"]
+    },
+    "imagenes": ["/images/projects/jotalopezdj/dj1.png", "/images/projects/jotalopezdj/dj2.png", "/images/projects/jotalopezdj/dj3.png", "/images/projects/jotalopezdj/dj4.png"],
+    "urlWeb": "https://cobos.vercel.app",
+    "enlaces": [
+      { "etiqueta": "Visitar web", "url": "https://cobos.vercel.app", "tipo": "primario" }
+    ],
+    "skills": ["nextjs", "react", "css", "js"],
+    "privado": false
+  },
+  {
+    "id": "jotalopez-dj",
+    "titulo": "JotaLopez DJ",
+    "descripcion": "Web profesional diseñada para un servicio de DJ especializado en bodas y eventos. Presenta los servicios, equipo profesional disponible y permite a los clientes conocer la experiencia y propuesta de valor.",
+    "detalles": {
+      "descripcion": "Sitio web corporativo para un DJ de eventos, diseñado para transmitir profesionalidad y facilitar la contratación.",
+      "queHice": [
+        "Diseñé una interfaz moderna y atractiva alineada con la marca personal.",
+        "Optimicé la carga de imágenes para asegurar un rendimiento fluido en móviles.",
+        "Implementé un formulario de contacto directo para aumentar la conversión de leads."
+      ],
+      "tecnologias": ["Next.js", "React", "CSS", "HTML"]
+    },
+    "imagenes": ["/images/projects/jotalopezdj/dj1.png", "/images/projects/jotalopezdj/dj2.png", "/images/projects/jotalopezdj/dj3.png", "/images/projects/jotalopezdj/dj4.png"],
+    "urlWeb": "https://jotalopezdj.vercel.app/",
+    "enlaces": [
+      { "etiqueta": "Visitar web", "url": "https://jotalopezdj.vercel.app/", "tipo": "primario" }
+    ],
+    "skills": ["html", "css", "js", "nextjs"],
+    "privado": false
+  },
+  {
+    "id": "comer-ia",
+    "titulo": "Comer-IA",
+    "descripcion": "Aplicación web con Next.js que genera recetas personalizadas usando la API de OpenAI. Los usuarios ingresan ingredientes y aplican filtros (tipo de comida, dificultad, dieta) para obtener recetas coherentes y detalladas.",
+    "detalles": {
+      "descripcion": "Aplicación que utiliza Inteligencia Artificial para generar recetas de cocina basadas en los ingredientes que el usuario tiene en casa.",
+      "queHice": [
+        "Integré la API de OpenAI para generar contenido dinámico y coherente.",
+        "Creé un sistema de filtros (dieta, tiempo, dificultad) para personalizar los resultados.",
+        "Diseñé una UI intuitiva que guía al usuario paso a paso en la creación del prompt."
+      ],
+      "tecnologias": ["Next.js", "React", "CSS", "OpenAI API"]
+    },
+    "imagenes": ["/images/projects/comer-ia/comeria1.png", "/images/projects/comer-ia/comeria2.png", "/images/projects/comer-ia/comeria3.png", "/images/projects/comer-ia/comeria4.png"],
+    "urlWeb": "https://www.comer-ia.com/",
+    "enlaces": [
+      { "etiqueta": "Visitar web", "url": "https://www.comer-ia.com/", "tipo": "primario" }
+    ],
+    "skills": ["html", "css", "js", "nextjs"],
+    "privado": false
+  },
+  {
+    "id": "play-online",
+    "titulo": "Play-Online",
+    "descripcion": "Web personal para acceder directamente a series y películas disponibles online de forma gratuita, sin tener que lidiar con páginas llenas de publicidad.",
+    "detalles": {
+      "descripcion": "Proyecto personal que centraliza enlaces a series y películas gratuitas, permitiendo acceder al contenido directamente sin pasar por páginas llenas de anuncios.",
+      "queHice": [
+        "Implementé persistencia de datos en LocalStorage para guardar el progreso del usuario.",
+        "Desarrollé una galería de episodios con carga diferida (lazy loading) para mejorar la velocidad.",
+        "Creé un reproductor de video personalizado integrado en la interfaz."
+      ],
+      "tecnologias": ["Next.js", "React", "CSS", "HTML"]
+    },
+    "imagenes": ["/images/projects/play-online/play-online1.png", "/images/projects/play-online/play-online2.png", "/images/projects/play-online/play-online3.png"],
+    "urlWeb": "https://play-online-eight.vercel.app/",
+    "enlaces": [
+      { "etiqueta": "Visitar web", "url": "https://play-online-eight.vercel.app/", "tipo": "primario" }
+    ],
+    "skills": ["html", "css", "js", "nextjs"],
+    "privado": false
+  },
+  {
+    "id": "wahaha",
+    "titulo": "Wahaha",
+    "descripcion": "Red social de humor donde los usuarios pueden publicar, votar y guardar chistes. Proyecto Full Stack con autenticación, API REST y base de datos MongoDB. Los usuarios interactúan en una comunidad activa de humor.",
+    "detalles": {
+      "descripcion": "Red social de humor donde los usuarios pueden publicar, votar y guardar chistes. Proyecto Full Stack que simula una comunidad activa con interacción en tiempo real.",
+      "queHice": [
+        "Desarrollé una API REST completa con Node.js y Express para gestionar usuarios y contenido.",
+        "Diseñé el esquema de base de datos en MongoDB para almacenar chistes, votos y favoritos.",
+        "Implementé autenticación de usuarios y protección de rutas en el frontend."
+      ],
+      "tecnologias": ["React", "Node.js", "MongoDB"]
+    },
+    "imagen": "/images/projects/JokesWeb.png",
+    "enlaces": [
+      { "etiqueta": "Ver demo", "url": "https://youtu.be/5QpQYx3MyBo", "tipo": "primario" }
+    ],
+    "skills": ["html", "css", "js", "react"],
+    "privado": false
+  },
+  {
+    "id": "simona-zappoli",
+    "titulo": "SimonaZappoli",
+    "descripcion": "Landing page profesional para una especialista en bienestar y coaching emocional, nutrición, masajes, meditación y yoga. Diseño elegante y rápido enfocado en transmitir profesionalidad y confianza.",
+    "detalles": {
+      "descripcion": "Landing page profesional para una especialista en bienestar y coaching. El objetivo era crear una presencia digital elegante y rápida que comunicara claramente sus servicios.",
+      "queHice": [
+        "Traduje los requisitos del cliente en un diseño web funcional y estético.",
+        "Optimicé el SEO y la estructura semántica para mejorar la visibilidad en buscadores.",
+        "Aseguré una experiencia de usuario fluida con una navegación sencilla y clara."
+      ],
+      "tecnologias": ["React", "CSS", "HTML", "JavaScript"]
+    },
+    "imagen": "/images/projects/simonaZappoliWeb.png",
+    "enlaces": [
+      { "etiqueta": "Visitar web", "url": "https://simona-zappoli.pages.dev/", "tipo": "primario" }
+    ],
+    "skills": ["html", "css", "js", "react"],
+    "privado": false
+  },
+  {
+    "id": "adivina-el-numero",
+    "titulo": "Adivina el Número",
+    "descripcion": "Juego clásico de lógica donde debes adivinar un número secreto que aumenta en dificultad a medida que avanzas de nivel. Con sistema de puntuación, animaciones CSS y feedback visual.",
+    "detalles": {
+      "descripcion": "Juego de lógica clásico donde el usuario debe adivinar un número oculto con pistas de 'mayor' o 'menor'. Proyecto enfocado en la lógica de programación pura y la manipulación del DOM.",
+      "queHice": [
+        "Programé la lógica del juego en JavaScript vanilla sin dependencias.",
+        "Implementé un sistema de puntuación y record para incentivar la rejugabilidad.",
+        "Añadí animaciones CSS para feedback visual de aciertos y errores."
+      ],
+      "tecnologias": ["JavaScript", "HTML", "CSS"]
+    },
+    "imagen": "/images/projects/NumberGammer.png",
+    "enlaces": [
+      { "etiqueta": "Jugar", "url": "https://gessthenumber.pages.dev/", "tipo": "primario" }
+    ],
+    "skills": ["html", "css", "js"],
+    "privado": false
+  },
+  {
+    "id": "rick-and-morty",
+    "titulo": "Rick and Morty API",
+    "descripcion": "Buscador de personajes de Rick y Morty que consume la API oficial. Scroll infinito, búsqueda en tiempo real, y diseño responsive. Muestra todos los personajes con sus características.",
+    "detalles": {
+      "descripcion": "Buscador de personajes de la serie Rick y Morty que consume su API oficial. Permite filtrar en tiempo real y cargar más resultados dinámicamente.",
+      "queHice": [
+        "Consumí la API REST de Rick and Morty utilizando fetch y useEffect.",
+        "Implementé un 'Infinite Scroll' para cargar personajes a medida que el usuario baja.",
+        "Creé un buscador con filtrado instantáneo para mejorar la UX."
+      ],
+      "tecnologias": ["React", "JavaScript", "CSS", "HTML"]
+    },
+    "imagen": "/images/projects/imgRAM.png",
+    "enlaces": [
+      { "etiqueta": "Visitar web", "url": "https://rick-and-morty-characters.pages.dev/", "tipo": "primario" }
+    ],
+    "skills": ["html", "css", "js", "react"],
+    "privado": false
+  }
+]

@@ -17,7 +17,7 @@ export default function AboutMe() {
                 });
             },
             {
-                threshold: 0.2, // Trigger when 20% of the element is visible
+                threshold: 0.2,
                 rootMargin: "0px"
             }
         );
@@ -43,19 +43,29 @@ export default function AboutMe() {
                     className={`about-me-text ${isVisible ? "visible" : ""}`}
                 >
                     <p>
-                        Hola, soy Manuel. Soy un desarrollador web apasionado por crear experiencias digitales que marcan la diferencia.
-                        Me especializo en el ecosistema de React y disfruto transformando ideas complejas en interfaces limpias, intuitivas y funcionales.
+                        Soy Manuel, un desarrollador que empezó como muchos: con HTML, CSS y JavaScript,
+                        construyendo poco a poco hasta dominar React, Node.js y el ecosistema full-stack.
+                        Me formé en CodeSpace Academy y desde entonces no he parado de crear.
                     </p>
                     <p>
-                        Mi enfoque combina la creatividad del diseño con la lógica de la programación. Me encanta resolver problemas y aprender
-                        continuamente nuevas tecnologías para mejorar mis habilidades y ofrecer mejores soluciones.
+                        Pero algo cambió. La IA irrumpió y, lejos de hacer que la programación desaparezca,
+                        la ha transformado. Hoy uso agentes inteligentes como parte de mi caja de herramientas —
+                        no para sustituir el código, sino para multiplicar lo que puedo construir.
+                        Sigo escribiendo cada línea, tomando decisiones arquitectónicas y resolviendo problemas
+                        complejos, pero ahora a una velocidad que antes requería equipos enteros.
                     </p>
                     <p>
-                        <span className="highlight-text">Tecnologías principales:</span> React, JavaScript, HTML, CSS, Next.js, Node.js y MongoDB.
+                        <span className="highlight-text">Stack actual:</span> React, Next.js, Python, FastAPI, Flutter,
+                        Docker, WebSockets, Three.js, IA/LLMs (DeepSeek, Ollama), y un flujo de trabajo
+                        donde los agentes IA son mis compañeros de desarrollo.
                     </p>
                     <p>
-                        Actualmente, estoy buscando mi primera oportunidad profesional como desarrollador web. Estoy listo para aportar mi entusiasmo,
-                        dedicación y capacidad de aprendizaje a un equipo dinámico donde pueda seguir creciendo.
+                        He construido desde asistentes IA con app Android hasta videojuegos 3D multijugador,
+                        pasando por bots de trading algorítmico, APIs de生成ación de imágenes y pipelines
+                        financieros. Cada proyecto me ha enseñado algo nuevo y me ha hecho mejor programador.
+                    </p>
+                    <p className="about-cta">
+                        ¿Tienes un proyecto interesante? Hablemos.
                     </p>
                 </div>
             </div>

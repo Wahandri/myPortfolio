@@ -1,0 +1,148 @@
+.agent-workflow-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.agent-workflow-content {
+  width: 100%;
+  max-width: 900px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: rgba(30, 30, 30, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 24px;
+  border: 1px solid rgba(159, 216, 107, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.agent-workflow-title {
+  margin-bottom: 16px;
+  font-size: 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.agent-workflow-subtitle {
+  font-size: 1.15rem;
+  color: #b0b0b0;
+  margin-bottom: 40px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.workflow-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  max-width: 500px;
+}
+
+.workflow-step {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 16px 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.workflow-step:hover {
+  background: rgba(159, 216, 107, 0.08);
+  border-color: rgba(159, 216, 107, 0.25);
+  transform: translateX(4px);
+}
+
+.step-icon {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(159, 216, 107, 0.1);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-title {
+  color: #9FD86B;
+  font-size: 1.1rem;
+  margin: 0 0 4px 0;
+  font-weight: 600;
+}
+
+.step-desc {
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.workflow-arrow {
+  color: #9FD86B;
+  font-size: 1.5rem;
+  opacity: 0.5;
+  padding: 6px 0;
+  line-height: 1;
+}
+
+.workflow-note {
+  margin-top: 40px;
+  padding: 20px 28px;
+  background: rgba(159, 216, 107, 0.06);
+  border-left: 3px solid #9FD86B;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+.workflow-note p {
+  color: #d0d0d0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .agent-workflow-content {
+    padding: 30px 20px;
+  }
+
+  .agent-workflow-title {
+    font-size: 1.5rem;
+  }
+
+  .workflow-step {
+    padding: 12px 16px;
+    gap: 14px;
+  }
+
+  .step-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
+
+  .step-title {
+    font-size: 1rem;
+  }
+
+  .step-desc {
+    font-size: 0.85rem;
+  }
+}

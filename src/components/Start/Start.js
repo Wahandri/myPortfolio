@@ -5,26 +5,28 @@ import ProyectosCarousel from "../ProyectosCarousel/ProyectosCarousel";
 import GitHubInvite from "../GitHubInvite/GitHubInvite";
 import AboutMe from "../AboutMe/AboutMe";
 import VSC from "../VSC/VSC";
-// import Experience from "../Experience/Experience";
+import AgentWorkflow from "../AgentWorkflow/AgentWorkflow";
 
-
-export default function Start({ proyectos = [] }) {
+export default function Start({ proyectos = [], loading = false }) {
   return (
     <div>
       <Greeting />
       <VSC />
 
-      {/* Sección de Experiencia Unificada */}
       <div className="experience-section">
         <div className="experience-content borderCard">
-          {/* <h2 className="flexCenter fontTitle experience-title">Experiencia</h2> */}
           <AboutMe />
+          <AgentWorkflow />
           <GitHubInvite />
-          <ProyectosCarousel proyectos={proyectos} />
+          {loading ? (
+            <div className="loading-projects">
+              <p>Cargando proyectos...</p>
+            </div>
+          ) : (
+            <ProyectosCarousel proyectos={proyectos} />
+          )}
         </div>
       </div>
-
-      {/* <Experience /> */}
     </div>
   );
 }
